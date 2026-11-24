@@ -1,0 +1,8 @@
+Welcome to OpenPack.
+
+This box shares a library of content over its own Wi-Fi. You do not need the internet.
+New content arrives as a "pack" on a USB stick or SD card, checked by a signature
+so nobody can quietly change it on the way.
+
+OpenPack အတွက် ကြိုဆိုပါတယ်။
+အင်တာနက် မလိုဘဲ ဤဘောက်စ်၏ Wi-Fi မှတစ်ဆင့် အကြောင်းအရာများကို ဖတ်ရှုနိုင်ပါသည်။

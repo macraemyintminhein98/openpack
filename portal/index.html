@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="my">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#a8480f">
+<title>OpenPack</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<noscript>
+  <p class="noscript">ဤစာမျက်နှာ အလုပ်လုပ်ရန် ဘရောက်ဇာတွင် JavaScript ဖွင့်ထားရပါမည်။<br>Please turn on JavaScript in your browser.</p>
+</noscript>
+<header id="top">
+  <div class="wrap">
+    <a id="brand" href="#/"><span id="title">OpenPack</span></a>
+    <nav class="tools">
+      <button id="t-lang" class="tool" type="button"></button>
+      <a id="t-help" class="tool" href="#/help"></a>
+      <a id="t-set" class="tool" href="#/settings"></a>
+    </nav>
+  </div>
+</header>
+<main id="view" class="wrap" aria-live="polite"></main>
+<footer id="foot" class="wrap"></footer>
+<!-- All words on screen: strings.js. Pack settings: manifest.js (also lets the pack work with no server). -->
+<script src="strings.js"></script>
+<script src="icons.js"></script>
+<script src="manifest.js"></script>
+<script src="zawgyi-rules.js"></script>
+<script src="search.js"></script>
+<script src="qr.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

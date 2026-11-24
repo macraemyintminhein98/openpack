@@ -1,0 +1,80 @@
+OPENPACK  -  offline library, no internet needed
+==================================================
+
+THE EASIEST WAY (any phone or laptop, nothing to install)
+  1. Open the folder named "pack".
+  2. Open "index.html" in a browser (Chrome, Firefox, Edge).
+  3. To give it to someone else, copy this whole folder to their USB stick or SD card.
+
+SHARE WITH MANY PEOPLE AT ONCE (one device becomes the library)
+
+  A. WINDOWS LAPTOP (Windows 10 or newer)
+     1. Double-click START-WINDOWS.bat
+     2. If Windows asks about the firewall: tick "Private networks", click Allow.
+     3. Turn on Mobile hotspot (Settings > Network > Mobile hotspot),
+        or connect to the same Wi-Fi as the other people.
+     4. Others open the address shown in the black window in their browser,
+        for example http://192.168.137.1:8080/
+        Tip: the "Share" button on the page shows a QR code to scan.
+
+  B. ANDROID PHONE (Android 7 or newer)
+     1. Install Termux (it is in the library as an APK, or get it from F-Droid).
+     2. Open Termux and type:  termux-setup-storage     then allow access.
+     3. Copy this folder to the phone's Downloads folder.
+     4. In Termux type:  sh ~/storage/downloads/OpenPack/START-ANDROID.sh
+        (use the real folder name if it is different)
+     5. Turn on the phone's hotspot. Others connect to it and open the address
+        shown on the screen, often http://192.168.43.1:8080/
+
+  C. LINUX LAPTOP
+     Open a terminal in this folder and type:  sh START-LINUX.sh
+
+NOTES
+  - Nothing is recorded. No accounts, no logs.
+  - Before starting, the program checks that no file was changed or damaged.
+    If it says "PACK CHECK FAILED", get a fresh copy from the original source.
+  - Windows 7 / Windows 8 or very old devices cannot run the server.
+    Use "THE EASIEST WAY" above.
+  - Keep the black window (or Termux) open while people are using it.
+    Close it with Ctrl+C.
+
+
+OPENPACK  -  အင်တာနက်မလိုသော စာကြည့်တိုက်
+==================================================
+
+အလွယ်ဆုံးနည်း (ဖုန်း သို့မဟုတ် လက်ပ်တော့ပ် မည်သည့်စက်တွင်မဆို၊ ဘာမှ ထည့်သွင်းစရာမလို)
+  ၁။ "pack" ဟု အမည်ပေးထားသော ဖိုလ်ဒါကို ဖွင့်ပါ။
+  ၂။ "index.html" ကို ဘရောက်ဇာ (Chrome, Firefox, Edge) ဖြင့် ဖွင့်ပါ။
+  ၃။ အခြားသူကို ပေးလိုလျှင် ဤဖိုလ်ဒါတစ်ခုလုံးကို သူ့ USB သို့မဟုတ် SD ကဒ်ထဲသို့ ကူးပေးပါ။
+
+လူများစွာကို တစ်ပြိုင်နက် မျှဝေရန် (စက်တစ်လုံးက စာကြည့်တိုက် ဖြစ်လာမည်)
+
+  က။ Windows လက်ပ်တော့ပ် (Windows 10 နှင့်အထက်)
+     ၁။ START-WINDOWS.bat ကို နှစ်ချက်နှိပ်ပါ။
+     ၂။ Windows က firewall မေးလျှင် "Private networks" ကို အမှန်ခြစ်ပြီး Allow နှိပ်ပါ။
+     ၃။ Mobile hotspot ကို ဖွင့်ပါ (Settings > Network > Mobile hotspot)၊
+        သို့မဟုတ် အခြားသူများနှင့် Wi-Fi တစ်ခုတည်းသို့ ချိတ်ဆက်ပါ။
+     ၄။ အခြားသူများသည် အနက်ရောင်ဝင်းဒိုးတွင် ပြထားသော လိပ်စာကို ဘရောက်ဇာတွင် ဖွင့်ပါ၊
+        ဥပမာ http://192.168.137.1:8080/
+        အကြံပြုချက်: စာမျက်နှာပေါ်ရှိ "မျှဝေရန်" ခလုတ်က QR ကုဒ် ပြပေးပါသည်။
+
+  ခ။ Android ဖုန်း (Android 7 နှင့်အထက်)
+     ၁။ Termux ကို ထည့်သွင်းပါ (စာကြည့်တိုက်ထဲတွင် APK အဖြစ်ရှိသည်၊ သို့မဟုတ် F-Droid မှ ရယူပါ)။
+     ၂။ Termux ကို ဖွင့်ပြီး  termux-setup-storage  ဟု ရိုက်ကာ ခွင့်ပြုပါ။
+     ၃။ ဤဖိုလ်ဒါကို ဖုန်း၏ Downloads ထဲသို့ ကူးထည့်ပါ။
+     ၄။ Termux တွင်  sh ~/storage/downloads/OpenPack/START-ANDROID.sh  ဟု ရိုက်ပါ။
+        (ဖိုလ်ဒါအမည် ကွဲပြားပါက အမှန်အတိုင်း ပြောင်းရိုက်ပါ)
+     ၅။ ဖုန်း၏ hotspot ကို ဖွင့်ပါ။ အခြားသူများ ချိတ်ဆက်ပြီး ဖန်သားပြင်ပေါ်တွင် ပြထားသော
+        လိပ်စာကို ဖွင့်ပါ၊ မကြာခဏ http://192.168.43.1:8080/ ဖြစ်တတ်သည်။
+
+  ဂ။ Linux လက်ပ်တော့ပ်
+     ဤဖိုလ်ဒါထဲတွင် terminal ဖွင့်ပြီး  sh START-LINUX.sh  ဟု ရိုက်ပါ။
+
+မှတ်ချက်
+  - မည်သည့်အရာမျှ မှတ်တမ်းမတင်ပါ။ အကောင့်မလို၊ log မရှိ။
+  - မစတင်မီ ဖိုင်များ ပြောင်းလဲခြင်း သို့မဟုတ် ပျက်စီးခြင်း မရှိကြောင်း စစ်ဆေးပါသည်။
+    "PACK CHECK FAILED" ဟု ပြလျှင် မူရင်းမှ ဖိုင်အသစ် ပြန်ကူးပါ။
+  - Windows 7 / Windows 8 သို့မဟုတ် အလွန်ဟောင်းသော စက်များတွင် server မလည်ပတ်နိုင်ပါ။
+    အထက်ပါ "အလွယ်ဆုံးနည်း" ကို သုံးပါ။
+  - လူများ အသုံးပြုနေစဉ် အနက်ရောင်ဝင်းဒိုး (သို့မဟုတ် Termux) ကို မပိတ်ပါနှင့်။
+    ရပ်လိုလျှင် Ctrl+C နှိပ်ပါ။

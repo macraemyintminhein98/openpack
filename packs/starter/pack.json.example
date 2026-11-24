@@ -1,0 +1,26 @@
+{
+  "name": "starter",
+  "title": "Myanmar Starter Pack",
+  "title_my": "မြန်မာ အခြေခံ ပက်ကေ့ချ်",
+  "version": "auto",
+  "default_lang": "my",
+  "categories": [
+    { "id": "reference", "title": "Knowledge", "title_my": "ဗဟုသုတ", "icon": "book" },
+    { "id": "kids", "title": "Kids", "title_my": "ကလေးများ", "icon": "star" },
+    { "id": "apps", "title": "Apps", "title_my": "အက်ပ်များ", "icon": "apps" }
+  ],
+  "items": [
+    {
+      "id": "wikipedia-my",
+      "title": "Wikipedia (Burmese)",
+      "title_my": "ဝီကီပီးဒီးယား (မြန်မာ)",
+      "description": "The free encyclopedia, readable offline.",
+      "description_my": "အင်တာနက်မလိုဘဲ ဖတ်နိုင်သော အခမဲ့ စွယ်စုံကျမ်း။",
+      "category": "reference",
+      "kind": "zim",
+      "license": "CC-BY-SA-4.0",
+      "attribution": "Wikipedia contributors, packaged by Kiwix",
+      "source": { "type": "http", "url": "https://download.kiwix.org/zim/wikipedia/wikipedia_my_all_maxi_REPLACE-DATE.zim" }
+    }
+  ]
+}

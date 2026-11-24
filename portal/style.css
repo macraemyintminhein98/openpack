@@ -1,0 +1,167 @@
+/* No external fonts or network assets: the portal must work with zero internet.
+
+   FONT: many phones in Myanmar are set to a Zawgyi system font, which draws Unicode Burmese
+   as garbage. This pack therefore carries its own Unicode font (Noto Sans Myanmar, SIL OFL 1.1,
+   see fonts/OFL-LICENSE.txt) and uses it for Burmese characters ONLY. Do not put a system
+   Burmese font before it. Latin text uses the device font.
+
+   No CSS variables, grid or newer features: it must also work on old Android WebViews.
+   Colours for the dark theme are listed separately under html.dark. Text size = html font-size. */
+@font-face {
+  font-family: "OpenPack Myanmar"; font-style: normal; font-weight: 400; font-display: swap;
+  src: url("fonts/noto-sans-myanmar-myanmar-400-normal.woff2") format("woff2"),
+       url("fonts/noto-sans-myanmar-myanmar-400-normal.woff") format("woff");
+  unicode-range: U+1000-109F, U+200C-200D, U+25CC, U+A92E, U+A9E0-A9FE, U+AA60-AA7F;
+}
+@font-face {
+  font-family: "OpenPack Myanmar"; font-style: normal; font-weight: 700; font-display: swap;
+  src: url("fonts/noto-sans-myanmar-myanmar-700-normal.woff2") format("woff2"),
+       url("fonts/noto-sans-myanmar-myanmar-700-normal.woff") format("woff");
+  unicode-range: U+1000-109F, U+200C-200D, U+25CC, U+A92E, U+A9E0-A9FE, U+AA60-AA7F;
+}
+
+* { box-sizing: border-box; }
+html { font-size: 18px; -webkit-text-size-adjust: 100%; }
+html.sz0 { font-size: 16px; }
+html.sz1 { font-size: 18px; }
+html.sz2 { font-size: 22px; }
+html.sz3 { font-size: 26px; }
+body {
+  margin: 0; background: #faf8f3; color: #1d1b16;
+  font-family: "OpenPack Myanmar", -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.75; /* Burmese stacked marks need generous leading */
+}
+a { color: #a8480f; }
+h1, h2, h3, p { margin: 0; }
+[hidden] { display: none !important; }
+.wrap { max-width: 640px; margin: 0 auto; padding-left: 16px; padding-right: 16px; }
+a:focus, button:focus, input:focus, summary:focus { outline: 3px solid #2a6df4; outline-offset: 2px; }
+.noscript { background: #fff3cd; padding: 16px; margin: 0; font-size: 1rem; }
+
+/* Top bar */
+#top { background: #fff; border-bottom: 1px solid #d9d3c2; padding-top: 10px; padding-bottom: 10px; }
+#brand { display: block; text-decoration: none; color: #1d1b16; font-size: 1.35rem; font-weight: 700; line-height: 1.5; }
+.tools { display: flex; flex-wrap: wrap; margin: 6px -3px 0; }
+.tool {
+  flex: 1 1 4rem; margin: 3px; min-height: 62px; padding: 6px 6px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  border: 1px solid #d9d3c2; border-radius: 12px; background: #faf8f3; color: #1d1b16;
+  font: inherit; font-size: .9rem; line-height: 1.4; text-align: center; text-decoration: none; cursor: pointer;
+  white-space: nowrap; /* a Burmese word must never be split; the buttons wrap to a new row instead */
+}
+.tool .ic { margin: 0 0 1px; flex: 0 0 auto; }
+.tool[aria-current=page] { background: #a8480f; border-color: #a8480f; color: #fff; }
+
+/* Icons */
+.ic { width: 1.35em; height: 1.35em; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; vertical-align: middle; }
+
+/* Screens */
+#view { padding-top: 14px; padding-bottom: 24px; min-height: 60vh; }
+h2.title { font-size: 1.3rem; margin: 6px 0 10px; line-height: 1.5; }
+h3.sub { font-size: 1.05rem; margin: 18px 0 8px; }
+.muted { color: #5f5a4e; }
+.backbtn {
+  display: inline-flex; align-items: center; min-height: 46px; padding: 6px 14px 6px 8px; margin-bottom: 6px;
+  border: 1px solid #d9d3c2; border-radius: 12px; background: #fff; color: #1d1b16; text-decoration: none; font-weight: 700;
+}
+.backbtn .ic { margin-right: .25rem; }
+
+/* Home */
+.tagline { font-size: 1.05rem; margin-bottom: 8px; }
+.badge { display: inline-block; padding: 2px 12px; border-radius: 999px; background: #e3f1e3; color: #17541f; font-size: .85rem; font-weight: 700; }
+.searchform { display: flex; margin: 14px 0 6px; }
+.searchform input {
+  flex: 1 1 0; min-width: 0; min-height: 52px; padding: 8px 12px; font: inherit; font-size: 1rem;
+  border: 2px solid #d9d3c2; border-radius: 12px 0 0 12px; background: #fff; color: #1d1b16; -webkit-appearance: none; appearance: none;
+}
+.go {
+  flex: 0 0 auto; min-height: 52px; padding: 8px 16px; display: flex; align-items: center; font: inherit; font-weight: 700;
+  border: 0; border-radius: 0 12px 12px 0; background: #a8480f; color: #fff; cursor: pointer;
+}
+.go .ic { margin-right: .35rem; }
+.tiles { display: flex; flex-wrap: wrap; margin: 0 -6px; }
+.tile {
+  display: block; width: calc(50% - 12px); margin: 6px; min-height: 8rem; padding: 14px 10px; text-align: center; text-decoration: none;
+  background: #fff; border: 1px solid #d9d3c2; border-radius: 16px; color: #1d1b16;
+}
+/* Large text: stack the search box so the hint stays readable */
+html.sz2 .searchform, html.sz3 .searchform { display: block; }
+html.sz2 .searchform input, html.sz3 .searchform input { display: block; width: 100%; border-radius: 12px; }
+html.sz2 .go, html.sz3 .go { width: 100%; justify-content: center; margin-top: 8px; border-radius: 12px; }
+.tile:active, .tool:active, .choice:active, .backbtn:active { opacity: .7; }
+.tile .ic { width: 2.4rem; height: 2.4rem; color: #a8480f; display: block; margin: 0 auto 6px; }
+.tile b { display: block; font-size: 1.05rem; line-height: 1.5; }
+.tile span { display: block; font-size: .85rem; color: #5f5a4e; }
+.bigbtn {
+  display: flex; align-items: center; justify-content: center; min-height: 54px; margin: 12px 0 0; padding: 8px 14px;
+  border-radius: 14px; background: #fff; border: 2px solid #a8480f; color: #a8480f; font-weight: 700; text-decoration: none; font-size: 1.05rem;
+}
+.bigbtn .ic { margin-right: .5rem; }
+.ver { margin-top: 18px; text-align: center; font-size: .8rem; color: #5f5a4e; }
+
+/* Item cards */
+.card { background: #fff; border: 1px solid #d9d3c2; border-radius: 14px; padding: 14px; margin: 0 0 12px; }
+.card h3 { font-size: 1.12rem; line-height: 1.55; margin: 0 0 2px; }
+.card .desc { margin: 2px 0 4px; color: #5f5a4e; font-size: .95rem; }
+.card .kind { margin: 2px 0 10px; font-size: .85rem; color: #5f5a4e; }
+.act {
+  display: flex; align-items: center; justify-content: center; min-height: 54px; padding: 8px 14px; border-radius: 12px;
+  background: #a8480f; color: #fff; text-decoration: none; font-weight: 700; font-size: 1.1rem;
+}
+.act .ic { margin-right: .5rem; }
+.note { margin: 8px 0 0; font-size: .85rem; color: #5f5a4e; }
+.note a { font-weight: 700; }
+details { margin-top: 10px; }
+summary { cursor: pointer; padding: 8px 0; min-height: 44px; font-weight: 700; color: #5f5a4e; font-size: .92rem; }
+.card details { border-top: 1px solid #d9d3c2; }
+dl { margin: 0; font-size: .9rem; }
+dt { margin-top: 8px; font-size: .8rem; color: #5f5a4e; }
+dd { margin: 0; word-wrap: break-word; }
+.hash { font-family: ui-monospace, Consolas, "Courier New", monospace; font-size: .72rem; word-break: break-all; }
+.empty { text-align: center; padding: 28px 8px; }
+.empty b { display: block; font-size: 1.15rem; margin-bottom: 6px; }
+
+/* Settings */
+.setgroup { background: #fff; border: 1px solid #d9d3c2; border-radius: 14px; padding: 6px 14px 14px; margin: 0 0 14px; }
+.setgroup h3 { font-size: 1.05rem; margin: 10px 0 8px; }
+.choices { display: flex; flex-wrap: wrap; margin: 0 -4px; }
+.choice {
+  flex: 1 1 6rem; margin: 4px; min-height: 56px; padding: 6px 8px; text-align: center; font: inherit; font-size: 1rem; line-height: 1.4;
+  background: #faf8f3; color: #1d1b16; border: 2px solid #d9d3c2; border-radius: 12px; cursor: pointer;
+}
+.choice[aria-pressed=true] { border-color: #a8480f; background: #fbe9dc; font-weight: 700; }
+.choice .ic { margin-right: .3rem; color: #a8480f; }
+.choice small { display: block; font-size: .8rem; line-height: 1.3; }
+.choice.sample { padding-top: 8px; }
+.resetbtn { width: 100%; min-height: 52px; margin-top: 4px; font: inherit; font-weight: 700; background: #fff; color: #1d1b16; border: 2px solid #d9d3c2; border-radius: 12px; cursor: pointer; }
+
+/* Help and share */
+.acc { background: #fff; border: 1px solid #d9d3c2; border-radius: 14px; padding: 4px 14px; margin: 0 0 10px; }
+.acc summary { color: #1d1b16; font-size: 1.02rem; padding: 10px 0; }
+.acc p { padding: 0 0 12px; }
+ol.steps { margin: 8px 0 12px; padding-left: 1.5rem; }
+ol.steps li { margin: 6px 0; }
+.sharebox { text-align: center; background: #fff; border: 1px solid #d9d3c2; border-radius: 14px; padding: 14px; }
+.sharebox .qr svg { width: 230px; height: 230px; max-width: 70vw; background: #fff; border: 1px solid #d9d3c2; border-radius: 8px; }
+.sharebox .url { font-family: ui-monospace, Consolas, "Courier New", monospace; font-size: 1.05rem; word-break: break-all; margin: 8px 0 0; }
+.sharebox .url-label { font-size: .85rem; color: #5f5a4e; margin-top: 10px; }
+.filenote { background: #fff3cd; border-radius: 12px; padding: 12px 14px; }
+#foot { text-align: center; color: #5f5a4e; font-size: .8rem; padding-top: 6px; padding-bottom: 28px; }
+
+/* Dark theme */
+html.dark body { background: #15130f; color: #f2efe6; }
+html.dark a { color: #f0a070; }
+html.dark #top, html.dark .card, html.dark .tile, html.dark .setgroup, html.dark .acc, html.dark .sharebox, html.dark .backbtn,
+html.dark .searchform input, html.dark .bigbtn, html.dark .resetbtn { background: #221f19; border-color: #3a352b; color: #f2efe6; }
+html.dark #brand { color: #f2efe6; }
+html.dark .tool, html.dark .choice { background: #1b1914; border-color: #3a352b; color: #f2efe6; }
+html.dark .tool[aria-current=page] { background: #e8873f; border-color: #e8873f; color: #1a1005; }
+html.dark .muted, html.dark .card .desc, html.dark .card .kind, html.dark .note, html.dark summary, html.dark dt, html.dark .tile span, html.dark .ver, html.dark #foot, html.dark .sharebox .url-label { color: #bdb7a7; }
+html.dark .acc summary { color: #f2efe6; }
+html.dark .tile .ic, html.dark .choice .ic { color: #f0a070; }
+html.dark .act, html.dark .go { background: #e8873f; color: #1a1005; }
+html.dark .bigbtn { border-color: #e8873f; color: #f0a070; }
+html.dark .choice[aria-pressed=true] { background: #4a2d17; border-color: #e8873f; }
+html.dark .badge { background: #1f3a22; color: #b9e6bd; }
+html.dark .card details { border-top-color: #3a352b; }
+html.dark .filenote { background: #4a3d12; }

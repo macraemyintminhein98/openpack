@@ -1,0 +1,4 @@
+- [ ] `npm test` passes
+- [ ] New content: licence, attribution and source are filled in, and I have the right to share it
+- [ ] Burmese text is Unicode (not Zawgyi)
+- [ ] No keys, passwords or personal data in this change

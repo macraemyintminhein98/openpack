@@ -1,0 +1,36 @@
+{
+  "name": "example",
+  "title": "OpenPack Example",
+  "title_my": "OpenPack နမူနာ",
+  "version": "auto",
+  "items": [
+    {
+      "id": "welcome",
+      "title": "Welcome to OpenPack",
+      "title_my": "OpenPack မှ ကြိုဆိုပါတယ်",
+      "description": "What this box is and how packs are updated.",
+      "description_my": "ဤဘောက်စ်ကား အဘယ်နည်း၊ ပက်ကေ့ချ်များကို မည်သို့ အသစ်လဲရမည်နည်း။",
+      "category": "about",
+      "license": "CC0-1.0",
+      "source": { "type": "local", "path": "content/welcome.txt" }
+    },
+    {
+      "id": "how-to-contribute",
+      "title": "How to contribute content",
+      "description": "Rules for adding content: licences, attribution, no piracy.",
+      "category": "about",
+      "license": "CC-BY-4.0",
+      "attribution": "OpenPack contributors",
+      "source": { "type": "local", "path": "content/contribute.md" }
+    },
+    {
+      "id": "sample-lesson",
+      "title": "Sample lesson: how a Wi-Fi box works",
+      "title_my": "နမူနာသင်ခန်းစာ: Wi-Fi ဘောက်စ် အလုပ်လုပ်ပုံ",
+      "category": "learn",
+      "license": "CC-BY-SA-4.0",
+      "attribution": "OpenPack contributors",
+      "source": { "type": "local", "path": "content/lesson.md" }
+    }
+  ]
+}
