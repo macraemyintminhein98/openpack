@@ -310,6 +310,13 @@ attribution shown on its library page.
 - [docs/DEVICE-TEST.md](docs/DEVICE-TEST.md): 20-minute checklist for real phones and Windows
 - [docs/burmese-review.csv](docs/burmese-review.csv): every Burmese label, for native review
 - [docs/ROADMAP.md](docs/ROADMAP.md): audio, Kolibri, known gaps
+- [docs/lesson-review.md](docs/lesson-review.md): every lesson line with its sources, for a health professional to sign off
+- [docs/LESSON-AUDIT.md](docs/LESSON-AUDIT.md): what was checked, changed and deliberately left out
+- [docs/DISTRIBUTION.md](docs/DISTRIBUTION.md): how packs travel and how problems come back
+- [docs/PILOT.md](docs/PILOT.md): two-week pilot plan and feedback questions
+- [docs/print/one-page.html](docs/print/one-page.html): printable one-page instructions (Burmese and English)
+- [docs/LEGAL-QUESTIONS.md](docs/LEGAL-QUESTIONS.md): what to ask a lawyer
+- [docs/NAMES.md](docs/NAMES.md): name options
 
 > **Name.** "OpenPack" is a working name. `openpack` is already an npm package (a Webpack
 > plugin) and a Rust library on GitHub, so pick a final name before publishing.

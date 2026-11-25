@@ -48,12 +48,12 @@
       "my": "မီးခြစ်၊ ဓာတ်မီးခြစ်နှင့် လောင်စာများကို ကလေးများ လက်လှမ်းမမီသော နေရာတွင် သိမ်းပါ။"
     },
     {
-      "en": "If oil in a pan catches fire, do not pour water on it. Cover it with a lid or a wet cloth.",
-      "my": "ဒယ်အိုးထဲရှိ ဆီ မီးစွဲလျှင် ရေမလောင်းပါနှင့်။ အဖုံး သို့မဟုတ် အဝတ်စိုဖြင့် အုပ်ပါ။"
+      "en": "If oil in a pan catches fire, never pour water on it. Slide a lid over the pan and take away the heat. Leave the lid on until the pan is cool.",
+      "my": "ဒယ်အိုးထဲရှိ ဆီ မီးစွဲလျှင် ရေ ဘယ်တော့မှ မလောင်းပါနှင့်။ အဖုံးဖြင့် အုပ်ပြီး မီးကို ဖယ်ပါ သို့မဟုတ် ပိတ်ပါ။ အိုးအေးသည်အထိ အဖုံးကို မဖွင့်ပါနှင့်။"
     },
     {
-      "en": "If clothes catch fire: stop, lie down, and roll on the ground.",
-      "my": "အဝတ်ကို မီးစွဲလျှင် ရပ်ပါ၊ မြေပေါ်လှဲပါ၊ လှိမ့်ပါ။"
+      "en": "If clothes catch fire: stop, lie down, cover your face with your hands, and roll on the ground until the fire is out.",
+      "my": "အဝတ်ကို မီးစွဲလျှင် မပြေးပါနှင့်။ ရပ်ပါ၊ မြေပေါ်လှဲပါ၊ မျက်နှာကို လက်ဖြင့် အုပ်ပါ၊ မီးငြိမ်းသည်အထိ လှိမ့်ပါ။"
     },
     {
       "en": "For a burn, cool it with running water for 20 minutes. See the burns lesson.",
@@ -72,6 +72,14 @@
     {
       "name": "UNICEF: Burns, scalds and fire-related injuries",
       "url": "https://www.unicef.org/parenting/safety/burns-scalds-fire-safety-tips"
+    },
+    {
+      "name": "US Fire Administration: Stop, drop and roll",
+      "url": "https://www.usfa.fema.gov/gallery/pictographs/stop-drop-roll.html"
+    },
+    {
+      "name": "Los Angeles Fire Department: Cooking safety",
+      "url": "https://lafd.org/cooking-safety"
     }
   ]
 }

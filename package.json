@@ -20,6 +20,7 @@
     "release": "bash scripts/weekly-release.sh",
     "pin": "node scripts/pin-source.js",
     "review-sheet": "node scripts/make-review-sheet.js",
+    "review-packet": "node scripts/make-review-packet.js",
     "lint:sh": "shellcheck -S warning scripts/*.sh box/*.sh bundle/*.sh"
   },
   "keywords": [

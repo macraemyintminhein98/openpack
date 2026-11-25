@@ -56,8 +56,8 @@
       "my": "စီးနေသောရေ မရှိလျှင် သန့်ရှင်းသော ရေအေး သို့မဟုတ် သန့်ရှင်းသော အဝတ်စိုကို သုံးပြီး မကြာခဏ လဲပေးပါ။"
     },
     {
-      "en": "If clothes catch fire: stop, lie down, and roll on the ground to put out the flames.",
-      "my": "အဝတ်ကို မီးစွဲလျှင် မပြေးပါနှင့်။ ရပ်ပါ၊ မြေပေါ်လှဲပါ၊ မီးငြိမ်းသည်အထိ လှိမ့်ပါ။"
+      "en": "If clothes catch fire: stop, lie down, cover your face with your hands, and roll on the ground until the fire is out.",
+      "my": "အဝတ်ကို မီးစွဲလျှင် မပြေးပါနှင့်။ ရပ်ပါ၊ မြေပေါ်လှဲပါ၊ မျက်နှာကို လက်ဖြင့် အုပ်ပါ၊ မီးငြိမ်းသည်အထိ လှိမ့်ပါ။"
     }
   ],
   "sources": [
@@ -68,6 +68,10 @@
     {
       "name": "NHS (UK): Burns and scalds, treatment",
       "url": "https://www.nhs.uk/conditions/burns-and-scalds/treatment/"
+    },
+    {
+      "name": "US Fire Administration: Stop, drop and roll",
+      "url": "https://www.usfa.fema.gov/gallery/pictographs/stop-drop-roll.html"
     }
   ]
 }
