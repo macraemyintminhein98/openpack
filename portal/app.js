@@ -111,6 +111,7 @@
   // What the one big button says and does, chosen from the file type so nobody has to guess.
   function describe(i) {
     var kind = i.kind || 'file', e = ext(i.path);
+    if (kind === 'lesson') { return { type: 'type_lesson', act: 'act_learn', icon: 'steps', lesson: true }; }
     if (kind === 'apk') { return { type: 'type_app', act: 'act_install', icon: 'download', dl: true, apk: true }; }
     if (kind === 'zim') {
       return state.features.kiwix
@@ -126,7 +127,7 @@
 
   function card(i) {
     var d = describe(i), desc = pick(i, 'description');
-    var href = d.kiwix ? 'kiwix/' : encodeURI(i.path);
+    var href = d.lesson ? '#/l/' + encodeURIComponent(i.id) : d.kiwix ? 'kiwix/' : encodeURI(i.path);
     var rows = '<dt>' + esc(t('d_size')) + '</dt><dd>' + size(i.bytes) + '</dd>' +
       '<dt>' + esc(t('d_license')) + '</dt><dd>' + esc(i.license) + (i.non_commercial ? ' · ' + esc(t('d_noncommercial')) : '') + '</dd>' +
       (i.attribution ? '<dt>' + esc(t('d_by')) + '</dt><dd>' + esc(i.attribution) + '</dd>' : '') +
@@ -223,6 +224,79 @@
       urls.map(function (u) { return '<p class="url">' + esc(u) + '</p>'; }).join('') + '</div>';
   }
 
+  /* ---------- lessons (step-by-step picture guides) ---------- */
+  // A lesson is a small script file in the pack. Loading it as a script (not fetch) is what
+  // lets it work when the pack is opened straight from a folder.
+  var lessonLoad = {}; // id -> 'loading' | 'ok' | 'error'
+  var lessonAt = { id: null, step: 0, tab: 'steps' };
+  function findItem(id) {
+    var list = state.manifest.items;
+    for (var i = 0; i < list.length; i++) { if (list[i].id === id) { return list[i]; } }
+    return null;
+  }
+  function loadLesson(item) {
+    if (lessonLoad[item.id]) { return; }
+    lessonLoad[item.id] = 'loading';
+    var el = document.createElement('script');
+    el.src = encodeURI(item.path);
+    el.onload = function () {
+      lessonLoad[item.id] = (window.OPENPACK_LESSONS && window.OPENPACK_LESSONS[item.id]) ? 'ok' : 'error';
+      render();
+    };
+    el.onerror = function () { lessonLoad[item.id] = 'error'; render(); };
+    document.body.appendChild(el);
+  }
+  function both(v) { return v ? (state.set.lang === 'my' ? v.my : v.en) : ''; }
+  function viewLesson(id) {
+    var item = findItem(id);
+    if (!item || item.kind !== 'lesson') { return backBtn() + emptyBox(); }
+    var back = '<a class="backbtn" href="#/c/' + encodeURIComponent(item.category) + '">' + ic('back') + esc(t('back')) + '</a>';
+    var head = back + '<h2 class="title">' + esc(pick(item, 'title')) + '</h2>';
+    if (lessonAt.id !== id) { lessonAt = { id: id, step: 0, tab: 'steps' }; }
+    loadLesson(item);
+    if (lessonLoad[id] === 'error') { return head + '<p class="filenote">' + esc(t('l_error')) + '</p>'; }
+    if (lessonLoad[id] !== 'ok') { return head + '<p class="muted">' + esc(t('l_loading')) + '</p>'; }
+
+    var L = window.OPENPACK_LESSONS[id], n = L.steps.length, at = lessonAt;
+    if (at.step < 0) { at.step = 0; }
+    if (at.step > n - 1) { at.step = n - 1; }
+    function tab(key, label, icon) {
+      return '<button type="button" class="ltab" data-do="ltab" data-val="' + key + '" aria-pressed="' + (at.tab === key ? 'true' : 'false') + '">' + ic(icon) + esc(label) + '</button>';
+    }
+    var tabs = '<div class="ltabs">' + tab('steps', t('l_steps'), 'steps') +
+      (L.why.length ? tab('why', t('l_why'), 'help') : '') +
+      (L.tips.length ? tab('tips', t('l_tips'), 'star') : '') + '</div>';
+    var body = '', k;
+    if (at.tab === 'why' || at.tab === 'tips') {
+      var list = at.tab === 'why' ? L.why : L.tips;
+      for (k = 0; k < list.length; k++) { body += '<p class="lpoint">' + esc(both(list[k])) + '</p>'; }
+    } else {
+      var s = L.steps[at.step], last = at.step === n - 1, dots = '';
+      for (k = 0; k < n; k++) { dots += '<i' + (k === at.step ? ' class="on"' : '') + '></i>'; }
+      body = '<div class="lstep">' +
+        '<div class="lpic">' + s.svg + '</div>' +
+        '<p class="lcount">' + esc(t('l_step_n', { n: at.step + 1, t: n })) + '</p>' +
+        '<div class="ldots" aria-hidden="true">' + dots + '</div>' +
+        '<p class="ltext">' + esc(both(s)) + '</p>' +
+        (last ? '<p class="ldone">' + ic('check') + esc(t('l_done')) + '</p>' : '') +
+        '<div class="lnav">' +
+        '<button type="button" class="lbtn" data-do="lstep" data-val="' + (at.step - 1) + '"' + (at.step === 0 ? ' disabled' : '') + '>' + ic('back') + esc(t('l_prev')) + '</button>' +
+        (last
+          ? '<button type="button" class="lbtn" data-do="lstep" data-val="0">' + esc(t('l_again')) + '</button>'
+          : '<button type="button" class="lbtn main" data-do="lstep" data-val="' + (at.step + 1) + '">' + esc(t('l_next')) + ic('chevron') + '</button>') +
+        '</div></div>';
+    }
+    var src = '';
+    for (k = 0; k < L.sources.length; k++) {
+      src += '<dd>' + esc(L.sources[k].name) + (L.sources[k].url ? '<br><span class="hash">' + esc(L.sources[k].url) + '</span>' : '') + '</dd>';
+    }
+    return head +
+      (L.warning ? '<p class="lwarn">' + esc(both(L.warning)) + '</p>' : '') +
+      tabs + body +
+      (L.reviewed ? '' : '<p class="note">' + esc(t('l_unreviewed')) + '</p>') +
+      '<details><summary>' + esc(t('l_sources')) + '</summary><dl>' + src + '</dl></details>';
+  }
+
   /* ---------- routing and drawing ---------- */
   function route() {
     var h = location.hash.replace(/^#\/?/, '');
@@ -237,8 +311,10 @@
     if (!m) { return; }
     applySettings();
     var r = route(), html;
+    if (r.name !== 'l') { lessonAt.id = null; } // reopening a lesson starts again at step 1
     if (r.name === 'c') { html = viewCategory(r.arg); }
     else if (r.name === 's') { html = viewSearch(r.arg); }
+    else if (r.name === 'l') { html = viewLesson(r.arg); }
     else if (r.name === 'settings') { html = viewSettings(); }
     else if (r.name === 'help') { html = viewHelp(); }
     else if (r.name === 'share') { html = viewShare(); }
@@ -274,6 +350,14 @@
     else if (what === 'size') { state.set.size = parseInt(val, 10) || 0; }
     else if (what === 'theme' && (val === 'light' || val === 'dark')) { state.set.theme = val; }
     else if (what === 'reset') { resetSettings(); render(); return; }
+    else if (what === 'ltab') { lessonAt.tab = val; render(); return; }
+    else if (what === 'lstep') {
+      lessonAt.step = parseInt(val, 10) || 0;
+      render();
+      var top = document.querySelector('.ltabs');
+      if (top && top.scrollIntoView) { top.scrollIntoView(); }
+      return;
+    }
     else { return; }
     saveSettings();
     render();

@@ -1,0 +1,85 @@
+{
+  "format": "openpack-lesson/1",
+  "reviewed": false,
+  "warning": {
+    "en": "Boiling kills germs. It does not remove fuel, pesticide or other chemicals. If the water smells of fuel or chemicals, do not drink it. Find another source.",
+    "my": "ရေကျိုခြင်းသည် ရောဂါပိုးများကို သေစေပါသည်။ ဆီ၊ ပိုးသတ်ဆေး နှင့် အခြား ဓာတုပစ္စည်းများကိုမူ မဖယ်ရှားနိုင်ပါ။ ရေတွင် ဆီနံ့ သို့မဟုတ် ဓာတုဆေးနံ့ ရလျှင် မသောက်ပါနှင့်။ အခြားရေကို ရှာပါ။"
+  },
+  "steps": [
+    {
+      "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\"><rect width=\"320\" height=\"200\" fill=\"#eef6fb\"/><path d=\"M0 150 Q80 135 160 150 T320 150 V200 H0z\" fill=\"#cfe8c9\"/><path d=\"M0 170 Q60 156 120 172 T240 168 T320 174 V200 H0z\" fill=\"#6bb6e6\"/><path d=\"M122 72 Q160 18 198 72\" fill=\"none\" stroke=\"#3b3a36\" stroke-width=\"4\"/><path d=\"M118 70 H202 L191 152 H129z\" fill=\"#f4f1ea\" stroke=\"#3b3a36\" stroke-width=\"4\" stroke-linejoin=\"round\"/><path d=\"M123 100 H197 L191 150 H129z\" fill=\"#8fd0f5\"/><path d=\"M126 100 q9 -7 18 0 t18 0 t18 0 t17 0\" fill=\"none\" stroke=\"#3b83b5\" stroke-width=\"3\"/><circle cx=\"262\" cy=\"58\" r=\"22\" fill=\"#2e9e4f\"/><path d=\"M252 58 l7 8 l13 -15\" fill=\"none\" stroke=\"#fff\" stroke-width=\"5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>",
+      "en": "Collect the clearest water you can find. Use a clean container.",
+      "my": "ရနိုင်သမျှ အကြည်ဆုံးရေကို ယူပါ။ သန့်ရှင်းသော ပုံး သို့မဟုတ် အိုးကို သုံးပါ။"
+    },
+    {
+      "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\"><rect width=\"320\" height=\"200\" fill=\"#eef6fb\"/><path d=\"M0 172 Q80 162 160 172 T320 172 V200 H0z\" fill=\"#cfe8c9\"/><rect x=\"90\" y=\"118\" width=\"140\" height=\"62\" rx=\"8\" fill=\"#b9bec6\" stroke=\"#3b3a36\" stroke-width=\"4\"/><path d=\"M90 132 H74 M230 132 H246\" stroke=\"#3b3a36\" stroke-width=\"6\" stroke-linecap=\"round\"/><rect x=\"94\" y=\"150\" width=\"132\" height=\"26\" rx=\"4\" fill=\"#8fd0f5\"/><path d=\"M78 112 Q160 142 242 112\" fill=\"none\" stroke=\"#e7a25a\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M78 112 l-8 16 M242 112 l8 16\" stroke=\"#e7a25a\" stroke-width=\"8\" stroke-linecap=\"round\"/><g transform=\"rotate(28 78 52)\"><rect x=\"46\" y=\"24\" width=\"64\" height=\"58\" rx=\"6\" fill=\"#f4f1ea\" stroke=\"#3b3a36\" stroke-width=\"4\"/><rect x=\"50\" y=\"46\" width=\"56\" height=\"32\" fill=\"#b08a5a\"/></g><path d=\"M122 62 Q150 70 158 122\" fill=\"none\" stroke=\"#b08a5a\" stroke-width=\"9\" stroke-linecap=\"round\"/><circle cx=\"150\" cy=\"140\" r=\"5\" fill=\"#3b83b5\"/><circle cx=\"166\" cy=\"146\" r=\"5\" fill=\"#3b83b5\"/><circle cx=\"158\" cy=\"134\" r=\"4\" fill=\"#3b83b5\"/></svg>",
+      "en": "If the water is cloudy, let it stand until the dirt sinks. Then pour the clear water through a clean cloth into the pot.",
+      "my": "ရေနောက်နေလျှင် အနည်ထိုင်သည်အထိ ထားပါ။ ထို့နောက် အပေါ်မှ ရေကြည်ကို သန့်ရှင်းသော အဝတ်ဖြင့် စစ်ပြီး အိုးထဲ လောင်းထည့်ပါ။"
+    },
+    {
+      "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\"><rect width=\"320\" height=\"200\" fill=\"#eef6fb\"/><path d=\"M0 172 Q80 162 160 172 T320 172 V200 H0z\" fill=\"#cfe8c9\"/><rect x=\"96\" y=\"166\" width=\"128\" height=\"12\" rx=\"6\" fill=\"#7a4e2b\"/><rect x=\"110\" y=\"172\" width=\"100\" height=\"10\" rx=\"5\" fill=\"#5e3b1f\"/><path d=\"M118 176 q-14 -22 4 -36 q-2 14 10 10 q-4 14 10 26z\" fill=\"#f08a24\"/><path d=\"M124 176 q-6 -10 3 -18 q0 8 6 6 q-2 7 4 12z\" fill=\"#ffd45a\"/><path d=\"M146 176 q-14 -22 4 -36 q-2 14 10 10 q-4 14 10 26z\" fill=\"#f08a24\"/><path d=\"M152 176 q-6 -10 3 -18 q0 8 6 6 q-2 7 4 12z\" fill=\"#ffd45a\"/><path d=\"M174 176 q-14 -22 4 -36 q-2 14 10 10 q-4 14 10 26z\" fill=\"#f08a24\"/><path d=\"M180 176 q-6 -10 3 -18 q0 8 6 6 q-2 7 4 12z\" fill=\"#ffd45a\"/><rect x=\"90\" y=\"78\" width=\"140\" height=\"62\" rx=\"8\" fill=\"#b9bec6\" stroke=\"#3b3a36\" stroke-width=\"4\"/><path d=\"M90 92 H74 M230 92 H246\" stroke=\"#3b3a36\" stroke-width=\"6\" stroke-linecap=\"round\"/><ellipse cx=\"160\" cy=\"80\" rx=\"66\" ry=\"10\" fill=\"#8fd0f5\" stroke=\"#3b3a36\" stroke-width=\"3\"/><circle cx=\"128\" cy=\"74\" r=\"9\" fill=\"#fff\" stroke=\"#3b83b5\" stroke-width=\"3\"/><circle cx=\"152\" cy=\"68\" r=\"11\" fill=\"#fff\" stroke=\"#3b83b5\" stroke-width=\"3\"/><circle cx=\"178\" cy=\"73\" r=\"9\" fill=\"#fff\" stroke=\"#3b83b5\" stroke-width=\"3\"/><circle cx=\"198\" cy=\"78\" r=\"6\" fill=\"#fff\" stroke=\"#3b83b5\" stroke-width=\"3\"/><circle cx=\"140\" cy=\"54\" r=\"6\" fill=\"#fff\" stroke=\"#3b83b5\" stroke-width=\"3\"/><circle cx=\"170\" cy=\"50\" r=\"7\" fill=\"#fff\" stroke=\"#3b83b5\" stroke-width=\"3\"/><path d=\"M120 40 q-8 -10 0 -20 M160 34 q-8 -10 0 -20 M200 40 q-8 -10 0 -20\" fill=\"none\" stroke=\"#9db7c7\" stroke-width=\"4\" stroke-linecap=\"round\"/><circle cx=\"276\" cy=\"48\" r=\"30\" fill=\"#fff\" stroke=\"#3b3a36\" stroke-width=\"4\"/><path d=\"M276 22 v6 M276 68 v6 M250 48 h6 M296 48 h6\" stroke=\"#3b3a36\" stroke-width=\"3\"/><text x=\"276\" y=\"60\" font-size=\"34\" font-weight=\"700\" text-anchor=\"middle\" font-family=\"sans-serif\" fill=\"#a8480f\">1</text></svg>",
+      "en": "Heat the water until big bubbles rise fast and do not stop. Keep it boiling like this for 1 minute. In high mountains (above 2,000 metres), boil for 3 minutes.",
+      "my": "ပူဖောင်းကြီးများ ဆက်တိုက် ထလာသည်အထိ ရေကို ကျိုပါ။ ထိုသို့ ဆူပွက်နေစဉ် ၁ မိနစ် ဆက်ကျိုပါ။ တောင်မြင့်ဒေသ (မီတာ ၂,၀၀၀ အထက်) တွင် ၃ မိနစ် ကျိုပါ။"
+    },
+    {
+      "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\"><rect width=\"320\" height=\"200\" fill=\"#eef6fb\"/><path d=\"M0 172 Q80 162 160 172 T320 172 V200 H0z\" fill=\"#cfe8c9\"/><rect x=\"90\" y=\"98\" width=\"140\" height=\"62\" rx=\"8\" fill=\"#b9bec6\" stroke=\"#3b3a36\" stroke-width=\"4\"/><path d=\"M90 112 H74 M230 112 H246\" stroke=\"#3b3a36\" stroke-width=\"6\" stroke-linecap=\"round\"/><path d=\"M84 100 Q160 66 236 100z\" fill=\"#9aa0a9\" stroke=\"#3b3a36\" stroke-width=\"4\" stroke-linejoin=\"round\"/><circle cx=\"160\" cy=\"76\" r=\"8\" fill=\"#3b3a36\"/><path d=\"M140 56 q-6 -8 0 -16 M180 56 q-6 -8 0 -16\" fill=\"none\" stroke=\"#c3d3dc\" stroke-width=\"4\" stroke-linecap=\"round\"/><rect x=\"259\" y=\"33\" width=\"34\" height=\"34\" rx=\"6\" fill=\"#cfeeff\" stroke=\"#3b83b5\" stroke-width=\"3\"/><path d=\"M266 42 l8 8 M278 40 l8 8\" stroke=\"#fff\" stroke-width=\"3\" stroke-linecap=\"round\"/><circle cx=\"276\" cy=\"50\" r=\"32\" fill=\"none\" stroke=\"#d23b2f\" stroke-width=\"6\"/><path d=\"M253.6 27.6 L298.4 72.4\" stroke=\"#d23b2f\" stroke-width=\"6\" stroke-linecap=\"round\"/></svg>",
+      "en": "Take the pot off the fire and cover it. Let it cool by itself. Do not add ice or unboiled water.",
+      "my": "အိုးကို မီးဖိုမှချပြီး အဖုံးဖုံးထားပါ။ သူ့အလိုလို အေးသွားပါစေ။ ရေခဲ သို့မဟုတ် မကျိုရသေးသောရေ မထည့်ပါနှင့်။"
+    },
+    {
+      "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\"><rect width=\"320\" height=\"200\" fill=\"#eef6fb\"/><path d=\"M0 172 Q80 162 160 172 T320 172 V200 H0z\" fill=\"#cfe8c9\"/><rect x=\"52\" y=\"62\" width=\"100\" height=\"112\" rx=\"12\" fill=\"#f4f1ea\" stroke=\"#3b3a36\" stroke-width=\"4\"/><rect x=\"56\" y=\"92\" width=\"92\" height=\"78\" rx=\"8\" fill=\"#8fd0f5\"/><rect x=\"46\" y=\"46\" width=\"112\" height=\"20\" rx=\"8\" fill=\"#a8480f\" stroke=\"#3b3a36\" stroke-width=\"4\"/><rect x=\"152\" y=\"138\" width=\"26\" height=\"12\" rx=\"3\" fill=\"#3b3a36\"/><rect x=\"172\" y=\"130\" width=\"8\" height=\"12\" rx=\"2\" fill=\"#3b3a36\"/><path d=\"M184 150 V170\" stroke=\"#3b83b5\" stroke-width=\"7\" stroke-linecap=\"round\"/><path d=\"M166 162 H206 L201 190 H171z\" fill=\"#fff\" stroke=\"#3b3a36\" stroke-width=\"4\" stroke-linejoin=\"round\"/><path d=\"M170 176 H202 L200 188 H172z\" fill=\"#8fd0f5\"/><circle cx=\"266\" cy=\"62\" r=\"22\" fill=\"#2e9e4f\"/><path d=\"M256 62 l7 8 l13 -15\" fill=\"none\" stroke=\"#fff\" stroke-width=\"5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>",
+      "en": "Keep the water in a clean container with a lid. Pour it out to drink. Do not dip hands or cups into it.",
+      "my": "ရေကို အဖုံးပါသော သန့်ရှင်းသည့် အိုး သို့မဟုတ် ဘူးထဲတွင် သိမ်းပါ။ သောက်လိုလျှင် လောင်းထည့်၍ သောက်ပါ။ လက် သို့မဟုတ် ခွက်ကို ရေထဲ မနှစ်ပါနှင့်။"
+    }
+  ],
+  "why": [
+    {
+      "en": "Water that looks clean can still carry germs that cause diarrhoea, cholera and typhoid. You cannot see them.",
+      "my": "ကြည်လင်နေသောရေတွင်လည်း ဝမ်းလျှော၊ ကာလဝမ်း နှင့် အူရောင်ငန်းဖျား ဖြစ်စေသော ရောဂါပိုးများ ပါနိုင်ပါသည်။ ပိုးများကို မျက်စိဖြင့် မမြင်နိုင်ပါ။"
+    },
+    {
+      "en": "Heat kills these germs. Big bubbles that keep rising show that the water is hot enough.",
+      "my": "အပူသည် ထိုပိုးများကို သေစေပါသည်။ ပူဖောင်းကြီးများ ဆက်တိုက်ထခြင်းသည် ရေ လုံလောက်စွာ ပူပြီဖြစ်ကြောင်း ပြပါသည်။"
+    },
+    {
+      "en": "Boiled water can become dirty again from hands, cups or an open container. That is why covering it and pouring it matter.",
+      "my": "ကျိုပြီးသားရေသည် လက်၊ ခွက် သို့မဟုတ် အဖုံးမပါသော အိုးကြောင့် ပြန်ညစ်ပတ်နိုင်ပါသည်။ ထို့ကြောင့် အဖုံးဖုံးခြင်းနှင့် လောင်းသောက်ခြင်းသည် အရေးကြီးပါသည်။"
+    }
+  ],
+  "tips": [
+    {
+      "en": "No fuel to boil? Wash clear plastic drink bottles (2 litres or smaller) and fill them with clear water. Lay them in full sun for 6 hours, or for 2 days if the sky is cloudy. This does not work on days of constant rain.",
+      "my": "ရေကျိုရန် လောင်စာ မရှိပါက ကြည်လင်သော ပလတ်စတစ် အချိုရည်ဘူး (၂ လီတာ သို့မဟုတ် ထိုထက်ငယ်) ကို ဆေးကြောပြီး ရေကြည် ဖြည့်ပါ။ နေရောင်အပြည့်ရသောနေရာတွင် ၆ နာရီ လှဲထားပါ။ တိမ်ထူသောနေ့ဆိုလျှင် ၂ ရက် ထားပါ။ မိုးဆက်တိုက်ရွာသောနေ့များတွင် ဤနည်း အသုံးမဝင်ပါ။"
+    },
+    {
+      "en": "Water-cleaning tablets or chlorine solution also work. Follow the instructions on the packet exactly.",
+      "my": "ရေသန့်ဆေးပြား သို့မဟုတ် ကလိုရင်းဆေးရည်ကိုလည်း သုံးနိုင်ပါသည်။ ထုပ်ပိုးဘူးပေါ်ရှိ ညွှန်ကြားချက်အတိုင်း တိကျစွာ လိုက်နာပါ။"
+    },
+    {
+      "en": "Boiled water can taste flat. Pour it back and forth between two clean containers, or add a pinch of salt to each litre.",
+      "my": "ကျိုထားသောရေသည် အရသာ ပေါ့နိုင်ပါသည်။ သန့်ရှင်းသော အိုးနှစ်လုံးကြား အပြန်အလှန် လောင်းပေးပါ၊ သို့မဟုတ် ရေတစ်လီတာလျှင် ဆား လက်တစ်ဆိတ်စာ ထည့်ပါ။"
+    },
+    {
+      "en": "Wash your hands with soap before you handle drinking water.",
+      "my": "သောက်ရေကို မကိုင်မီ လက်ကို ဆပ်ပြာဖြင့် ဆေးပါ။"
+    },
+    {
+      "en": "Use boiled water for baby milk and for brushing teeth too.",
+      "my": "ကလေးနို့ဖျော်ရန်နှင့် သွားတိုက်ရန်အတွက်လည်း ကျိုထားသောရေကို သုံးပါ။"
+    }
+  ],
+  "sources": [
+    {
+      "name": "US CDC: How to Make Water Safe in an Emergency",
+      "url": "https://www.cdc.gov/water-emergency/about/"
+    },
+    {
+      "name": "WHO: Boil water, technical brief (2015)",
+      "url": "https://www.who.int/publications/i/item/WHO-FWC-WSH-15.02"
+    },
+    {
+      "name": "Eawag/Sandec: SODIS manual (2016)",
+      "url": "https://www.eawag.ch/fileadmin/Domain1/Abteilungen/sandec/publikationen/SWP/SODIS_manual_2016.pdf"
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "format": "openpack-lesson/1",
+  "reviewed": false,
+  "steps": [
+    {
+      "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\"><rect width=\"320\" height=\"200\" fill=\"#eef6fb\"/><path d=\"M0 172 Q80 162 160 172 T320 172 V200 H0z\" fill=\"#cfe8c9\"/><path d=\"M40 172 V70 L140 30 L240 70 V172\" fill=\"#f4f1ea\" stroke=\"#3b3a36\" stroke-width=\"4\" stroke-linejoin=\"round\"/><rect x=\"180\" y=\"86\" width=\"40\" height=\"40\" fill=\"#bfe3f7\" stroke=\"#3b3a36\" stroke-width=\"4\"/><g transform=\"translate(96 170) scale(0.8)\"><path d=\"M0 0 q-22 -30 4 -52 q-2 20 14 14 q-6 20 14 38z\" fill=\"#f08a24\"/><path d=\"M8 0 q-10 -14 4 -26 q0 10 8 8 q-2 10 6 18z\" fill=\"#ffd45a\"/></g><rect x=\"84\" y=\"96\" width=\"80\" height=\"40\" rx=\"6\" fill=\"#b9bec6\" stroke=\"#3b3a36\" stroke-width=\"4\"/><path d=\"M150 110 q30 -14 40 -2 M222 100 q30 -18 50 -6 M228 116 q30 -10 56 4\" fill=\"none\" stroke=\"#9aa7b4\" stroke-width=\"6\" stroke-linecap=\"round\"/><path d=\"M262 104 L296 96\" stroke=\"#9aa7b4\" stroke-width=\"5\" stroke-linecap=\"round\"/><path d=\"M282.5 92.3 L296 96 L285.6 105.3\" fill=\"none\" stroke=\"#9aa7b4\" stroke-width=\"5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>",
+      "en": "Cook where the air moves: outside, or with the door and window open, so the smoke can leave.",
+      "my": "လေဝင်လေထွက် ကောင်းသောနေရာတွင် ချက်ပြုတ်ပါ။ အိမ်ပြင်တွင် ချက်ပါ၊ သို့မဟုတ် မီးခိုးထွက်နိုင်ရန် တံခါးနှင့် ပြတင်းပေါက်ကို ဖွင့်ထားပါ။"
+    },
+    {
+      "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\"><rect width=\"320\" height=\"200\" fill=\"#eef6fb\"/><path d=\"M0 172 Q80 162 160 172 T320 172 V200 H0z\" fill=\"#cfe8c9\"/><rect x=\"96\" y=\"124\" width=\"128\" height=\"48\" fill=\"#c98a5a\" stroke=\"#3b3a36\" stroke-width=\"4\"/><path d=\"M96 148 h128 M128 124 v24 M160 148 v24 M192 124 v24\" stroke=\"#3b3a36\" stroke-width=\"3\"/><g transform=\"translate(140 124) scale(0.9)\"><path d=\"M0 0 q-22 -30 4 -52 q-2 20 14 14 q-6 20 14 38z\" fill=\"#f08a24\"/><path d=\"M8 0 q-10 -14 4 -26 q0 10 8 8 q-2 10 6 18z\" fill=\"#ffd45a\"/></g><ellipse cx=\"90\" cy=\"174\" rx=\"14\" ry=\"10\" fill=\"#8d8f94\" stroke=\"#3b3a36\" stroke-width=\"3\"/><ellipse cx=\"232\" cy=\"174\" rx=\"14\" ry=\"10\" fill=\"#8d8f94\" stroke=\"#3b3a36\" stroke-width=\"3\"/><path d=\"M40 150 L40 110\" stroke=\"#2e9e4f\" stroke-width=\"6\" stroke-linecap=\"round\"/><path d=\"M33.3 122.3 L40 110 L46.7 122.3\" fill=\"none\" stroke=\"#2e9e4f\" stroke-width=\"6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>",
+      "en": "Raise the fire off the floor, or ring it with bricks or stones, so that children cannot fall into it.",
+      "my": "ကလေးများ မီးထဲ မကျစေရန် မီးဖိုကို ကြမ်းပြင်ထက် မြှင့်ထားပါ၊ သို့မဟုတ် အုတ် သို့မဟုတ် ကျောက်တုံးများဖြင့် ဝိုင်းထားပါ။"
+    },
+    {
+      "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\"><rect width=\"320\" height=\"200\" fill=\"#eef6fb\"/><path d=\"M0 172 Q80 162 160 172 T320 172 V200 H0z\" fill=\"#cfe8c9\"/><g transform=\"translate(60 170) scale(0.9)\"><path d=\"M0 0 q-22 -30 4 -52 q-2 20 14 14 q-6 20 14 38z\" fill=\"#f08a24\"/><path d=\"M8 0 q-10 -14 4 -26 q0 10 8 8 q-2 10 6 18z\" fill=\"#ffd45a\"/></g><rect x=\"46\" y=\"92\" width=\"80\" height=\"40\" rx=\"6\" fill=\"#b9bec6\" stroke=\"#3b3a36\" stroke-width=\"4\"/><path d=\"M150 40 V172\" stroke=\"#d23b2f\" stroke-width=\"5\" stroke-dasharray=\"12 9\"/><g transform=\"translate(232 110) scale(0.66)\"><path d=\"M0 14 V56 M0 24 L-16 44 M0 24 L16 44 M0 56 L-12 88 M0 56 L12 88\" fill=\"none\" stroke=\"#c9785a\" stroke-width=\"8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle r=\"13\" fill=\"#f2c79b\" stroke=\"#3b3a36\" stroke-width=\"3\"/></g><path d=\"M176 150 L206 150\" stroke=\"#d23b2f\" stroke-width=\"6\" stroke-linecap=\"round\"/><path d=\"M193.7 143.3 L206 150 L193.7 156.7\" fill=\"none\" stroke=\"#d23b2f\" stroke-width=\"6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>",
+      "en": "Keep small children away from the fire. Tie back loose clothing and long hair when you cook.",
+      "my": "ကလေးငယ်များကို မီးနှင့် ဝေးဝေးထားပါ။ ချက်ပြုတ်ချိန်တွင် ပွသော အဝတ်နှင့် ဆံပင်ရှည်ကို စည်းထားပါ။"
+    },
+    {
+      "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\"><rect width=\"320\" height=\"200\" fill=\"#eef6fb\"/><rect x=\"60\" y=\"120\" width=\"200\" height=\"16\" fill=\"#7a4e2b\"/><rect x=\"120\" y=\"80\" width=\"80\" height=\"40\" rx=\"6\" fill=\"#b9bec6\" stroke=\"#3b3a36\" stroke-width=\"4\"/><path d=\"M120 96 h-34\" stroke=\"#3b3a36\" stroke-width=\"9\" stroke-linecap=\"round\"/><path d=\"M60 60 L96 86\" stroke=\"#2e9e4f\" stroke-width=\"6\" stroke-linecap=\"round\"/><path d=\"M90.0 73.4 L96 86 L82.1 84.2\" fill=\"none\" stroke=\"#2e9e4f\" stroke-width=\"6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g transform=\"translate(276 96) scale(0.5)\"><path d=\"M0 14 V56 M0 24 L-16 44 M0 24 L16 44 M0 56 L-12 88 M0 56 L12 88\" fill=\"none\" stroke=\"#c9785a\" stroke-width=\"8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle r=\"13\" fill=\"#f2c79b\" stroke=\"#3b3a36\" stroke-width=\"3\"/></g><circle cx=\"276\" cy=\"110\" r=\"30\" fill=\"none\" stroke=\"#d23b2f\" stroke-width=\"6\"/><path d=\"M255.0 89.0 L297.0 131.0\" stroke=\"#d23b2f\" stroke-width=\"6\" stroke-linecap=\"round\"/></svg>",
+      "en": "Turn pot handles away from the edge. Never leave fire, hot oil or boiling water alone when children are near.",
+      "my": "အိုးလက်ကိုင်များကို အစွန်းဘက်မှ လှည့်ထားပါ။ ကလေးများ အနီးရှိချိန်တွင် မီး၊ ဆီပူ သို့မဟုတ် ရေနွေးပွက်ကို ဘယ်တော့မှ ပစ်မထားပါနှင့်။"
+    },
+    {
+      "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\"><rect width=\"320\" height=\"200\" fill=\"#eef6fb\"/><path d=\"M0 172 Q80 162 160 172 T320 172 V200 H0z\" fill=\"#cfe8c9\"/><path d=\"M200 96 H264 L256 160 H208z\" fill=\"#f4f1ea\" stroke=\"#3b3a36\" stroke-width=\"4\" stroke-linejoin=\"round\"/><path d=\"M204 120 H260 L256 158 H208z\" fill=\"#8fd0f5\"/><ellipse cx=\"96\" cy=\"160\" rx=\"44\" ry=\"12\" fill=\"#55504a\"/><path d=\"M80 140 q-6 -14 4 -24 M104 138 q-6 -14 4 -24\" fill=\"none\" stroke=\"#9aa7b4\" stroke-width=\"5\" stroke-linecap=\"round\"/><circle cx=\"150\" cy=\"60\" r=\"18\" fill=\"#2e9e4f\"/><path d=\"M141.9 60 l5.76 6.4799999999999995 l10.799999999999999 -12.6\" fill=\"none\" stroke=\"#fff\" stroke-width=\"5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>",
+      "en": "Keep a bucket of water or sand close by. Put the fire out completely before you sleep or leave the house.",
+      "my": "ရေပုံး သို့မဟုတ် သဲပုံးကို အနီးတွင် ထားပါ။ မအိပ်မီ သို့မဟုတ် အိမ်မှ မထွက်မီ မီးကို လုံးဝ ငြိမ်းသတ်ပါ။"
+    }
+  ],
+  "why": [
+    {
+      "en": "Open cooking fires can set loose clothing alight. Women and small children are burned most often.",
+      "my": "ဟင်းလင်းပွင့် မီးဖိုများသည် ပွသော အဝတ်ကို မီးစွဲစေနိုင်ပါသည်။ အမျိုးသမီးများနှင့် ကလေးငယ်များသည် မီးလောင်ဒဏ်ရာ အများဆုံး ရတတ်ပါသည်။"
+    },
+    {
+      "en": "Cooking smoke in a closed room harms the lungs, especially for children.",
+      "my": "ပိတ်ထားသော အခန်းထဲရှိ ချက်ပြုတ်မီးခိုးသည် အဆုတ်ကို ထိခိုက်စေပါသည်။ အထူးသဖြင့် ကလေးများအတွက် ဖြစ်ပါသည်။"
+    },
+    {
+      "en": "Most burns to small children happen in the cooking area.",
+      "my": "ကလေးငယ်များ၏ အပူလောင်ဒဏ်ရာ အများစုသည် ချက်ပြုတ်သည့်နေရာတွင် ဖြစ်ပါသည်။"
+    }
+  ],
+  "tips": [
+    {
+      "en": "Store matches, lighters and fuel where children cannot reach them.",
+      "my": "မီးခြစ်၊ ဓာတ်မီးခြစ်နှင့် လောင်စာများကို ကလေးများ လက်လှမ်းမမီသော နေရာတွင် သိမ်းပါ။"
+    },
+    {
+      "en": "If oil in a pan catches fire, do not pour water on it. Cover it with a lid or a wet cloth.",
+      "my": "ဒယ်အိုးထဲရှိ ဆီ မီးစွဲလျှင် ရေမလောင်းပါနှင့်။ အဖုံး သို့မဟုတ် အဝတ်စိုဖြင့် အုပ်ပါ။"
+    },
+    {
+      "en": "If clothes catch fire: stop, lie down, and roll on the ground.",
+      "my": "အဝတ်ကို မီးစွဲလျှင် ရပ်ပါ၊ မြေပေါ်လှဲပါ၊ လှိမ့်ပါ။"
+    },
+    {
+      "en": "For a burn, cool it with running water for 20 minutes. See the burns lesson.",
+      "my": "အပူလောင်လျှင် စီးနေသောရေဖြင့် မိနစ် ၂၀ အအေးခံပါ။ အပူလောင်ခြင်း သင်ခန်းစာကို ကြည့်ပါ။"
+    }
+  ],
+  "sources": [
+    {
+      "name": "WHO: Burns, fact sheet",
+      "url": "https://www.who.int/en/news-room/fact-sheets/detail/burns"
+    },
+    {
+      "name": "WHO: Household air pollution, fact sheet",
+      "url": "https://www.who.int/en/news-room/fact-sheets/detail/household-air-pollution-and-health"
+    },
+    {
+      "name": "UNICEF: Burns, scalds and fire-related injuries",
+      "url": "https://www.unicef.org/parenting/safety/burns-scalds-fire-safety-tips"
+    }
+  ]
+}

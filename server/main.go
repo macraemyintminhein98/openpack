@@ -24,7 +24,7 @@ import (
 	"time"
 )
 
-const version = "0.4.0"
+const version = "0.5.0"
 
 func main() {
 	dirFlag := flag.String("dir", "", "pack folder (default: ./pack next to this program, or the current folder)")

@@ -1,0 +1,74 @@
+{
+  "format": "openpack-lesson/1",
+  "reviewed": false,
+  "steps": [
+    {
+      "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\"><rect width=\"320\" height=\"200\" fill=\"#eef6fb\"/><path d=\"M0 172 Q80 162 160 172 T320 172 V200 H0z\" fill=\"#cfe8c9\"/><rect x=\"206\" y=\"50\" width=\"70\" height=\"122\" fill=\"#c9a26b\" stroke=\"#3b3a36\" stroke-width=\"4\"/><circle cx=\"220\" cy=\"114\" r=\"5\" fill=\"#3b3a36\"/><g transform=\"translate(70 70) scale(1)\"><path d=\"M18 8 q22 -30 44 0\" fill=\"none\" stroke=\"#3b3a36\" stroke-width=\"6\"/><rect x=\"0\" y=\"8\" width=\"80\" height=\"92\" rx=\"16\" fill=\"#a8480f\" stroke=\"#3b3a36\" stroke-width=\"4\"/><rect x=\"14\" y=\"48\" width=\"52\" height=\"34\" rx=\"6\" fill=\"#d98c4a\" stroke=\"#3b3a36\" stroke-width=\"3\"/></g><circle cx=\"60\" cy=\"46\" r=\"18\" fill=\"#2e9e4f\"/><path d=\"M51.9 46 l5.76 6.4799999999999995 l10.799999999999999 -12.6\" fill=\"none\" stroke=\"#fff\" stroke-width=\"5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>",
+      "en": "Choose a bag that one person can carry. Keep it near the door, where everyone can find it.",
+      "my": "လူတစ်ယောက် သယ်နိုင်သော အိတ်ကို ရွေးပါ။ လူတိုင်း ရှာတွေ့နိုင်ရန် တံခါးအနီးတွင် ထားပါ။"
+    },
+    {
+      "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\"><rect width=\"320\" height=\"200\" fill=\"#eef6fb\"/><path d=\"M0 172 Q80 162 160 172 T320 172 V200 H0z\" fill=\"#cfe8c9\"/><rect x=\"47\" y=\"96\" width=\"10\" height=\"10\" fill=\"#3b83b5\"/><rect x=\"40\" y=\"106\" width=\"24\" height=\"52\" rx=\"6\" fill=\"#8fd0f5\" stroke=\"#3b3a36\" stroke-width=\"3\"/><rect x=\"79\" y=\"96\" width=\"10\" height=\"10\" fill=\"#3b83b5\"/><rect x=\"72\" y=\"106\" width=\"24\" height=\"52\" rx=\"6\" fill=\"#8fd0f5\" stroke=\"#3b3a36\" stroke-width=\"3\"/><rect x=\"111\" y=\"96\" width=\"10\" height=\"10\" fill=\"#3b83b5\"/><rect x=\"104\" y=\"106\" width=\"24\" height=\"52\" rx=\"6\" fill=\"#8fd0f5\" stroke=\"#3b3a36\" stroke-width=\"3\"/><rect x=\"150\" y=\"112\" width=\"40\" height=\"48\" rx=\"6\" fill=\"#b9bec6\" stroke=\"#3b3a36\" stroke-width=\"4\"/><path d=\"M196 162 q-4 -50 26 -52 q30 2 26 52z\" fill=\"#f4f1ea\" stroke=\"#3b3a36\" stroke-width=\"4\" stroke-linejoin=\"round\"/><circle cx=\"270\" cy=\"56\" r=\"28\" fill=\"#fff\" stroke=\"#3b3a36\" stroke-width=\"4\"/><path d=\"M270 31 v5 M270 76 v5 M245 56 h5 M290 56 h5\" stroke=\"#3b3a36\" stroke-width=\"3\"/><text x=\"270\" y=\"66\" font-size=\"32\" font-weight=\"700\" text-anchor=\"middle\" font-family=\"sans-serif\" fill=\"#a8480f\">3</text></svg>",
+      "en": "Pack water and food that does not spoil: enough for 3 days.",
+      "my": "ရေနှင့် မပုပ်မသိုးနိုင်သော အစားအစာကို ၃ ရက်စာ ထည့်ပါ။"
+    },
+    {
+      "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\"><rect width=\"320\" height=\"200\" fill=\"#eef6fb\"/><path d=\"M0 172 Q80 162 160 172 T320 172 V200 H0z\" fill=\"#cfe8c9\"/><rect x=\"40\" y=\"96\" width=\"90\" height=\"66\" rx=\"8\" fill=\"#fff\" stroke=\"#3b3a36\" stroke-width=\"4\"/><path d=\"M85 110 v38 M66 129 h38\" stroke=\"#2e9e4f\" stroke-width=\"10\"/><rect x=\"156\" y=\"124\" width=\"56\" height=\"34\" rx=\"12\" fill=\"#f6d9e0\" stroke=\"#3b3a36\" stroke-width=\"4\"/><rect x=\"234\" y=\"100\" width=\"46\" height=\"60\" rx=\"5\" fill=\"#fff\" stroke=\"#3b3a36\" stroke-width=\"4\"/><path d=\"M242 116 h30 M242 130 h30 M242 144 h18\" stroke=\"#3b3a36\" stroke-width=\"3\"/></svg>",
+      "en": "Add the medicines your family needs, a first aid kit, soap and ORS packets.",
+      "my": "မိသားစု လိုအပ်သော ဆေးဝါးများ၊ ရှေးဦးသူနာပြုသေတ္တာ၊ ဆပ်ပြာနှင့် ဓာတ်ဆားထုပ်များ ထည့်ပါ။"
+    },
+    {
+      "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\"><rect width=\"320\" height=\"200\" fill=\"#eef6fb\"/><path d=\"M0 172 Q80 162 160 172 T320 172 V200 H0z\" fill=\"#cfe8c9\"/><rect x=\"30\" y=\"78\" width=\"46\" height=\"18\" rx=\"4\" fill=\"#3b3a36\"/><path d=\"M76 74 h14 v26 h-14z\" fill=\"#b9bec6\" stroke=\"#3b3a36\" stroke-width=\"3\"/><path d=\"M96 76 l14 -8 M98 87 h16 M96 98 l14 8\" stroke=\"#e3b23c\" stroke-width=\"4\" stroke-linecap=\"round\"/><rect x=\"150\" y=\"66\" width=\"74\" height=\"46\" rx=\"6\" fill=\"#6f7a86\" stroke=\"#3b3a36\" stroke-width=\"4\"/><circle cx=\"172\" cy=\"89\" r=\"12\" fill=\"#cfd6dd\" stroke=\"#3b3a36\" stroke-width=\"3\"/><path d=\"M194 82 h20 M194 96 h20\" stroke=\"#cfd6dd\" stroke-width=\"4\"/><path d=\"M212 66 l14 -28\" stroke=\"#3b3a36\" stroke-width=\"4\" stroke-linecap=\"round\"/><rect x=\"40\" y=\"130\" width=\"22\" height=\"34\" rx=\"4\" fill=\"#e3b23c\" stroke=\"#3b3a36\" stroke-width=\"3\"/><rect x=\"70\" y=\"130\" width=\"22\" height=\"34\" rx=\"4\" fill=\"#e3b23c\" stroke=\"#3b3a36\" stroke-width=\"3\"/><path d=\"M196 150 h40 q16 0 16 -14 t-16 -14 h-24 v14\" fill=\"none\" stroke=\"#a8480f\" stroke-width=\"10\" stroke-linejoin=\"round\"/><circle cx=\"268\" cy=\"150\" r=\"10\" fill=\"none\" stroke=\"#3b3a36\" stroke-width=\"4\"/></svg>",
+      "en": "Add a torch, a small radio, spare batteries, a phone charger or power bank, and a whistle.",
+      "my": "ဓာတ်မီး၊ ရေဒီယိုအသေး၊ အပိုဓာတ်ခဲ၊ ဖုန်းအားသွင်းကြိုး သို့မဟုတ် ပါဝါဘဏ်နှင့် ခရာ ထည့်ပါ။"
+    },
+    {
+      "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\"><rect width=\"320\" height=\"200\" fill=\"#eef6fb\"/><path d=\"M0 172 Q80 162 160 172 T320 172 V200 H0z\" fill=\"#cfe8c9\"/><rect x=\"50\" y=\"60\" width=\"130\" height=\"104\" rx=\"8\" fill=\"#dff3ff\" fill-opacity=\"0.8\" stroke=\"#3b83b5\" stroke-width=\"4\" stroke-dasharray=\"8 6\"/><rect x=\"68\" y=\"76\" width=\"70\" height=\"72\" rx=\"4\" fill=\"#fff\" stroke=\"#3b3a36\" stroke-width=\"3\"/><path d=\"M78 92 h50 M78 106 h50 M78 120 h34\" stroke=\"#3b3a36\" stroke-width=\"3\"/><rect x=\"204\" y=\"96\" width=\"76\" height=\"40\" rx=\"5\" fill=\"#b7dcb0\" stroke=\"#3b3a36\" stroke-width=\"4\"/><circle cx=\"242\" cy=\"116\" r=\"11\" fill=\"none\" stroke=\"#3b3a36\" stroke-width=\"3\"/><circle cx=\"222\" cy=\"152\" r=\"12\" fill=\"#e3b23c\" stroke=\"#3b3a36\" stroke-width=\"3\"/><circle cx=\"250\" cy=\"156\" r=\"12\" fill=\"#e3b23c\" stroke=\"#3b3a36\" stroke-width=\"3\"/></svg>",
+      "en": "Add cash and copies of important papers (identity cards, land papers, phone numbers) in a sealed plastic bag.",
+      "my": "ငွေသားနှင့် အရေးကြီး စာရွက်စာတမ်းများ၏ မိတ္တူ (မှတ်ပုံတင်၊ မြေစာရွက်၊ ဖုန်းနံပါတ်များ) ကို လုံအောင်ပိတ်ထားသော ပလတ်စတစ်အိတ်ထဲ ထည့်ပါ။"
+    },
+    {
+      "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\"><rect width=\"320\" height=\"200\" fill=\"#eef6fb\"/><path d=\"M0 172 Q80 162 160 172 T320 172 V200 H0z\" fill=\"#cfe8c9\"/><rect x=\"40\" y=\"56\" width=\"110\" height=\"104\" rx=\"8\" fill=\"#fff\" stroke=\"#3b3a36\" stroke-width=\"4\"/><rect x=\"40\" y=\"56\" width=\"110\" height=\"26\" rx=\"8\" fill=\"#a8480f\" stroke=\"#3b3a36\" stroke-width=\"4\"/><path d=\"M62 104 h66 M62 124 h66 M62 144 h40\" stroke=\"#c9c5ba\" stroke-width=\"5\"/><path d=\"M190 80 a22 22 0 0 1 42 -6 a18 18 0 0 1 26 26 h-72 a14 14 0 0 1 4 -20z\" fill=\"#9aa7b4\" stroke=\"#3b3a36\" stroke-width=\"4\"/><path d=\"M204 110 q-6 9 0 14 q6 -5 0 -14z\" fill=\"#3b83b5\"/><path d=\"M220 118 q-6 9 0 14 q6 -5 0 -14z\" fill=\"#3b83b5\"/><path d=\"M236 110 q-6 9 0 14 q6 -5 0 -14z\" fill=\"#3b83b5\"/><path d=\"M252 118 q-6 9 0 14 q6 -5 0 -14z\" fill=\"#3b83b5\"/><circle cx=\"250\" cy=\"150\" r=\"18\" fill=\"#2e9e4f\"/><path d=\"M241.9 150 l5.76 6.4799999999999995 l10.799999999999999 -12.6\" fill=\"none\" stroke=\"#fff\" stroke-width=\"5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>",
+      "en": "Check the bag at the start of every rainy season. Replace old food, water, medicines and batteries.",
+      "my": "မိုးရာသီ အစတိုင်း အိတ်ကို စစ်ဆေးပါ။ ဟောင်းသွားသော အစားအစာ၊ ရေ၊ ဆေးဝါးနှင့် ဓာတ်ခဲများကို လဲပါ။"
+    }
+  ],
+  "why": [
+    {
+      "en": "In a disaster, shops and banks may be closed and help may take days to arrive.",
+      "my": "ဘေးအန္တရာယ် ကျရောက်ချိန်တွင် ဆိုင်များနှင့် ဘဏ်များ ပိတ်ထားနိုင်ပြီး အကူအညီ ရောက်ရန် ရက်အတန်ကြာ ကြာနိုင်ပါသည်။"
+    },
+    {
+      "en": "If you must leave quickly, there is no time to search for things.",
+      "my": "အမြန် ထွက်ခွာရလျှင် ပစ္စည်းများ ရှာဖွေရန် အချိန်မရှိပါ။"
+    },
+    {
+      "en": "Papers help you prove who you are and get help afterwards.",
+      "my": "စာရွက်စာတမ်းများသည် နောက်ပိုင်းတွင် မိမိမည်သူဖြစ်ကြောင်း သက်သေပြရန်နှင့် အကူအညီရယူရန် အထောက်အကူ ဖြစ်ပါသည်။"
+    }
+  ],
+  "tips": [
+    {
+      "en": "Add what babies, old people and sick family members need.",
+      "my": "ကလေးငယ်များ၊ သက်ကြီးရွယ်အိုများနှင့် နာမကျန်းသော မိသားစုဝင်များ လိုအပ်သည့် ပစ္စည်းများကို ထည့်ပါ။"
+    },
+    {
+      "en": "A change of clothes, a blanket and a mosquito net are useful.",
+      "my": "အပိုအဝတ်၊ စောင်နှင့် ခြင်ထောင်တို့သည် အသုံးဝင်ပါသည်။"
+    },
+    {
+      "en": "Make sure everyone in the house knows where the bag is.",
+      "my": "အိတ် ဘယ်မှာရှိသည်ကို အိမ်သားတိုင်း သိအောင် ပြောထားပါ။"
+    }
+  ],
+  "sources": [
+    {
+      "name": "UNICEF Myanmar: How to prepare for a cyclone",
+      "url": "https://www.unicef.org/myanmar/ParentingHub/how-prepare-cyclone"
+    },
+    {
+      "name": "IFRC: Public awareness and public education for disaster risk reduction, key messages",
+      "url": "https://www.ifrc.org/sites/default/files/PAPE-2.0-English.pdf"
+    }
+  ]
+}

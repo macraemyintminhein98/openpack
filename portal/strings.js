@@ -92,6 +92,22 @@ window.OPENPACK_STRINGS = {
     share_addr: 'လိပ်စာ',
     share_file: 'ဤစာမျက်နှာကို ဖိုလ်ဒါမှ တိုက်ရိုက်ဖွင့်ထားပါသည်။ လူများစွာကို မျှဝေလိုလျှင် START ဖိုင်ဖြင့် စတင်ပါ။',
 
+    // Lessons (step-by-step picture guides)
+    type_lesson: 'ပုံပြ သင်ခန်းစာ',
+    act_learn: 'လေ့လာရန်',
+    l_steps: 'လုပ်နည်း',
+    l_why: 'အကြောင်းရင်း',
+    l_tips: 'အကြံပြုချက်',
+    l_step_n: 'အဆင့် {n} / {t}',
+    l_next: 'ရှေ့သို့',
+    l_prev: 'ယခင်',
+    l_again: 'အစမှ ပြန်ကြည့်ရန်',
+    l_done: 'သင်ခန်းစာ ပြီးပါပြီ။',
+    l_sources: 'ကိုးကားချက်များ',
+    l_unreviewed: 'ဤသင်ခန်းစာကို ကျွမ်းကျင်သူက မစစ်ဆေးရသေးပါ။',
+    l_loading: 'ဖွင့်နေပါသည်…',
+    l_error: 'သင်ခန်းစာကို ဖွင့်၍ မရပါ။ ဖိုလ်ဒါတစ်ခုလုံးကို မူရင်းမှ ပြန်ကူးပါ။',
+
     // Messages
     err_manifest: 'ဖိုင်များ မတွေ့ပါ။ ဖိုလ်ဒါတစ်ခုလုံးကို မူရင်းမှ ပြန်ကူးပါ။',
     footer: 'အကြောင်းအရာတစ်ခုချင်းစီကို ၎င်း၏ လိုင်စင်စည်းကမ်းအတိုင်း မျှဝေထားပါသည်။'
@@ -173,6 +189,21 @@ window.OPENPACK_STRINGS = {
     share_addr: 'Address',
     share_file: 'This page was opened directly from a folder. To share with many people, start it with the START file.',
 
+    type_lesson: 'Picture lesson',
+    act_learn: 'Start lesson',
+    l_steps: 'Steps',
+    l_why: 'Why',
+    l_tips: 'Tips',
+    l_step_n: 'Step {n} of {t}',
+    l_next: 'Next',
+    l_prev: 'Previous',
+    l_again: 'Start again',
+    l_done: 'You have finished this lesson.',
+    l_sources: 'Sources',
+    l_unreviewed: 'This lesson has not yet been checked by an expert.',
+    l_loading: 'Loading…',
+    l_error: 'This lesson could not be opened. Copy the whole folder again from the original.',
+
     err_manifest: 'Files not found. Copy the whole folder again from the original.',
     footer: 'Each item is shared under the licence shown in its details.'
   }
@@ -184,6 +215,7 @@ window.OPENPACK_LANGS = { my: 'မြန်မာ', en: 'English' };
 /* Names and icons for the type tiles on the home screen.
    A pack can add or rename its own in pack.json ("categories"). */
 window.OPENPACK_CATEGORIES = {
+  survival:  { my: 'အရေးပေါ် လမ်းညွှန်',       en: 'Emergency skills',   icon: 'shield' },
   about:     { my: 'ဤစာကြည့်တိုက် အကြောင်း', en: 'About this library', icon: 'info' },
   learn:     { my: 'သင်ယူရန်',               en: 'Learn',              icon: 'learn' },
   reference: { my: 'ဗဟုသုတ',                 en: 'Knowledge',          icon: 'book' },

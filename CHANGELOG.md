@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.5.0
+- Picture lessons (`kind: "lesson"`): step-by-step guides with drawings, Why and Tips tabs, sources and a review flag.
+- Nine standard lessons in `lessons/`, added to every pack automatically (opt out with `"lessons": false`):
+  water, heat, bleeding, burns, snake bite, flood and cyclone, emergency bag, signalling, cooking fires.
+  All Burmese + English, all marked not yet expert-reviewed.
+- New "Emergency skills" category.
+
 ## 0.4.0
 - Search understands Zawgyi typing, ignores spaces in Burmese, falls back to syllables, ranks title matches first.
 - `scripts/weekly-release.sh`: one-command build, sign, verify, bundle, change note, checksum, pruning.

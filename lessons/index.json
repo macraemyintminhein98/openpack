@@ -1,0 +1,86 @@
+{
+  "category": "survival",
+  "lessons": [
+    {
+      "id": "water-safe",
+      "title": "Make water safe to drink",
+      "title_my": "ရေကို သောက်ရန် ဘေးကင်းအောင် ပြုလုပ်နည်း",
+      "description": "Five picture steps: settle, strain, boil, cool, store.",
+      "description_my": "ပုံပြ အဆင့် ၅ ဆင့်။ အနည်ထိုင်၊ စစ်၊ ကျို၊ အအေးခံ၊ သိမ်း။",
+      "license": "CC-BY-4.0",
+      "attribution": "OpenPack contributors"
+    },
+    {
+      "id": "heat-illness",
+      "title": "Too hot: heat exhaustion and heatstroke",
+      "title_my": "အပူဒဏ်ကြောင့် နေမကောင်းဖြစ်လျှင်",
+      "description": "Cool the person down and know when to go to hospital.",
+      "description_my": "လူနာကို အအေးခံပေးနည်းနှင့် ဆေးရုံသွားရမည့်အချိန်။",
+      "license": "CC-BY-4.0",
+      "attribution": "OpenPack contributors"
+    },
+    {
+      "id": "stop-bleeding",
+      "title": "Stop heavy bleeding",
+      "title_my": "သွေးအများအပြား ထွက်လျှင်",
+      "description": "Press on the wound and get help.",
+      "description_my": "ဒဏ်ရာကို ဖိထားပြီး အကူအညီ ရယူပါ။",
+      "license": "CC-BY-4.0",
+      "attribution": "OpenPack contributors"
+    },
+    {
+      "id": "burns",
+      "title": "Burns and scalds",
+      "title_my": "မီးလောင်၊ အပူလောင်လျှင်",
+      "description": "Cool with running water for 20 minutes, then cover.",
+      "description_my": "စီးနေသောရေဖြင့် မိနစ် ၂၀ အအေးခံပြီး ဖုံးထားပါ။",
+      "license": "CC-BY-4.0",
+      "attribution": "OpenPack contributors"
+    },
+    {
+      "id": "snake-bite",
+      "title": "Snake bite",
+      "title_my": "မြွေကိုက်ခံရလျှင်",
+      "description": "Keep still, splint the limb, go to hospital fast.",
+      "description_my": "မလှုပ်ဘဲနေပါ၊ ကျပ်စည်းပါ၊ ဆေးရုံသို့ အမြန်သွားပါ။",
+      "license": "CC-BY-4.0",
+      "attribution": "OpenPack contributors"
+    },
+    {
+      "id": "flood-cyclone",
+      "title": "Before a flood or cyclone",
+      "title_my": "ရေကြီးခြင်း၊ မုန်တိုင်း မတိုင်မီ ပြင်ဆင်ရန်",
+      "description": "Know your safe place, pack, and leave early.",
+      "description_my": "ဘေးကင်းရာကို သိထားပါ၊ အိတ်ပြင်ပါ၊ စောစောထွက်ပါ။",
+      "license": "CC-BY-4.0",
+      "attribution": "OpenPack contributors"
+    },
+    {
+      "id": "emergency-bag",
+      "title": "Pack an emergency bag",
+      "title_my": "အရေးပေါ်အိတ် ပြင်ဆင်ထားရန်",
+      "description": "What to keep ready for three days away from home.",
+      "description_my": "အိမ်နှင့်ဝေးရာတွင် သုံးရက်စာ အသင့်ထားရမည့် ပစ္စည်းများ။",
+      "license": "CC-BY-4.0",
+      "attribution": "OpenPack contributors"
+    },
+    {
+      "id": "signal-for-help",
+      "title": "Signal for help",
+      "title_my": "အကူအညီရရန် အချက်ပြနည်း",
+      "description": "Be seen and heard: whistle, mirror, bright cloth, torch.",
+      "description_my": "မြင်အောင် ကြားအောင် လုပ်ပါ။ ခရာ၊ မှန်၊ အဝတ်တောက်၊ ဓာတ်မီး။",
+      "license": "CC-BY-4.0",
+      "attribution": "OpenPack contributors"
+    },
+    {
+      "id": "cooking-fire",
+      "title": "Safe cooking fires",
+      "title_my": "ချက်ပြုတ်မီး ဘေးကင်းစေရန်",
+      "description": "Prevent burns and smoke harm at home.",
+      "description_my": "အိမ်တွင် အပူလောင်ခြင်းနှင့် မီးခိုးအန္တရာယ်ကို ကာကွယ်ပါ။",
+      "license": "CC-BY-4.0",
+      "attribution": "OpenPack contributors"
+    }
+  ]
+}

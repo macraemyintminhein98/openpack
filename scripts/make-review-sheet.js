@@ -23,6 +23,20 @@ for (const k of Object.keys(P.strings.en)) rows.push([`strings.${k}`, where(k), 
 for (const [id, c] of Object.entries(P.categories)) rows.push([`category.${id}`, 'Home screen tile', c.en, c.my, '', '', '']);
 
 const MY = /[က-႟]/;
+// Lessons: titles, then every step, reason and tip.
+const lessonsDir = path.join(root, 'lessons');
+const lessonIndex = JSON.parse(fs.readFileSync(path.join(lessonsDir, 'index.json'), 'utf8'));
+for (const meta of lessonIndex.lessons) {
+  const l = JSON.parse(fs.readFileSync(path.join(lessonsDir, `${meta.id}.lesson.json`), 'utf8'));
+  const id = `lesson ${meta.id}`;
+  rows.push([`${id}: title`, 'Lesson title', meta.title, meta.title_my, '', '', '']);
+  rows.push([`${id}: description`, 'Lesson card', meta.description, meta.description_my, '', '', '']);
+  if (l.warning) rows.push([`${id}: warning`, 'Lesson warning box', l.warning.en, l.warning.my, '', '', '']);
+  l.steps.forEach((s, n) => rows.push([`${id}: step ${n + 1}`, 'Lesson step', s.en, s.my, '', '', '']));
+  (l.why || []).forEach((s, n) => rows.push([`${id}: why ${n + 1}`, 'Lesson "Why" tab', s.en, s.my, '', '', '']));
+  (l.tips || []).forEach((s, n) => rows.push([`${id}: tip ${n + 1}`, 'Lesson "Tips" tab', s.en, s.my, '', '', '']));
+}
+
 const extra = [['bundle/START-HERE.txt', 'Instructions file'], ['README.my.md', 'Burmese README'], ['portal/index.html', 'Shown when JavaScript is off']];
 for (const [file, label] of extra) {
   const lines = fs.readFileSync(path.join(root, file), 'utf8').split(/\r?\n/);

@@ -4,7 +4,7 @@ const assert = require('node:assert');
 const fs = require('node:fs');
 const os = require('node:os');
 const path = require('node:path');
-const { build, verifyPack, validateConfig } = require('../lib/build');
+const { build, verifyPack, validateConfig, standardLessons } = require('../lib/build');
 const { keygen } = require('../lib/sign');
 
 const EXAMPLE = path.resolve(__dirname, '..', 'packs', 'example');
@@ -31,7 +31,7 @@ test('build, sign and verify the example pack', async () => {
   const { priv, pub } = keygen(path.join(dir, 'keys'));
   const { outDir, manifest, signed } = await build(EXAMPLE, { key: priv, out: path.join(dir, 'dist'), version: 'test.1' });
   assert.ok(signed);
-  assert.strictEqual(manifest.items.length, 3);
+  assert.strictEqual(manifest.items.length, 3 + standardLessons().length);
   assert.ok(fs.existsSync(path.join(outDir, 'index.html')), 'portal copied into pack');
   const r = verifyPack(outDir, pub);
   assert.ok(r.ok, r.problems.join('; '));

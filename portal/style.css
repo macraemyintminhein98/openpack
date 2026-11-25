@@ -148,6 +148,46 @@ ol.steps li { margin: 6px 0; }
 .filenote { background: #fff3cd; border-radius: 12px; padding: 12px 14px; }
 #foot { text-align: center; color: #5f5a4e; font-size: .8rem; padding-top: 6px; padding-bottom: 28px; }
 
+/* Lessons */
+.lwarn { background: #fff3cd; border-left: 6px solid #c9820a; border-radius: 10px; padding: 10px 14px; margin: 0 0 12px; font-size: .95rem; }
+.ltabs { display: flex; margin: 0 -3px 10px; }
+.ltab {
+  flex: 1 1 0; margin: 3px; min-height: 52px; padding: 6px 4px; display: flex; flex-direction: column; align-items: center; justify-content: center;
+  font: inherit; font-size: .85rem; line-height: 1.4; background: #fff; color: #1d1b16; border: 2px solid #d9d3c2; border-radius: 12px; cursor: pointer;
+  white-space: nowrap;
+}
+.ltab[aria-pressed=true] { border-color: #a8480f; background: #fbe9dc; font-weight: 700; }
+.lstep { background: #fff; border: 1px solid #d9d3c2; border-radius: 14px; padding: 12px; }
+.lpic { background: #eef6fb; border-radius: 10px; overflow: hidden; line-height: 0; }
+.lpic svg { display: block; width: 100%; height: auto; max-height: 46vh; }
+.lcount { margin: 10px 0 0; text-align: center; font-weight: 700; color: #a8480f; }
+.ldots { text-align: center; line-height: 1; margin: 4px 0 6px; }
+.ldots i { display: inline-block; width: 10px; height: 10px; margin: 0 4px; border-radius: 50%; background: #d9d3c2; }
+.ldots i.on { background: #a8480f; }
+.ltext { font-size: 1.12rem; line-height: 1.8; margin: 4px 2px 12px; }
+.ldone { background: #e3f1e3; color: #17541f; border-radius: 10px; padding: 8px 12px; margin: 0 0 12px; font-weight: 700; }
+.ldone .ic { margin-right: .4rem; }
+.lnav { display: flex; margin: 0 -4px; }
+.lbtn {
+  flex: 1 1 0; margin: 4px; min-height: 56px; padding: 6px 8px; display: flex; align-items: center; justify-content: center;
+  font: inherit; font-weight: 700; font-size: 1.02rem; background: #fff; color: #1d1b16; border: 2px solid #d9d3c2; border-radius: 12px; cursor: pointer;
+  white-space: nowrap;
+}
+html.sz3 .lnav { display: block; }
+html.sz3 .lbtn { width: calc(100% - 8px); }
+.lbtn.main { background: #a8480f; border-color: #a8480f; color: #fff; }
+.lbtn[disabled] { opacity: .35; cursor: default; }
+.lbtn .ic { margin: 0 .25rem; }
+.lpoint { background: #fff; border: 1px solid #d9d3c2; border-radius: 12px; padding: 12px 14px; margin: 0 0 10px; font-size: 1.02rem; }
+html.dark .ltab, html.dark .lstep, html.dark .lbtn, html.dark .lpoint { background: #221f19; border-color: #3a352b; color: #f2efe6; }
+html.dark .ltab[aria-pressed=true] { background: #4a2d17; border-color: #e8873f; }
+html.dark .lbtn.main { background: #e8873f; border-color: #e8873f; color: #1a1005; }
+html.dark .lcount { color: #f0a070; }
+html.dark .ldots i { background: #3a352b; }
+html.dark .ldots i.on { background: #e8873f; }
+html.dark .lwarn { background: #4a3d12; }
+html.dark .ldone { background: #1f3a22; color: #b9e6bd; }
+
 /* Dark theme */
 html.dark body { background: #15130f; color: #f2efe6; }
 html.dark a { color: #f0a070; }

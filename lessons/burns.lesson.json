@@ -1,0 +1,73 @@
+{
+  "format": "openpack-lesson/1",
+  "reviewed": false,
+  "warning": {
+    "en": "Do not put ice, toothpaste, oil, butter or creams on a burn. They can make it worse.",
+    "my": "အပူလောင်ဒဏ်ရာပေါ်တွင် ရေခဲ၊ သွားတိုက်ဆေး၊ ဆီ၊ ထောပတ် သို့မဟုတ် လိမ်းဆေးများ မတင်ပါနှင့်။ ဒဏ်ရာကို ပိုဆိုးစေနိုင်ပါသည်။"
+  },
+  "steps": [
+    {
+      "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\"><rect width=\"320\" height=\"200\" fill=\"#eef6fb\"/><path d=\"M150 20 h40 v26 h-22 v16 h-18z\" fill=\"#b9bec6\" stroke=\"#3b3a36\" stroke-width=\"4\" stroke-linejoin=\"round\"/><path d=\"M159 62 V118\" stroke=\"#8fd0f5\" stroke-width=\"14\" stroke-linecap=\"round\"/><rect x=\"40\" y=\"118\" width=\"220\" height=\"46\" rx=\"23\" fill=\"#f2c79b\" stroke=\"#3b3a36\" stroke-width=\"4\"/><ellipse cx=\"160\" cy=\"134\" rx=\"26\" ry=\"12\" fill=\"#e9736a\"/><circle cx=\"270\" cy=\"58\" r=\"28\" fill=\"#fff\" stroke=\"#3b3a36\" stroke-width=\"4\"/><path d=\"M270 33 v5 M270 78 v5 M245 58 h5 M290 58 h5\" stroke=\"#3b3a36\" stroke-width=\"3\"/><text x=\"270\" y=\"68\" font-size=\"26\" font-weight=\"700\" text-anchor=\"middle\" font-family=\"sans-serif\" fill=\"#a8480f\">20</text></svg>",
+      "en": "Cool the burn under cool running water for 20 minutes. Start as soon as you can. If there is no tap, keep pouring clean cool water over it.",
+      "my": "လောင်ထားသောနေရာကို စီးနေသော ရေအေးအောက်တွင် မိနစ် ၂၀ ထား၍ အအေးခံပါ။ တတ်နိုင်သမျှ အမြန်ဆုံး စလုပ်ပါ။ ရေပိုက် မရှိလျှင် သန့်ရှင်းသော ရေအေးကို ဆက်တိုက် လောင်းပေးပါ။"
+    },
+    {
+      "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\"><rect width=\"320\" height=\"200\" fill=\"#eef6fb\"/><rect x=\"30\" y=\"96\" width=\"200\" height=\"46\" rx=\"23\" fill=\"#f2c79b\" stroke=\"#3b3a36\" stroke-width=\"4\"/><ellipse cx=\"110\" cy=\"112\" rx=\"26\" ry=\"12\" fill=\"#e9736a\"/><circle cx=\"196\" cy=\"119\" r=\"20\" fill=\"none\" stroke=\"#e3b23c\" stroke-width=\"7\"/><rect x=\"232\" y=\"100\" width=\"20\" height=\"38\" rx=\"4\" fill=\"#3b3a36\"/><path d=\"M196 86 L196 40\" stroke=\"#a8480f\" stroke-width=\"6\" stroke-linecap=\"round\"/><path d=\"M189.3 52.3 L196 40 L202.7 52.3\" fill=\"none\" stroke=\"#a8480f\" stroke-width=\"6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M262 100 L292 60\" stroke=\"#a8480f\" stroke-width=\"6\" stroke-linecap=\"round\"/><path d=\"M279.3 65.8 L292 60 L290.0 73.9\" fill=\"none\" stroke=\"#a8480f\" stroke-width=\"6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>",
+      "en": "Take off rings, watches and clothing near the burn. Do not pull off anything that is stuck to the skin.",
+      "my": "လောင်ထားသောနေရာအနီးရှိ လက်စွပ်၊ နာရီနှင့် အဝတ်များကို ချွတ်ပါ။ အရေပြားတွင် ကပ်နေသော အရာကိုမူ မဆွဲခွာပါနှင့်။"
+    },
+    {
+      "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\"><rect width=\"320\" height=\"200\" fill=\"#eef6fb\"/><rect x=\"40\" y=\"110\" width=\"230\" height=\"46\" rx=\"23\" fill=\"#f2c79b\" stroke=\"#3b3a36\" stroke-width=\"4\"/><ellipse cx=\"160\" cy=\"126\" rx=\"26\" ry=\"12\" fill=\"#e9736a\"/><rect x=\"104\" y=\"92\" width=\"112\" height=\"72\" rx=\"8\" fill=\"#dff3ff\" fill-opacity=\"0.75\" stroke=\"#3b83b5\" stroke-width=\"4\" stroke-dasharray=\"8 6\"/><circle cx=\"266\" cy=\"56\" r=\"20\" fill=\"#2e9e4f\"/><path d=\"M257 56 l6.4 7.199999999999999 l12 -14\" fill=\"none\" stroke=\"#fff\" stroke-width=\"5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>",
+      "en": "Cover the burn loosely with clean plastic wrap, a clean plastic bag, or a clean cloth that is not fluffy.",
+      "my": "လောင်ထားသောနေရာကို သန့်ရှင်းသော ပလတ်စတစ်အကြည်၊ သန့်ရှင်းသော ပလတ်စတစ်အိတ် သို့မဟုတ် အမွှေးမထသော သန့်ရှင်းသည့် အဝတ်ဖြင့် ချောင်ချောင် ဖုံးထားပါ။"
+    },
+    {
+      "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\"><rect width=\"320\" height=\"200\" fill=\"#eef6fb\"/><rect x=\"40\" y=\"110\" width=\"230\" height=\"46\" rx=\"23\" fill=\"#f2c79b\" stroke=\"#3b3a36\" stroke-width=\"4\"/><ellipse cx=\"150\" cy=\"130\" rx=\"26\" ry=\"12\" fill=\"#e9736a\"/><circle cx=\"138\" cy=\"126\" r=\"9\" fill=\"#fbe3d6\" stroke=\"#3b3a36\" stroke-width=\"3\"/><circle cx=\"162\" cy=\"134\" r=\"7\" fill=\"#fbe3d6\" stroke=\"#3b3a36\" stroke-width=\"3\"/><path d=\"M222 44 L176 104\" stroke=\"#3b3a36\" stroke-width=\"5\" stroke-linecap=\"round\"/><circle cx=\"204\" cy=\"70\" r=\"38\" fill=\"none\" stroke=\"#d23b2f\" stroke-width=\"6\"/><path d=\"M177.4 43.4 L230.6 96.6\" stroke=\"#d23b2f\" stroke-width=\"6\" stroke-linecap=\"round\"/></svg>",
+      "en": "Do not break blisters. Keep the person warm.",
+      "my": "အရည်ကြည်ဖုများကို မဖောက်ပါနှင့်။ လူနာကို နွေးနွေးထွေးထွေး ထားပါ။"
+    },
+    {
+      "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\"><rect width=\"320\" height=\"200\" fill=\"#eef6fb\"/><path d=\"M0 172 Q80 162 160 172 T320 172 V200 H0z\" fill=\"#cfe8c9\"/><g transform=\"translate(70 84) scale(1)\"><path d=\"M0 14 V56 M0 24 L-16 44 M0 24 L16 44 M0 56 L-12 88 M0 56 L12 88\" fill=\"none\" stroke=\"#4a6fa5\" stroke-width=\"8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle r=\"13\" fill=\"#f2c79b\" stroke=\"#3b3a36\" stroke-width=\"3\"/></g><g transform=\"translate(112 108) scale(0.62)\"><path d=\"M0 14 V56 M0 24 L-16 44 M0 24 L16 44 M0 56 L-12 88 M0 56 L12 88\" fill=\"none\" stroke=\"#c9785a\" stroke-width=\"8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle r=\"13\" fill=\"#f2c79b\" stroke=\"#3b3a36\" stroke-width=\"3\"/></g><path d=\"M150 120 L196 120\" stroke=\"#a8480f\" stroke-width=\"6\" stroke-linecap=\"round\"/><path d=\"M183.7 113.3 L196 120 L183.7 126.7\" fill=\"none\" stroke=\"#a8480f\" stroke-width=\"6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><rect x=\"214\" y=\"108\" width=\"84\" height=\"64\" fill=\"#fff\" stroke=\"#3b3a36\" stroke-width=\"4\"/><path d=\"M206 108 L256 82 L306 108z\" fill=\"#9ec3e0\" stroke=\"#3b3a36\" stroke-width=\"4\" stroke-linejoin=\"round\"/><path d=\"M256 120 v28 M242 134 h28\" stroke=\"#2e9e4f\" stroke-width=\"9\"/><rect x=\"246\" y=\"154\" width=\"20\" height=\"18\" fill=\"#9ec3e0\" stroke=\"#3b3a36\" stroke-width=\"3\"/></svg>",
+      "en": "Go to a clinic or hospital for any burn on a child, and for burns that are large, deep, or on the face, hands or private parts.",
+      "my": "ကလေးတွင် ဖြစ်သော အပူလောင်ဒဏ်ရာ မှန်သမျှအတွက်၊ ထို့ပြင် ကျယ်သော၊ နက်သော၊ သို့မဟုတ် မျက်နှာ၊ လက် သို့မဟုတ် လျှို့ဝှက်အင်္ဂါတွင် ဖြစ်သော ဒဏ်ရာများအတွက် ဆေးခန်း သို့မဟုတ် ဆေးရုံသို့ သွားပါ။"
+    }
+  ],
+  "why": [
+    {
+      "en": "Cooling takes the heat out of the skin. It eases pain and leaves less scarring.",
+      "my": "အအေးခံခြင်းက အရေပြားထဲမှ အပူကို ထုတ်ပေးပါသည်။ နာကျင်မှုကို သက်သာစေပြီး အမာရွတ် နည်းစေပါသည်။"
+    },
+    {
+      "en": "Ice can damage the skin. Creams and oils do not cool the burn.",
+      "my": "ရေခဲသည် အရေပြားကို ထိခိုက်စေနိုင်ပါသည်။ လိမ်းဆေးနှင့် ဆီများသည် လောင်ထားသောနေရာကို အအေးမခံပေးနိုင်ပါ။"
+    },
+    {
+      "en": "A clean cover keeps germs out of the wound.",
+      "my": "သန့်ရှင်းသော အဖုံးက ဒဏ်ရာထဲသို့ ရောဂါပိုး မဝင်စေရန် ကာကွယ်ပေးပါသည်။"
+    }
+  ],
+  "tips": [
+    {
+      "en": "Lay plastic wrap over the burn. Do not wind it tightly around an arm or leg, because the area may swell.",
+      "my": "ပလတ်စတစ်ကို ဒဏ်ရာပေါ်တွင် အုပ်ရုံသာ အုပ်ပါ။ ရောင်လာနိုင်သောကြောင့် လက် သို့မဟုတ် ခြေထောက်ကို တင်းတင်း မပတ်ပါနှင့်။"
+    },
+    {
+      "en": "No running water? Use any clean cool water, or a clean wet cloth, and keep changing it.",
+      "my": "စီးနေသောရေ မရှိလျှင် သန့်ရှင်းသော ရေအေး သို့မဟုတ် သန့်ရှင်းသော အဝတ်စိုကို သုံးပြီး မကြာခဏ လဲပေးပါ။"
+    },
+    {
+      "en": "If clothes catch fire: stop, lie down, and roll on the ground to put out the flames.",
+      "my": "အဝတ်ကို မီးစွဲလျှင် မပြေးပါနှင့်။ ရပ်ပါ၊ မြေပေါ်လှဲပါ၊ မီးငြိမ်းသည်အထိ လှိမ့်ပါ။"
+    }
+  ],
+  "sources": [
+    {
+      "name": "British Red Cross: First aid for burns",
+      "url": "https://www.redcross.org.uk/first-aid/learn-first-aid/burns"
+    },
+    {
+      "name": "NHS (UK): Burns and scalds, treatment",
+      "url": "https://www.nhs.uk/conditions/burns-and-scalds/treatment/"
+    }
+  ]
+}

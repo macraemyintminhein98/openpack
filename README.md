@@ -187,6 +187,48 @@ replace it. The two solve different problems:
 If a box has a PC and internet access at install time, running NOMAD for Kolibri and maps
 and using OpenPack for the weekly curated pack is a reasonable combination.
 
+## Picture lessons (in every pack)
+
+Step-by-step guides shown inside the portal: one simple drawing and one or two sentences per
+step, big Next / Previous buttons, plus "Why" and "Tips" tabs. They work offline, from a
+folder or a server, on old phones (no 3D, no video; each lesson is 10 to 14 KB).
+
+The standard lessons live in `lessons/` and are **added to every pack automatically**, under
+the "Emergency skills" tile. A pack can opt out with `"lessons": false` in `pack.json`.
+
+| Lesson | Main sources |
+|---|---|
+| Make water safe to drink | US CDC, WHO, Eawag SODIS manual |
+| Too hot: heat exhaustion and heatstroke | NHS, Mayo Clinic |
+| Stop heavy bleeding | British and Australian Red Cross, St John Ambulance |
+| Burns and scalds | British Red Cross, NHS |
+| Snake bite | WHO, PAHO, Mayo Clinic |
+| Before a flood or cyclone | IFRC, UNICEF Myanmar, US CDC |
+| Pack an emergency bag | UNICEF Myanmar, IFRC |
+| Signal for help | State of Utah, Colorado Parks and Wildlife |
+| Safe cooking fires | WHO, UNICEF |
+
+**These lessons were written by an AI from the sources above and have not been checked by a
+health professional.** Each one is marked `"reviewed": false`, and the portal shows readers a
+notice saying so. Do not change the flag until a qualified person has reviewed the lesson, in
+Burmese.
+
+To add a lesson: put `<id>.lesson.json` in `lessons/` (format at the top of `lib/lesson.js`)
+and add its title and description to `lessons/index.json`. A pack can also carry its own
+lesson as a normal item with `"kind": "lesson"`. The builder refuses a lesson unless it has:
+
+- Burmese (Unicode) and English for every step, reason and tip;
+- at least one named **source** for its facts;
+- a `reviewed` flag;
+- pictures that are plain SVG drawings: no scripts, links, images or outside files.
+
+Lesson text is included in `docs/burmese-review.csv` for native review.
+
+**Safety rule for health and survival lessons:** follow a recognised source (WHO, Red Cross,
+a national health agency), keep to what the source says, and leave out anything where a small
+mistake can kill (identifying wild plants or mushrooms, medicine doses, home-made rehydration
+recipes).
+
 ## Weekly release in one command
 
 ```bash
@@ -276,11 +318,12 @@ attribution shown on its library page.
 
 | Piece | State |
 |---|---|
-| Pack builder, signing, verification, licence gate | Working, tested (36 Node tests) |
+| Pack builder, signing, verification, licence gate | Working, tested (44 Node tests) |
 | Zawgyi lint, copyleft source rule, `zim`/`apk` kinds | Working, tested |
+| Picture lessons: builder checks, player, 9 lessons included in every pack | Working, tested in Node and Chrome (every lesson stepped through). **Content is AI-written from the listed sources and not yet expert-reviewed.** |
 | Search: Zawgyi input, space-insensitive Burmese, syllable fallback, ranking | Working, tested in Node and in Chrome. Conversion rules need a native check on real typing. |
 | Weekly release script, change notes, checksum pinning | Release script tested end to end here. `pin-source.js` download-and-hash path tested against a live https server; the publisher `.sha256` shortcut is not yet tested against Kiwix. |
-| Portal: tiles, one-button items, settings (language, text size, theme), help, QR share, bundled Burmese font | Tested in headless Chrome in folder and served mode (74 checks incl. Back button, saved settings, 360 px width, largest text, dark). Not yet tried on real Burmese phones. |
+| Portal: tiles, one-button items, settings (language, text size, theme), help, QR share, bundled Burmese font | Tested in headless Chrome in folder and served mode (108 checks incl. Back button, saved settings, 360 px width, largest text, dark). Not yet tried on real Burmese phones. |
 | Go server: verification, serving, hidden dotfiles, no listings, range downloads | Tested (Go tests plus a Node-signed pack verified by Go, and tamper checks). Runs on Linux here. |
 | Windows, Android/Termux and 32-bit ARM builds | **Compiled but not run.** They cross-compile cleanly; nobody has executed them on those devices yet. |
 | `START-*` scripts | Written to spec, not yet run on real devices |

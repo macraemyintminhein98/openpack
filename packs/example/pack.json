@@ -12,7 +12,10 @@
       "description_my": "ဤဘောက်စ်ကား အဘယ်နည်း၊ ပက်ကေ့ချ်များကို မည်သို့ အသစ်လဲရမည်နည်း။",
       "category": "about",
       "license": "CC0-1.0",
-      "source": { "type": "local", "path": "content/welcome.txt" }
+      "source": {
+        "type": "local",
+        "path": "content/welcome.txt"
+      }
     },
     {
       "id": "how-to-contribute",
@@ -21,7 +24,10 @@
       "category": "about",
       "license": "CC-BY-4.0",
       "attribution": "OpenPack contributors",
-      "source": { "type": "local", "path": "content/contribute.md" }
+      "source": {
+        "type": "local",
+        "path": "content/contribute.md"
+      }
     },
     {
       "id": "sample-lesson",
@@ -30,7 +36,10 @@
       "category": "learn",
       "license": "CC-BY-SA-4.0",
       "attribution": "OpenPack contributors",
-      "source": { "type": "local", "path": "content/lesson.md" }
+      "source": {
+        "type": "local",
+        "path": "content/lesson.md"
+      }
     }
   ]
 }

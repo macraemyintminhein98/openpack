@@ -39,7 +39,7 @@ def run_flow(b, base_url, tag, served):
     page.wait_for_selector('.tile')
 
     # ---- home ----
-    check(tag + ': home shows 2 type tiles', page.locator('.tile').count() == 2, page.locator('.tile').count())
+    check(tag + ': home shows 3 type tiles', page.locator('.tile').count() == 3, page.locator('.tile').count())
     check(tag + ': tiles are in Burmese by default', 'သင်ယူရန်' in page.inner_text('#view'), page.inner_text('#view')[:200])
     check(tag + ': page language is Burmese', page.evaluate('document.documentElement.lang') == 'my')
     check(tag + ': share button ' + ('shown' if served else 'hidden'), (page.locator('.bigbtn').count() == 1) == served)
@@ -62,11 +62,11 @@ def run_flow(b, base_url, tag, served):
     page.screenshot(path=SHOTS + tag + '-2-category.png')
     page.go_back()
     page.wait_for_selector('.tile')
-    check(tag + ': phone Back returns to home', page.locator('.tile').count() == 2)
+    check(tag + ': phone Back returns to home', page.locator('.tile').count() == 3)
     page.click('a.tile[href="#/c/about"]')
     page.click('.backbtn')
     page.wait_for_selector('.tile')
-    check(tag + ': on-screen Back button returns to home', page.locator('.tile').count() == 2)
+    check(tag + ': on-screen Back button returns to home', page.locator('.tile').count() == 3)
 
     # ---- search ----
     page.fill('#q', 'lesson')
@@ -91,6 +91,65 @@ def run_flow(b, base_url, tag, served):
     page.wait_for_selector('.empty')
     check(tag + ': nothing found shows a friendly message', 'ရလဒ် မတွေ့ပါ' in page.inner_text('.empty'))
     page.screenshot(path=SHOTS + tag + '-3-empty.png')
+
+    # ---- picture lesson ----
+    page.goto(base_url + '#/c/survival')
+    page.wait_for_selector('.card')
+    check(tag + ': lesson card says Start lesson in Burmese', 'လေ့လာရန်' in text(page, '.act'), text(page, '.act'))
+    page.click('.act')
+    page.wait_for_selector('.lstep')
+    check(tag + ': lesson opens with a picture and step 1 of 5', page.locator('.lpic svg').count() == 1 and '၁' not in text(page, '.lcount') and '1 / 5' in text(page, '.lcount'), text(page, '.lcount'))
+    check(tag + ': lesson shows the safety warning', page.locator('.lwarn').count() == 1)
+    check(tag + ': Previous is disabled on the first step', page.locator('.lbtn').first.is_disabled())
+    check(tag + ': Next button is easy to tap', page.locator('.lbtn.main').bounding_box()['height'] >= 48)
+    check(tag + ': lesson fits 360px', no_overflow(page))
+    page.screenshot(path=SHOTS + tag + '-9-lesson-step1.png', full_page=True)
+    first_text = text(page, '.ltext')
+    page.click('.lbtn.main')
+    page.click('.lbtn.main')
+    check(tag + ': Next moves through the steps', '3 / 5' in text(page, '.lcount') and text(page, '.ltext') != first_text and '၁ မိနစ်' in text(page, '.ltext'), text(page, '.lcount'))
+    page.screenshot(path=SHOTS + tag + '-9-lesson-step3.png', full_page=True)
+    page.click('.lbtn.main')
+    page.click('.lbtn.main')
+    check(tag + ': last step says finished and offers Start again', page.locator('.ldone').count() == 1 and page.locator('.lbtn.main').count() == 0)
+    page.locator('.lbtn').nth(1).click()
+    check(tag + ': Start again returns to step 1', '1 / 5' in text(page, '.lcount'))
+    page.click('[data-val="why"]')
+    check(tag + ': Why tab shows the reasons', page.locator('.lpoint').count() == 3)
+    page.click('[data-val="tips"]')
+    check(tag + ': Tips tab shows the tips', page.locator('.lpoint').count() == 5)
+    page.screenshot(path=SHOTS + tag + '-9-lesson-tips.png', full_page=True)
+    check(tag + ': lesson says it is not expert-checked and lists sources', 'မစစ်ဆေးရသေး' in page.inner_text('#view') and 'CDC' in page.text_content('#view'))
+    page.go_back()
+    page.wait_for_selector('.card')
+    check(tag + ': phone Back leaves the lesson', page.url.endswith('#/c/survival'), page.url)
+
+    # ---- every standard lesson opens and can be stepped through ----
+    ids = page.evaluate("window.OPENPACK_MANIFEST.items.filter(function(i){return i.kind==='lesson'}).map(function(i){return i.id})")
+    check(tag + ': pack carries all 9 standard lessons', len(ids) == 9, ids)
+    page.goto(base_url + '#/c/survival')
+    page.wait_for_selector('.card')
+    check(tag + ': emergency tile lists every lesson', page.locator('.card').count() == len(ids), page.locator('.card').count())
+    bad = []
+    for lid in ids:
+        page.goto(base_url + '#/l/' + lid)
+        page.wait_for_selector('.lstep')
+        n = 1
+        while page.locator('.lbtn.main').count():
+            if page.locator('.lpic svg').count() != 1 or not text(page, '.ltext').strip() or not no_overflow(page):
+                bad.append(lid + ' step ' + str(n))
+            page.click('.lbtn.main')
+            n += 1
+        if page.locator('.ldone').count() != 1 or n < 5:
+            bad.append(lid + ' end')
+        for tab in ('why', 'tips'):
+            page.click('[data-val="%s"]' % tab)
+            if page.locator('.lpoint').count() < 3:
+                bad.append(lid + ' ' + tab)
+    check(tag + ': all lessons step through to the end with pictures, reasons and tips', not bad, bad)
+    page.click('#t-lang')
+    check(tag + ': lessons switch to English', 'Why' in page.inner_text('.ltabs'), page.inner_text('.ltabs'))
+    page.click('#t-lang')
 
     # ---- help ----
     page.click('#t-help')

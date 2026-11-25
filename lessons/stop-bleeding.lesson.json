@@ -1,0 +1,81 @@
+{
+  "format": "openpack-lesson/1",
+  "reviewed": false,
+  "warning": {
+    "en": "Heavy bleeding is an emergency. Send someone for help straight away while you press on the wound.",
+    "my": "သွေးအများအပြား ထွက်ခြင်းသည် အရေးပေါ် အခြေအနေ ဖြစ်ပါသည်။ သင်က ဒဏ်ရာကို ဖိထားစဉ် တစ်စုံတစ်ယောက်ကို အကူအညီ ချက်ချင်း သွားခေါ်ခိုင်းပါ။"
+  },
+  "steps": [
+    {
+      "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\"><rect width=\"320\" height=\"200\" fill=\"#eef6fb\"/><rect x=\"50\" y=\"112\" width=\"190\" height=\"46\" rx=\"23\" fill=\"#f2c79b\" stroke=\"#3b3a36\" stroke-width=\"4\"/><ellipse cx=\"150\" cy=\"122\" rx=\"16\" ry=\"8\" fill=\"#d23b2f\"/><rect x=\"112\" y=\"96\" width=\"76\" height=\"30\" rx=\"6\" fill=\"#fff\" stroke=\"#3b3a36\" stroke-width=\"4\"/><rect x=\"122\" y=\"60\" width=\"56\" height=\"34\" rx=\"14\" fill=\"#f2c79b\" stroke=\"#3b3a36\" stroke-width=\"4\"/><path d=\"M136 64 v26 M150 64 v26 M164 64 v26\" stroke=\"#3b3a36\" stroke-width=\"2\"/><path d=\"M110 40 L110 84\" stroke=\"#d23b2f\" stroke-width=\"6\" stroke-linecap=\"round\"/><path d=\"M116.7 71.7 L110 84 L103.3 71.7\" fill=\"none\" stroke=\"#d23b2f\" stroke-width=\"6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M190 40 L190 84\" stroke=\"#d23b2f\" stroke-width=\"6\" stroke-linecap=\"round\"/><path d=\"M196.7 71.7 L190 84 L183.3 71.7\" fill=\"none\" stroke=\"#d23b2f\" stroke-width=\"6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>",
+      "en": "Press hard, directly on the wound, with a clean cloth or your hand.",
+      "my": "သန့်ရှင်းသော အဝတ် သို့မဟုတ် လက်ဖြင့် ဒဏ်ရာပေါ်ကို တိုက်ရိုက် အားဖြင့် ဖိထားပါ။"
+    },
+    {
+      "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\"><rect width=\"320\" height=\"200\" fill=\"#eef6fb\"/><path d=\"M0 172 Q80 162 160 172 T320 172 V200 H0z\" fill=\"#cfe8c9\"/><path d=\"M86 158 H148 M100 158 l14 16 M148 158 L198 158\" fill=\"none\" stroke=\"#4a6fa5\" stroke-width=\"9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"70\" cy=\"156\" r=\"13\" fill=\"#f2c79b\" stroke=\"#3b3a36\" stroke-width=\"3\"/><rect x=\"166\" y=\"138\" width=\"36\" height=\"18\" rx=\"6\" fill=\"#fff\" stroke=\"#3b3a36\" stroke-width=\"4\"/><path d=\"M40 110 h40 M60 96 v28\" stroke=\"none\"/><circle cx=\"262\" cy=\"60\" r=\"20\" fill=\"#2e9e4f\"/><path d=\"M253 60 l6.4 7.199999999999999 l12 -14\" fill=\"none\" stroke=\"#fff\" stroke-width=\"5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>",
+      "en": "Lay the person down and keep them still.",
+      "my": "လူနာကို လှဲစေပြီး မလှုပ်ရှားစေပါနှင့်။"
+    },
+    {
+      "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\"><rect width=\"320\" height=\"200\" fill=\"#eef6fb\"/><rect x=\"50\" y=\"112\" width=\"190\" height=\"46\" rx=\"23\" fill=\"#f2c79b\" stroke=\"#3b3a36\" stroke-width=\"4\"/><rect x=\"112\" y=\"96\" width=\"76\" height=\"30\" rx=\"6\" fill=\"#fff\" stroke=\"#3b3a36\" stroke-width=\"4\"/><rect x=\"122\" y=\"60\" width=\"56\" height=\"34\" rx=\"14\" fill=\"#f2c79b\" stroke=\"#3b3a36\" stroke-width=\"4\"/><path d=\"M136 64 v26 M150 64 v26 M164 64 v26\" stroke=\"#3b3a36\" stroke-width=\"2\"/><circle cx=\"258\" cy=\"56\" r=\"26\" fill=\"#fff\" stroke=\"#3b3a36\" stroke-width=\"4\"/><path d=\"M258 33 v5 M258 74 v5 M235 56 h5 M276 56 h5\" stroke=\"#3b3a36\" stroke-width=\"3\"/><text x=\"258\" y=\"66\" font-size=\"32\" font-weight=\"700\" text-anchor=\"middle\" font-family=\"sans-serif\" fill=\"#a8480f\"></text><path d=\"M258 56 V38 M258 56 l12 8\" stroke=\"#3b3a36\" stroke-width=\"4\" stroke-linecap=\"round\"/><path d=\"M60 40 L60 84\" stroke=\"#d23b2f\" stroke-width=\"6\" stroke-linecap=\"round\"/><path d=\"M66.7 71.7 L60 84 L53.3 71.7\" fill=\"none\" stroke=\"#d23b2f\" stroke-width=\"6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>",
+      "en": "Keep pressing firmly without stopping. Do not keep lifting the cloth to look.",
+      "my": "မရပ်မနား ဆက်၍ အားဖြင့် ဖိထားပါ။ အဝတ်ကို မကြာခဏ လှန်မကြည့်ပါနှင့်။"
+    },
+    {
+      "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\"><rect width=\"320\" height=\"200\" fill=\"#eef6fb\"/><rect x=\"50\" y=\"100\" width=\"190\" height=\"46\" rx=\"23\" fill=\"#f2c79b\" stroke=\"#3b3a36\" stroke-width=\"4\"/><rect x=\"108\" y=\"96\" width=\"84\" height=\"54\" rx=\"8\" fill=\"#fff\" stroke=\"#3b3a36\" stroke-width=\"4\"/><path d=\"M124 96 v54 M142 96 v54 M160 96 v54 M178 96 v54\" stroke=\"#c9c5ba\" stroke-width=\"3\"/><path d=\"M150 96 l-10 -18 M150 96 l12 -16\" stroke=\"#3b3a36\" stroke-width=\"5\" stroke-linecap=\"round\"/><circle cx=\"262\" cy=\"60\" r=\"20\" fill=\"#2e9e4f\"/><path d=\"M253 60 l6.4 7.199999999999999 l12 -14\" fill=\"none\" stroke=\"#fff\" stroke-width=\"5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>",
+      "en": "When the bleeding slows, tie the cloth firmly in place. If the fingers or toes beyond it turn cold, pale or numb, loosen it a little.",
+      "my": "သွေးထွက် နည်းသွားလျှင် အဝတ်ကို နေရာမရွေ့အောင် ခိုင်ခိုင် စည်းထားပါ။ စည်းထားသည့်နေရာ အောက်ဘက်ရှိ လက်ချောင်း သို့မဟုတ် ခြေချောင်းများ အေးလာလျှင်၊ ဖြူဖျော့လာလျှင်၊ ထုံလာလျှင် အနည်းငယ် လျှော့ပေးပါ။"
+    },
+    {
+      "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\"><rect width=\"320\" height=\"200\" fill=\"#eef6fb\"/><path d=\"M0 172 Q80 162 160 172 T320 172 V200 H0z\" fill=\"#cfe8c9\"/><path d=\"M56 152 H118 M70 152 l14 16 M118 152 L168 152\" fill=\"none\" stroke=\"#4a6fa5\" stroke-width=\"9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"40\" cy=\"150\" r=\"13\" fill=\"#f2c79b\" stroke=\"#3b3a36\" stroke-width=\"3\"/><path d=\"M150 110 L190 110\" stroke=\"#a8480f\" stroke-width=\"6\" stroke-linecap=\"round\"/><path d=\"M177.7 103.3 L190 110 L177.7 116.7\" fill=\"none\" stroke=\"#a8480f\" stroke-width=\"6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><rect x=\"210\" y=\"108\" width=\"84\" height=\"64\" fill=\"#fff\" stroke=\"#3b3a36\" stroke-width=\"4\"/><path d=\"M202 108 L252 82 L302 108z\" fill=\"#9ec3e0\" stroke=\"#3b3a36\" stroke-width=\"4\" stroke-linejoin=\"round\"/><path d=\"M252 120 v28 M238 134 h28\" stroke=\"#2e9e4f\" stroke-width=\"9\"/><rect x=\"242\" y=\"154\" width=\"20\" height=\"18\" fill=\"#9ec3e0\" stroke=\"#3b3a36\" stroke-width=\"3\"/></svg>",
+      "en": "Take the person to a clinic or hospital. Keep pressing on the wound on the way.",
+      "my": "လူနာကို ဆေးခန်း သို့မဟုတ် ဆေးရုံသို့ ပို့ပါ။ လမ်းတွင်လည်း ဒဏ်ရာကို ဆက်ဖိထားပါ။"
+    }
+  ],
+  "why": [
+    {
+      "en": "Pressure slows the flow of blood so that it can clot and stop.",
+      "my": "ဖိထားခြင်းက သွေးစီးကို နှေးစေပြီး သွေးခဲကာ ရပ်သွားစေပါသည်။"
+    },
+    {
+      "en": "Losing a lot of blood quickly can kill. Acting in the first minutes matters most.",
+      "my": "သွေးအများအပြား အမြန်ဆုံးရှုံးခြင်းသည် အသက်အန္တရာယ် ရှိပါသည်။ ပထမဆုံး မိနစ်များအတွင်း လုပ်ဆောင်ခြင်းသည် အရေးအကြီးဆုံး ဖြစ်ပါသည်။"
+    },
+    {
+      "en": "Lying still helps the person not to faint.",
+      "my": "ငြိမ်ငြိမ်လှဲနေခြင်းက လူနာ မမေ့လဲစေရန် ကူညီပါသည်။"
+    }
+  ],
+  "tips": [
+    {
+      "en": "If something is stuck in the wound, do not pull it out. Press around it.",
+      "my": "ဒဏ်ရာထဲတွင် တစ်စုံတစ်ခု စိုက်နေလျှင် မဆွဲထုတ်ပါနှင့်။ ၎င်း၏ ပတ်လည်ကို ဖိထားပါ။"
+    },
+    {
+      "en": "If you can, cover your hand with a clean plastic bag or glove before touching blood.",
+      "my": "ဖြစ်နိုင်လျှင် သွေးကို မထိမီ လက်ကို သန့်ရှင်းသော ပလတ်စတစ်အိတ် သို့မဟုတ် လက်အိတ်ဖြင့် စွပ်ပါ။"
+    },
+    {
+      "en": "Wash your hands with soap afterwards.",
+      "my": "ပြီးလျှင် လက်ကို ဆပ်ပြာဖြင့် ဆေးပါ။"
+    },
+    {
+      "en": "For a small cut: wash it with clean water and cover it with a clean cloth.",
+      "my": "ဒဏ်ရာ အသေးအတွက် သန့်ရှင်းသောရေဖြင့် ဆေးပြီး သန့်ရှင်းသော အဝတ်ဖြင့် ဖုံးထားပါ။"
+    }
+  ],
+  "sources": [
+    {
+      "name": "British Red Cross: First aid for someone bleeding heavily",
+      "url": "https://www.redcross.org.uk/first-aid/learn-first-aid/bleeding-heavily"
+    },
+    {
+      "name": "Australian Red Cross: First aid for someone who is bleeding heavily",
+      "url": "https://redcross.org.au/firstaid/basics/bleeding"
+    },
+    {
+      "name": "St John Ambulance: Severe bleeding",
+      "url": "https://www.sja.org.uk/first-aid-advice/severe-bleeding/"
+    }
+  ]
+}

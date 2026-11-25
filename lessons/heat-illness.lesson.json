@@ -1,0 +1,81 @@
+{
+  "format": "openpack-lesson/1",
+  "reviewed": false,
+  "warning": {
+    "en": "Heatstroke can kill. If the person is confused, faints, has a fit, has hot dry skin, or is not better after 30 minutes, take them to a clinic or hospital at once. Keep cooling them on the way.",
+    "my": "အပူရှပ်ခြင်းသည် အသက်ဆုံးရှုံးစေနိုင်ပါသည်။ လူနာ စိတ်ရှုပ်ထွေးလျှင်၊ မေ့လဲလျှင်၊ တက်လျှင်၊ အရေပြား ပူပြီး ခြောက်နေလျှင်၊ သို့မဟုတ် မိနစ် ၃၀ ကြာသည်အထိ မသက်သာလျှင် ဆေးခန်း သို့မဟုတ် ဆေးရုံသို့ ချက်ချင်း ပို့ပါ။ လမ်းတွင်လည်း ဆက်၍ အအေးခံပေးပါ။"
+  },
+  "steps": [
+    {
+      "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\"><rect width=\"320\" height=\"200\" fill=\"#eef6fb\"/><path d=\"M0 172 Q80 162 160 172 T320 172 V200 H0z\" fill=\"#cfe8c9\"/><circle cx=\"52\" cy=\"48\" r=\"22\" fill=\"#ffc93c\" stroke=\"#e39a00\" stroke-width=\"3\"/><path d=\"M52 20 v-12 M52 76 v12 M24 48 h-12 M80 48 h12 M32.2 28.2 l-9 -9 M71.8 28.2 l9 -9 M32.2 67.8 l-9 9 M71.8 67.8 l9 9\" stroke=\"#e39a00\" stroke-width=\"4\" stroke-linecap=\"round\"/><rect x=\"221\" y=\"92\" width=\"14\" height=\"60\" rx=\"4\" fill=\"#7a4e2b\"/><circle cx=\"228\" cy=\"86\" r=\"38\" fill=\"#4f9b58\"/><circle cx=\"198\" cy=\"100\" r=\"22\" fill=\"#4f9b58\"/><circle cx=\"258\" cy=\"100\" r=\"22\" fill=\"#4f9b58\"/><ellipse cx=\"226\" cy=\"170\" rx=\"80\" ry=\"10\" fill=\"#9cc79f\"/><path d=\"M186 160 H248 M200 160 l14 16 M248 160 L298 160\" fill=\"none\" stroke=\"#4a6fa5\" stroke-width=\"9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"170\" cy=\"158\" r=\"13\" fill=\"#f2c79b\" stroke=\"#3b3a36\" stroke-width=\"3\"/><path d=\"M96 96 L150 130\" stroke=\"#a8480f\" stroke-width=\"6\" stroke-linecap=\"round\"/><path d=\"M143.2 117.8 L150 130 L136.0 129.1\" fill=\"none\" stroke=\"#a8480f\" stroke-width=\"6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>",
+      "en": "Move the person out of the sun to a cool, shady place.",
+      "my": "လူနာကို နေပူထဲမှ အရိပ်ရသော အေးသည့်နေရာသို့ ရွှေ့ပါ။"
+    },
+    {
+      "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\"><rect width=\"320\" height=\"200\" fill=\"#eef6fb\"/><path d=\"M0 172 Q80 162 160 172 T320 172 V200 H0z\" fill=\"#cfe8c9\"/><rect x=\"196\" y=\"140\" width=\"64\" height=\"30\" rx=\"5\" fill=\"#c9a26b\" stroke=\"#3b3a36\" stroke-width=\"4\"/><path d=\"M96 162 H158 M110 162 l14 16 M158 162 L208 138\" fill=\"none\" stroke=\"#4a6fa5\" stroke-width=\"9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"80\" cy=\"160\" r=\"13\" fill=\"#f2c79b\" stroke=\"#3b3a36\" stroke-width=\"3\"/><path d=\"M240 96 L240 126\" stroke=\"#a8480f\" stroke-width=\"6\" stroke-linecap=\"round\"/><path d=\"M246.7 113.7 L240 126 L233.3 113.7\" fill=\"none\" stroke=\"#a8480f\" stroke-width=\"6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>",
+      "en": "Lay them down and raise their feet a little. Loosen or take off extra clothes.",
+      "my": "လူနာကို လှဲစေပြီး ခြေထောက်ကို အနည်းငယ် မြှင့်ထားပါ။ အဝတ်များကို ချောင်ပေးပါ၊ မလိုသော အဝတ်ကို ချွတ်ပေးပါ။"
+    },
+    {
+      "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\"><rect width=\"320\" height=\"200\" fill=\"#eef6fb\"/><path d=\"M0 172 Q80 162 160 172 T320 172 V200 H0z\" fill=\"#cfe8c9\"/><path d=\"M96 160 H158 M110 160 l14 16 M158 160 L208 160\" fill=\"none\" stroke=\"#4a6fa5\" stroke-width=\"9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"80\" cy=\"158\" r=\"13\" fill=\"#f2c79b\" stroke=\"#3b3a36\" stroke-width=\"3\"/><rect x=\"108\" y=\"92\" width=\"60\" height=\"28\" rx=\"6\" fill=\"#bfe3f7\" stroke=\"#3b3a36\" stroke-width=\"4\"/><path d=\"M118 126 q-6 9 0 14 q6 -5 0 -14z\" fill=\"#3b83b5\"/><path d=\"M134 134 q-6 9 0 14 q6 -5 0 -14z\" fill=\"#3b83b5\"/><path d=\"M150 126 q-6 9 0 14 q6 -5 0 -14z\" fill=\"#3b83b5\"/><path d=\"M232 122 q30 -62 60 -6 q-30 -14 -60 6z\" fill=\"#f4d58d\" stroke=\"#3b3a36\" stroke-width=\"4\" stroke-linejoin=\"round\"/><path d=\"M232 122 l-12 22\" stroke=\"#3b3a36\" stroke-width=\"6\" stroke-linecap=\"round\"/><path d=\"M196 96 q10 6 0 14 M210 88 q12 10 0 22\" fill=\"none\" stroke=\"#9db7c7\" stroke-width=\"4\" stroke-linecap=\"round\"/></svg>",
+      "en": "Cool the skin. Wipe or sprinkle them with cool water and fan them.",
+      "my": "အရေပြားကို အေးအောင် လုပ်ပေးပါ။ ရေအေးဖြင့် သုတ်ပေးပါ သို့မဟုတ် ဖျန်းပေးပြီး ယပ်ခတ်ပေးပါ။"
+    },
+    {
+      "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\"><rect width=\"320\" height=\"200\" fill=\"#eef6fb\"/><path d=\"M0 172 Q80 162 160 172 T320 172 V200 H0z\" fill=\"#cfe8c9\"/><g transform=\"translate(104 70) scale(1)\"><path d=\"M0 14 V56 M0 24 L-16 44 M0 24 L16 44 M0 56 L-12 88 M0 56 L12 88\" fill=\"none\" stroke=\"#4a6fa5\" stroke-width=\"8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle r=\"13\" fill=\"#f2c79b\" stroke=\"#3b3a36\" stroke-width=\"3\"/></g><path d=\"M176 92 H226 L220 150 H182z\" fill=\"#fff\" stroke=\"#3b3a36\" stroke-width=\"4\" stroke-linejoin=\"round\"/><path d=\"M180 112 H222 L219 148 H183z\" fill=\"#8fd0f5\"/><path d=\"M170 120 L132 100\" stroke=\"#a8480f\" stroke-width=\"6\" stroke-linecap=\"round\"/><path d=\"M139.7 111.7 L132 100 L146.0 99.8\" fill=\"none\" stroke=\"#a8480f\" stroke-width=\"6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><rect x=\"246\" y=\"96\" width=\"46\" height=\"56\" rx=\"5\" fill=\"#fff\" stroke=\"#3b3a36\" stroke-width=\"4\"/><path d=\"M269 108 v20 M259 118 h20\" stroke=\"#2e9e4f\" stroke-width=\"6\"/><path d=\"M254 140 h30\" stroke=\"#3b3a36\" stroke-width=\"3\"/></svg>",
+      "en": "If they are awake and can swallow, give water or oral rehydration salts (ORS) in small sips.",
+      "my": "လူနာ သတိရှိပြီး မျိုချနိုင်လျှင် ရေ သို့မဟုတ် ဓာတ်ဆားရည်ကို နည်းနည်းချင်း တိုက်ပါ။"
+    },
+    {
+      "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\"><rect width=\"320\" height=\"200\" fill=\"#eef6fb\"/><path d=\"M0 172 Q80 162 160 172 T320 172 V200 H0z\" fill=\"#cfe8c9\"/><circle cx=\"70\" cy=\"80\" r=\"34\" fill=\"#fff\" stroke=\"#3b3a36\" stroke-width=\"4\"/><path d=\"M70 49 v5 M70 106 v5 M39 80 h5 M96 80 h5\" stroke=\"#3b3a36\" stroke-width=\"3\"/><text x=\"70\" y=\"90\" font-size=\"26\" font-weight=\"700\" text-anchor=\"middle\" font-family=\"sans-serif\" fill=\"#a8480f\">30</text><path d=\"M118 110 L176 118\" stroke=\"#a8480f\" stroke-width=\"6\" stroke-linecap=\"round\"/><path d=\"M164.7 109.7 L176 118 L162.9 123.0\" fill=\"none\" stroke=\"#a8480f\" stroke-width=\"6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><rect x=\"200\" y=\"108\" width=\"84\" height=\"64\" fill=\"#fff\" stroke=\"#3b3a36\" stroke-width=\"4\"/><path d=\"M192 108 L242 82 L292 108z\" fill=\"#9ec3e0\" stroke=\"#3b3a36\" stroke-width=\"4\" stroke-linejoin=\"round\"/><path d=\"M242 120 v28 M228 134 h28\" stroke=\"#2e9e4f\" stroke-width=\"9\"/><rect x=\"232\" y=\"154\" width=\"20\" height=\"18\" fill=\"#9ec3e0\" stroke=\"#3b3a36\" stroke-width=\"3\"/></svg>",
+      "en": "If they are not better in 30 minutes, or they get worse, go to a clinic or hospital.",
+      "my": "မိနစ် ၃၀ အတွင်း မသက်သာလျှင်၊ သို့မဟုတ် ပိုဆိုးလာလျှင် ဆေးခန်း သို့မဟုတ် ဆေးရုံသို့ သွားပါ။"
+    }
+  ],
+  "why": [
+    {
+      "en": "In strong heat the body loses water and salt through sweat. That causes weakness, dizziness, headache and cramps.",
+      "my": "အပူပြင်းသောအခါ ချွေးထွက်ခြင်းကြောင့် ခန္ဓာကိုယ်မှ ရေနှင့် ဆား ဆုံးရှုံးပါသည်။ ထို့ကြောင့် အားနည်းခြင်း၊ မူးဝေခြင်း၊ ခေါင်းကိုက်ခြင်းနှင့် ကြွက်တက်ခြင်း ဖြစ်ပါသည်။"
+    },
+    {
+      "en": "If the body cannot cool itself, it becomes dangerously hot. This is heatstroke and it is an emergency.",
+      "my": "ခန္ဓာကိုယ်က မိမိဘာသာ အအေးမခံနိုင်တော့လျှင် အန္တရာယ်ရှိလောက်အောင် ပူလာပါသည်။ ၎င်းကို အပူရှပ်ခြင်းဟု ခေါ်ပြီး အရေးပေါ် အခြေအနေ ဖြစ်ပါသည်။"
+    },
+    {
+      "en": "Small children, old people and sick people are affected fastest.",
+      "my": "ကလေးငယ်များ၊ သက်ကြီးရွယ်အိုများနှင့် နာမကျန်းသူများသည် အမြန်ဆုံး ထိခိုက်တတ်ပါသည်။"
+    }
+  ],
+  "tips": [
+    {
+      "en": "Never give a drink to someone who is unconscious or cannot swallow.",
+      "my": "သတိမရှိသူ သို့မဟုတ် မမျိုနိုင်သူကို မည်သည့်အရည်မျှ မတိုက်ပါနှင့်။"
+    },
+    {
+      "en": "Mix ORS exactly as the packet says, with safe water.",
+      "my": "ဓာတ်ဆားထုပ်ကို ထုပ်ပေါ်ရှိ ညွှန်ကြားချက်အတိုင်း သန့်ရှင်းသောရေဖြင့် တိကျစွာ ဖျော်ပါ။"
+    },
+    {
+      "en": "In hot weather, drink water often, before you feel thirsty.",
+      "my": "ရာသီဥတု ပူသောအခါ ရေမဆာခင်ကပင် ရေကို မကြာခဏ သောက်ပါ။"
+    },
+    {
+      "en": "Rest in the shade in the middle of the day. Wear a hat and loose, light clothes.",
+      "my": "နေ့လယ်ပိုင်းတွင် အရိပ်ထဲ နားပါ။ ဦးထုပ်ဆောင်းပြီး ပွယောင်းသော အဝတ်ပါးကို ဝတ်ပါ။"
+    },
+    {
+      "en": "Check on old people and small children on very hot days.",
+      "my": "အလွန်ပူသောနေ့များတွင် သက်ကြီးရွယ်အိုများနှင့် ကလေးငယ်များကို ဂရုစိုက်ကြည့်ရှုပါ။"
+    }
+  ],
+  "sources": [
+    {
+      "name": "NHS (UK): Heat exhaustion and heatstroke",
+      "url": "https://www.nhs.uk/conditions/heat-exhaustion-heatstroke/"
+    },
+    {
+      "name": "Mayo Clinic: Heat exhaustion, first aid",
+      "url": "https://www.mayoclinic.org/first-aid/first-aid-heat-exhaustion/basics/art-20056651"
+    }
+  ]
+}

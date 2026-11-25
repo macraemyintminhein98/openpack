@@ -1,0 +1,81 @@
+{
+  "format": "openpack-lesson/1",
+  "reviewed": false,
+  "warning": {
+    "en": "If the authorities or your village leaders say to leave, leave early. Never walk or drive through moving flood water.",
+    "my": "အာဏာပိုင်များ သို့မဟုတ် ရပ်ရွာလူကြီးများက ထွက်ခွာရန် ပြောလျှင် စောစော ထွက်ပါ။ စီးနေသော ရေကြီးရေထဲ ဘယ်တော့မှ လမ်းမလျှောက်ပါနှင့်၊ ယာဉ်မမောင်းပါနှင့်။"
+  },
+  "steps": [
+    {
+      "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\"><rect width=\"320\" height=\"200\" fill=\"#eef6fb\"/><path d=\"M170 172 Q240 60 320 110 V172z\" fill=\"#a9d3a0\"/><path d=\"M0 172 Q80 162 160 172 T320 172 V200 H0z\" fill=\"#cfe8c9\"/><path d=\"M0 182 q20 -10 40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 V200 H0z\" fill=\"#6bb6e6\"/><rect x=\"30\" y=\"118\" width=\"76\" height=\"52\" fill=\"#f4f1ea\" stroke=\"#3b3a36\" stroke-width=\"4\"/><path d=\"M20 118 L68 88 L116 118z\" fill=\"#a8480f\" stroke=\"#3b3a36\" stroke-width=\"4\" stroke-linejoin=\"round\"/><rect x=\"58\" y=\"140\" width=\"20\" height=\"30\" fill=\"#b9bec6\" stroke=\"#3b3a36\" stroke-width=\"3\"/><rect x=\"226\" y=\"62\" width=\"76\" height=\"52\" fill=\"#fff\" stroke=\"#3b3a36\" stroke-width=\"4\"/><path d=\"M216 62 L264 32 L312 62z\" fill=\"#a8480f\" stroke=\"#3b3a36\" stroke-width=\"4\" stroke-linejoin=\"round\"/><rect x=\"254\" y=\"84\" width=\"20\" height=\"30\" fill=\"#b9bec6\" stroke=\"#3b3a36\" stroke-width=\"3\"/><path d=\"M120 140 L214 106\" stroke=\"#a8480f\" stroke-width=\"6\" stroke-linecap=\"round\"/><path d=\"M200.2 103.9 L214 106 L204.7 116.5\" fill=\"none\" stroke=\"#a8480f\" stroke-width=\"6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>",
+      "en": "Know your safe place: higher ground or a strong building. Agree with your family how to get there.",
+      "my": "ဘေးကင်းရာ နေရာကို ကြိုသိထားပါ။ ကုန်းမြင့် သို့မဟုတ် ခိုင်ခံ့သော အဆောက်အအုံ ဖြစ်ရပါမည်။ ထိုနေရာသို့ မည်သို့သွားမည်ကို မိသားစုနှင့် ကြိုတင် သဘောတူထားပါ။"
+    },
+    {
+      "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\"><rect width=\"320\" height=\"200\" fill=\"#eef6fb\"/><path d=\"M196 60 a26 26 0 0 1 50 -8 a22 22 0 0 1 30 30 h-84 a16 16 0 0 1 4 -22z\" fill=\"#9aa7b4\" stroke=\"#3b3a36\" stroke-width=\"4\"/><path d=\"M206 96 q-6 9 0 14 q6 -5 0 -14z\" fill=\"#3b83b5\"/><path d=\"M222 104 q-6 9 0 14 q6 -5 0 -14z\" fill=\"#3b83b5\"/><path d=\"M238 96 q-6 9 0 14 q6 -5 0 -14z\" fill=\"#3b83b5\"/><path d=\"M254 104 q-6 9 0 14 q6 -5 0 -14z\" fill=\"#3b83b5\"/><path d=\"M270 96 q-6 9 0 14 q6 -5 0 -14z\" fill=\"#3b83b5\"/><rect x=\"50\" y=\"96\" width=\"74\" height=\"46\" rx=\"6\" fill=\"#6f7a86\" stroke=\"#3b3a36\" stroke-width=\"4\"/><circle cx=\"72\" cy=\"119\" r=\"12\" fill=\"#cfd6dd\" stroke=\"#3b3a36\" stroke-width=\"3\"/><path d=\"M94 112 h20 M94 126 h20\" stroke=\"#cfd6dd\" stroke-width=\"4\"/><path d=\"M112 96 l14 -28\" stroke=\"#3b3a36\" stroke-width=\"4\" stroke-linecap=\"round\"/><path d=\"M136 96 q16 20 0 40 M150 86 q24 30 0 60\" fill=\"none\" stroke=\"#a8480f\" stroke-width=\"5\" stroke-linecap=\"round\"/></svg>",
+      "en": "Listen to the radio and weather warnings. Follow the instructions you are given.",
+      "my": "ရေဒီယိုနှင့် မိုးလေဝသ သတိပေးချက်များကို နားထောင်ပါ။ ပေးထားသော ညွှန်ကြားချက်များကို လိုက်နာပါ။"
+    },
+    {
+      "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\"><rect width=\"320\" height=\"200\" fill=\"#eef6fb\"/><path d=\"M0 172 Q80 162 160 172 T320 172 V200 H0z\" fill=\"#cfe8c9\"/><g transform=\"translate(40 60) scale(1)\"><path d=\"M18 8 q22 -30 44 0\" fill=\"none\" stroke=\"#3b3a36\" stroke-width=\"6\"/><rect x=\"0\" y=\"8\" width=\"80\" height=\"92\" rx=\"16\" fill=\"#a8480f\" stroke=\"#3b3a36\" stroke-width=\"4\"/><rect x=\"14\" y=\"48\" width=\"52\" height=\"34\" rx=\"6\" fill=\"#d98c4a\" stroke=\"#3b3a36\" stroke-width=\"3\"/></g><rect x=\"157\" y=\"100\" width=\"10\" height=\"10\" fill=\"#3b83b5\"/><rect x=\"150\" y=\"110\" width=\"24\" height=\"52\" rx=\"6\" fill=\"#8fd0f5\" stroke=\"#3b3a36\" stroke-width=\"3\"/><rect x=\"196\" y=\"86\" width=\"46\" height=\"18\" rx=\"4\" fill=\"#3b3a36\"/><path d=\"M242 82 h14 v26 h-14z\" fill=\"#b9bec6\" stroke=\"#3b3a36\" stroke-width=\"3\"/><path d=\"M262 84 l14 -8 M264 95 h16 M262 106 l14 8\" stroke=\"#e3b23c\" stroke-width=\"4\" stroke-linecap=\"round\"/><rect x=\"196\" y=\"126\" width=\"56\" height=\"38\" rx=\"5\" fill=\"#fff\" stroke=\"#3b3a36\" stroke-width=\"4\"/><path d=\"M224 134 v22 M213 145 h22\" stroke=\"#2e9e4f\" stroke-width=\"6\"/></svg>",
+      "en": "Pack an emergency bag: water, dry food, medicines, a torch, a radio, cash, and your documents in a plastic bag.",
+      "my": "အရေးပေါ်အိတ် ပြင်ထားပါ။ ရေ၊ အခြောက်အစားအစာ၊ ဆေးဝါး၊ ဓာတ်မီး၊ ရေဒီယို၊ ငွေသားနှင့် ပလတ်စတစ်အိတ်ဖြင့် ထုပ်ထားသော စာရွက်စာတမ်းများ ထည့်ပါ။"
+    },
+    {
+      "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\"><rect width=\"320\" height=\"200\" fill=\"#eef6fb\"/><path d=\"M0 172 Q80 162 160 172 T320 172 V200 H0z\" fill=\"#cfe8c9\"/><rect x=\"40\" y=\"70\" width=\"150\" height=\"100\" fill=\"#f4f1ea\" stroke=\"#3b3a36\" stroke-width=\"4\"/><path d=\"M52 104 H178\" stroke=\"#7a4e2b\" stroke-width=\"7\"/><rect x=\"66\" y=\"78\" width=\"30\" height=\"24\" rx=\"3\" fill=\"#d98c4a\" stroke=\"#3b3a36\" stroke-width=\"3\"/><rect x=\"110\" y=\"74\" width=\"36\" height=\"28\" rx=\"3\" fill=\"#c9a26b\" stroke=\"#3b3a36\" stroke-width=\"3\"/><path d=\"M92 156 L92 118\" stroke=\"#a8480f\" stroke-width=\"6\" stroke-linecap=\"round\"/><path d=\"M85.3 130.3 L92 118 L98.7 130.3\" fill=\"none\" stroke=\"#a8480f\" stroke-width=\"6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M252 44 l-22 40 h18 l-10 34 l34 -48 h-20 l12 -26z\" fill=\"#ffc93c\" stroke=\"#3b3a36\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"250\" cy=\"82\" r=\"46\" fill=\"none\" stroke=\"#d23b2f\" stroke-width=\"6\"/><path d=\"M217.8 49.8 L282.2 114.2\" stroke=\"#d23b2f\" stroke-width=\"6\" stroke-linecap=\"round\"/></svg>",
+      "en": "Tie down or bring inside anything loose. Move food and valuables up high. Turn off electricity and gas before you leave.",
+      "my": "လွင့်နိုင်သော ပစ္စည်းများကို ချည်ထားပါ သို့မဟုတ် အိမ်ထဲ သွင်းပါ။ အစားအစာနှင့် တန်ဖိုးရှိပစ္စည်းများကို အမြင့်သို့ ရွှေ့ပါ။ မထွက်ခွာမီ လျှပ်စစ်မီးနှင့် ဂက်စ်ကို ပိတ်ပါ။"
+    },
+    {
+      "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\"><rect width=\"320\" height=\"200\" fill=\"#eef6fb\"/><path d=\"M170 172 Q240 60 320 110 V172z\" fill=\"#a9d3a0\"/><path d=\"M0 172 Q80 162 160 172 T320 172 V200 H0z\" fill=\"#cfe8c9\"/><path d=\"M0 184 q20 -10 40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 V200 H0z\" fill=\"#6bb6e6\"/><g transform=\"translate(70 74) scale(1)\"><path d=\"M0 14 V56 M0 24 L-16 44 M0 24 L16 44 M0 56 L-12 88 M0 56 L12 88\" fill=\"none\" stroke=\"#4a6fa5\" stroke-width=\"8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle r=\"13\" fill=\"#f2c79b\" stroke=\"#3b3a36\" stroke-width=\"3\"/></g><g transform=\"translate(110 96) scale(0.7)\"><path d=\"M0 14 V56 M0 24 L-16 44 M0 24 L16 44 M0 56 L-12 88 M0 56 L12 88\" fill=\"none\" stroke=\"#c9785a\" stroke-width=\"8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle r=\"13\" fill=\"#f2c79b\" stroke=\"#3b3a36\" stroke-width=\"3\"/></g><g transform=\"translate(150 74) scale(1)\"><path d=\"M0 14 V56 M0 24 L-16 44 M0 24 L16 44 M0 56 L-12 88 M0 56 L12 88\" fill=\"none\" stroke=\"#6a8f5a\" stroke-width=\"8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle r=\"13\" fill=\"#f2c79b\" stroke=\"#3b3a36\" stroke-width=\"3\"/></g><path d=\"M186 120 L236 96\" stroke=\"#a8480f\" stroke-width=\"6\" stroke-linecap=\"round\"/><path d=\"M222.0 95.3 L236 96 L227.8 107.4\" fill=\"none\" stroke=\"#a8480f\" stroke-width=\"6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><rect x=\"236\" y=\"62\" width=\"76\" height=\"52\" fill=\"#fff\" stroke=\"#3b3a36\" stroke-width=\"4\"/><path d=\"M226 62 L274 32 L322 62z\" fill=\"#a8480f\" stroke=\"#3b3a36\" stroke-width=\"4\" stroke-linejoin=\"round\"/><rect x=\"264\" y=\"84\" width=\"20\" height=\"30\" fill=\"#b9bec6\" stroke=\"#3b3a36\" stroke-width=\"3\"/></svg>",
+      "en": "Leave early for your safe place. Help children, old people and anyone who cannot move easily.",
+      "my": "ဘေးကင်းရာ နေရာသို့ စောစော ထွက်ပါ။ ကလေးများ၊ သက်ကြီးရွယ်အိုများနှင့် သွားလာရန် ခက်ခဲသူများကို ကူညီပါ။"
+    }
+  ],
+  "why": [
+    {
+      "en": "Most deaths in cyclones are caused by flooding. Others are caused by electric shock, collapsing buildings and flying objects.",
+      "my": "မုန်တိုင်းကြောင့် သေဆုံးမှု အများစုသည် ရေကြီးခြင်းကြောင့် ဖြစ်ပါသည်။ အခြားသေဆုံးမှုများမှာ ဓာတ်လိုက်ခြင်း၊ အဆောက်အအုံ ပြိုကျခြင်းနှင့် လွင့်လာသော ပစ္စည်းများကြောင့် ဖြစ်ပါသည်။"
+    },
+    {
+      "en": "Moving water is much stronger than it looks, and it hides holes and sharp things.",
+      "my": "စီးနေသောရေသည် မြင်ရသည်ထက် များစွာ အားပြင်းပါသည်။ ကျင်းများနှင့် ချွန်ထက်သော အရာများကိုလည်း ဖုံးကွယ်ထားပါသည်။"
+    },
+    {
+      "en": "Leaving early is safer. Roads and bridges may be cut later.",
+      "my": "စောစော ထွက်ခြင်းက ပို၍ ဘေးကင်းပါသည်။ နောက်ပိုင်းတွင် လမ်းနှင့် တံတားများ ပြတ်တောက်နိုင်ပါသည်။"
+    }
+  ],
+  "tips": [
+    {
+      "en": "Afterwards, wait until you are told it is safe before you go home.",
+      "my": "ပြီးနောက် ဘေးကင်းပြီဟု အကြောင်းကြားသည်အထိ စောင့်ပြီးမှ အိမ်ပြန်ပါ။"
+    },
+    {
+      "en": "Stay away from fallen power lines and from water near them.",
+      "my": "ပြတ်ကျနေသော ဓာတ်ကြိုးများနှင့် ၎င်းတို့အနီးရှိ ရေမှ ဝေးဝေးနေပါ။"
+    },
+    {
+      "en": "After a flood, treat all water before drinking it, and wash hands with soap.",
+      "my": "ရေကြီးပြီးနောက် သောက်ရေအားလုံးကို သန့်စင်ပြီးမှ သောက်ပါ။ လက်ကို ဆပ်ပြာဖြင့် ဆေးပါ။"
+    },
+    {
+      "en": "Choose one meeting place in case the family gets separated.",
+      "my": "မိသားစု ကွဲသွားပါက ပြန်ဆုံရန် နေရာတစ်ခုကို ကြိုသတ်မှတ်ထားပါ။"
+    }
+  ],
+  "sources": [
+    {
+      "name": "IFRC: Cyclones, key messages",
+      "url": "https://www.ifrc.org/document/cyclones-key-messages"
+    },
+    {
+      "name": "UNICEF Myanmar: How to prepare for a cyclone",
+      "url": "https://www.unicef.org/myanmar/ParentingHub/how-prepare-cyclone"
+    },
+    {
+      "name": "US CDC: Preparing for floods",
+      "url": "https://www.cdc.gov/floods/safety/index.html"
+    }
+  ]
+}

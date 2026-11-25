@@ -1,0 +1,73 @@
+{
+  "format": "openpack-lesson/1",
+  "reviewed": false,
+  "steps": [
+    {
+      "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\"><rect width=\"320\" height=\"200\" fill=\"#eef6fb\"/><path d=\"M0 172 Q80 162 160 172 T320 172 V200 H0z\" fill=\"#cfe8c9\"/><rect x=\"41\" y=\"110\" width=\"14\" height=\"60\" rx=\"4\" fill=\"#7a4e2b\"/><circle cx=\"48\" cy=\"104\" r=\"38\" fill=\"#4f9b58\"/><circle cx=\"18\" cy=\"118\" r=\"22\" fill=\"#4f9b58\"/><circle cx=\"78\" cy=\"118\" r=\"22\" fill=\"#4f9b58\"/><rect x=\"273\" y=\"112\" width=\"14\" height=\"60\" rx=\"4\" fill=\"#7a4e2b\"/><circle cx=\"280\" cy=\"106\" r=\"38\" fill=\"#4f9b58\"/><circle cx=\"250\" cy=\"120\" r=\"22\" fill=\"#4f9b58\"/><circle cx=\"310\" cy=\"120\" r=\"22\" fill=\"#4f9b58\"/><g transform=\"translate(160 78) scale(1)\"><path d=\"M0 14 V56 M0 24 L-16 44 M0 24 L16 44 M0 56 L-12 88 M0 56 L12 88\" fill=\"none\" stroke=\"#4a6fa5\" stroke-width=\"8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle r=\"13\" fill=\"#f2c79b\" stroke=\"#3b3a36\" stroke-width=\"3\"/></g><ellipse cx=\"160\" cy=\"172\" rx=\"56\" ry=\"9\" fill=\"#e7dfb8\"/><circle cx=\"232\" cy=\"52\" r=\"18\" fill=\"#2e9e4f\"/><path d=\"M223.9 52 l5.76 6.4799999999999995 l10.799999999999999 -12.6\" fill=\"none\" stroke=\"#fff\" stroke-width=\"5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>",
+      "en": "Stay in one place, in an open spot where you can be seen. Moving around makes you harder to find.",
+      "my": "မြင်သာသော ကွင်းပြင်ကျယ်တစ်နေရာတွင် တစ်နေရာတည်း နေပါ။ ဟိုဟိုဒီဒီ သွားနေလျှင် ရှာတွေ့ရန် ပိုခက်ပါသည်။"
+    },
+    {
+      "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\"><rect width=\"320\" height=\"200\" fill=\"#eef6fb\"/><rect x=\"60\" y=\"86\" width=\"76\" height=\"34\" rx=\"8\" fill=\"#e3b23c\" stroke=\"#3b3a36\" stroke-width=\"4\"/><circle cx=\"74\" cy=\"118\" r=\"22\" fill=\"#e3b23c\" stroke=\"#3b3a36\" stroke-width=\"4\"/><circle cx=\"74\" cy=\"118\" r=\"8\" fill=\"#3b3a36\"/><path d=\"M150 88 q14 14 0 28 M166 78 q24 24 0 48 M182 68 q34 34 0 68\" fill=\"none\" stroke=\"#a8480f\" stroke-width=\"5\" stroke-linecap=\"round\"/><circle cx=\"258\" cy=\"100\" r=\"34\" fill=\"#fff\" stroke=\"#3b3a36\" stroke-width=\"4\"/><path d=\"M258 69 v5 M258 126 v5 M227 100 h5 M284 100 h5\" stroke=\"#3b3a36\" stroke-width=\"3\"/><text x=\"258\" y=\"110\" font-size=\"32\" font-weight=\"700\" text-anchor=\"middle\" font-family=\"sans-serif\" fill=\"#a8480f\">3</text></svg>",
+      "en": "Make sound in threes: three whistle blasts, three shouts, or three bangs on a pot. Wait, then repeat.",
+      "my": "အသံကို သုံးကြိမ်စီ ပေးပါ။ ခရာ သုံးချက် မှုတ်ပါ၊ သုံးခါ အော်ပါ၊ သို့မဟုတ် အိုးကို သုံးချက် တီးပါ။ ခဏနားပြီး ထပ်လုပ်ပါ။"
+    },
+    {
+      "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\"><rect width=\"320\" height=\"200\" fill=\"#eef6fb\"/><circle cx=\"52\" cy=\"48\" r=\"22\" fill=\"#ffc93c\" stroke=\"#e39a00\" stroke-width=\"3\"/><path d=\"M52 20 v-12 M52 76 v12 M24 48 h-12 M80 48 h12 M32.2 28.2 l-9 -9 M71.8 28.2 l9 -9 M32.2 67.8 l-9 9 M71.8 67.8 l9 9\" stroke=\"#e39a00\" stroke-width=\"4\" stroke-linecap=\"round\"/><rect x=\"120\" y=\"120\" width=\"44\" height=\"34\" rx=\"4\" fill=\"#dff3ff\" stroke=\"#3b3a36\" stroke-width=\"4\" transform=\"rotate(-20 142 137)\"/><path d=\"M78 68 L134 126\" stroke=\"#e3b23c\" stroke-width=\"6\" stroke-dasharray=\"10 8\" stroke-linecap=\"round\"/><path d=\"M150 124 L250 62\" stroke=\"#e3b23c\" stroke-width=\"6\" stroke-dasharray=\"10 8\" stroke-linecap=\"round\"/><path d=\"M240 50 h46 l12 -14 h8 l-8 14 q10 2 10 8 h-70z M262 58 l-12 22 h10 l16 -22z\" fill=\"#9aa7b4\" stroke=\"#3b3a36\" stroke-width=\"3\" stroke-linejoin=\"round\"/><path d=\"M0 172 Q80 162 160 172 T320 172 V200 H0z\" fill=\"#cfe8c9\"/></svg>",
+      "en": "In sunlight, flash a mirror or anything shiny (a tin lid, a phone screen) towards people, boats or aircraft.",
+      "my": "နေရောင်ရှိချိန်တွင် မှန် သို့မဟုတ် တောက်ပြောင်သော အရာ (သံဘူးအဖုံး၊ ဖုန်းမျက်နှာပြင်) ဖြင့် လူများ၊ လှေများ သို့မဟုတ် လေယာဉ်များဆီသို့ အလင်းပြန်ပြပါ။"
+    },
+    {
+      "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\"><rect width=\"320\" height=\"200\" fill=\"#eef6fb\"/><path d=\"M0 172 Q80 162 160 172 T320 172 V200 H0z\" fill=\"#e7dfb8\"/><g transform=\"translate(80 80) scale(1)\"><path d=\"M0 14 V56 M0 24 L-16 44 M0 24 L16 44 M0 56 L-12 88 M0 56 L12 88\" fill=\"none\" stroke=\"#4a6fa5\" stroke-width=\"8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle r=\"13\" fill=\"#f2c79b\" stroke=\"#3b3a36\" stroke-width=\"3\"/></g><path d=\"M96 104 L130 40\" stroke=\"#7a4e2b\" stroke-width=\"6\" stroke-linecap=\"round\"/><path d=\"M130 40 h54 l-12 16 l12 16 h-54z\" fill=\"#d23b2f\" stroke=\"#3b3a36\" stroke-width=\"3\" stroke-linejoin=\"round\"/><path d=\"M206 120 L290 168 M290 120 L206 168\" stroke=\"#d23b2f\" stroke-width=\"12\" stroke-linecap=\"round\"/></svg>",
+      "en": "Wave a bright cloth on a stick. On open ground, lay out bright cloth or a large X that can be seen from far away.",
+      "my": "တောက်ပသော အဝတ်ကို တုတ်တွင်ချည်၍ ဝှေ့ယမ်းပါ။ ကွင်းပြင်ပေါ်တွင် တောက်ပသော အဝတ်များ သို့မဟုတ် အဝေးမှ မြင်ရသည့် ကြက်ခြေခတ် (X) အကြီးတစ်ခု ချထားပါ။"
+    },
+    {
+      "svg": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\"><rect width=\"320\" height=\"200\" fill=\"#1f2a44\"/><circle cx=\"270\" cy=\"40\" r=\"16\" fill=\"#f6f1c9\"/><circle cx=\"60\" cy=\"30\" r=\"2\" fill=\"#fff\"/><circle cx=\"120\" cy=\"54\" r=\"2\" fill=\"#fff\"/><circle cx=\"200\" cy=\"26\" r=\"2\" fill=\"#fff\"/><path d=\"M0 172 Q80 162 160 172 T320 172 V200 H0z\" fill=\"#2d4a3a\"/><g transform=\"rotate(-30 110 130)\"><rect x=\"70\" y=\"120\" width=\"46\" height=\"18\" rx=\"4\" fill=\"#3b3a36\"/><path d=\"M116 116 h14 v26 h-14z\" fill=\"#b9bec6\" stroke=\"#3b3a36\" stroke-width=\"3\"/><path d=\"M136 118 l14 -8 M138 129 h16 M136 140 l14 8\" stroke=\"#e3b23c\" stroke-width=\"4\" stroke-linecap=\"round\"/></g><text x=\"236\" y=\"130\" font-size=\"44\" font-weight=\"700\" text-anchor=\"middle\" font-family=\"sans-serif\" fill=\"#ffd45a\">3</text></svg>",
+      "en": "At night, flash a torch three times, wait, then repeat. Turn it off in between to save the battery.",
+      "my": "ညအချိန်တွင် ဓာတ်မီးကို သုံးချက် မှိတ်တုတ်ပြပါ၊ ခဏနားပြီး ထပ်လုပ်ပါ။ ဓာတ်ခဲ မကုန်စေရန် ကြားတွင် ပိတ်ထားပါ။"
+    }
+  ],
+  "why": [
+    {
+      "en": "Three of any signal (sounds, flashes or fires) is widely understood as a call for help.",
+      "my": "မည်သည့်အချက်ပြမှုမဆို သုံးကြိမ် ပြုလုပ်ခြင်း (အသံ၊ အလင်း သို့မဟုတ် မီးပုံ) ကို အကူအညီတောင်းခြင်းအဖြစ် ကျယ်ကျယ်ပြန့်ပြန့် နားလည်ကြပါသည်။"
+    },
+    {
+      "en": "A whistle is louder than a voice and does not tire you out.",
+      "my": "ခရာသံသည် လူသံထက် ပိုကျယ်ပြီး မောပန်းမှု နည်းပါသည်။"
+    },
+    {
+      "en": "Searchers look in open places first, and for things that move, shine or have bright colour.",
+      "my": "ရှာဖွေသူများသည် ကွင်းပြင်ကျယ်များကို အရင်ရှာပြီး လှုပ်ရှားသော၊ တောက်ပြောင်သော သို့မဟုတ် အရောင်တောက်သော အရာများကို ရှာကြပါသည်။"
+    }
+  ],
+  "tips": [
+    {
+      "en": "If your phone has signal, send a text message saying where you are. Then save the battery.",
+      "my": "ဖုန်းလိုင်းမိလျှင် မိမိရှိရာနေရာကို စာတိုဖြင့် ပို့ပါ။ ထို့နောက် ဓာတ်ခဲကို ချွေတာပါ။"
+    },
+    {
+      "en": "In a flood, go up high and hang bright cloth where rescuers can see it.",
+      "my": "ရေကြီးချိန်တွင် အမြင့်သို့တက်ပြီး ကယ်ဆယ်သူများ မြင်နိုင်သောနေရာတွင် တောက်ပသော အဝတ်ကို ချိတ်ထားပါ။"
+    },
+    {
+      "en": "Keep a whistle in your emergency bag and give one to each child.",
+      "my": "အရေးပေါ်အိတ်ထဲတွင် ခရာတစ်ခု ထည့်ထားပါ။ ကလေးတိုင်းကိုလည်း တစ်ခုစီ ပေးထားပါ။"
+    },
+    {
+      "en": "Only light a signal fire where it cannot spread.",
+      "my": "အချက်ပြမီးပုံကို မီးမကူးစက်နိုင်သော နေရာတွင်သာ မွှေးပါ။"
+    }
+  ],
+  "sources": [
+    {
+      "name": "Be Ready Utah (State of Utah): Emergency signaling",
+      "url": "https://beready.utah.gov/?p=4067"
+    },
+    {
+      "name": "Colorado Parks and Wildlife: Survival signals",
+      "url": "https://cpw.state.co.us/learn/Pages/SurvivalSignal.aspx"
+    }
+  ]
+}
