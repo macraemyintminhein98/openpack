@@ -253,6 +253,12 @@ Output lands in `dist/`: the bundle zip to copy onto USB sticks, its `.sha256`, 
 release. Old releases are pruned (`--keep 4` by default). For `http` sources, pin checksums
 first with `node scripts/pin-source.js packs/<name>/pack.json`.
 
+## Publishing a new version
+
+Change `"version"` in `package.json`, commit and push to `main`. GitHub then builds the
+server programs and a demo bundle and publishes them as release `v<version>`. Nothing else
+is needed. Real packs are still built and signed on your own machine.
+
 ## Search
 
 - **Zawgyi keyboards work.** Zawgyi typing is detected and converted to Unicode before
