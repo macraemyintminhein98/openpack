@@ -235,7 +235,9 @@ with sync_playwright() as p:
     run_flow(b, 'file://' + pack + 'index.html', 'file', False)
 
     exe = ROOT + '/dist-bin/openpack-linux-amd64'
-    srv = subprocess.Popen([exe, '-dir', pack, '-pub', bundle + 'openpack.pub', '-port', '18090'],
+    # OP_SERVER="java -cp ... org.openpack.core.ServeMain" runs the same checks against the Android app's server.
+    cmd = os.environ['OP_SERVER'].split() if os.environ.get('OP_SERVER') else [exe]
+    srv = subprocess.Popen(cmd + ['-dir', pack, '-pub', bundle + 'openpack.pub', '-port', '18090'],
                            stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)
     time.sleep(1.5)
     try:

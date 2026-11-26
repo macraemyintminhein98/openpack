@@ -1,0 +1,8 @@
+.gradle/
+build/
+app/build/
+local.properties
+# The pack and public key are copied in by scripts/build-android.sh
+app/src/main/assets/
+*.jks
+*.keystore

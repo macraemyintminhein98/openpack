@@ -229,6 +229,12 @@ a national health agency), keep to what the source says, and leave out anything 
 mistake can kill (identifying wild plants or mushrooms, medicine doses, home-made rehydration
 recipes).
 
+## Android app (test build)
+
+`android/` holds a small app that carries a pack, shows it, and shares it to nearby phones with one
+button. No Termux and no computer needed. It is a first test build and has not been run on a real
+phone yet. Details, build steps and limits: [android/README.md](android/README.md).
+
 ## Hub notice board
 
 The notice board belongs to the place running the START file (a shop, school, clinic), not

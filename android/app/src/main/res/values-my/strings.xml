@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="share">အနီးရှိ ဖုန်းများသို့ မျှဝေရန်</string>
+    <string name="share_stop">မျှဝေမှု ရပ်ရန်</string>
+    <string name="menu">နောက်ထပ်</string>
+    <string name="open_pack">ပက်ကေ့ချ်အသစ် ဖွင့်ရန်…</string>
+    <string name="edit_notices">ကြေညာချက် ရေးရန်…</string>
+    <string name="use_builtin">မူလ စာကြည့်တိုက်သို့ ပြန်သွားရန်</string>
+    <string name="about">အကြောင်း</string>
+    <string name="checking">စာကြည့်တိုက်ကို စစ်ဆေးနေပါသည်…</string>
+    <string name="sharing_on">မျှဝေနေပါသည်။ အခြားဖုန်းတွင် Wi-Fi သို့မဟုတ် Hotspot တစ်ခုတည်းသို့ ချိတ်ပြီး ဤလိပ်စာကို ဖွင့်ပါ - %s</string>
+    <string name="no_network">Wi-Fi သို့မဟုတ် Hotspot ကို အရင်ဖွင့်ပါ။ ထို့နောက် မျှဝေရန်ကို ထပ်နှိပ်ပါ။</string>
+    <string name="pack_ok">ပက်ကေ့ချ်အသစ်ကို ဖွင့်ပြီးပါပြီ။</string>
+    <string name="pack_bad">ဤပက်ကေ့ချ်ကို ဖွင့်၍ မရပါ - %s</string>
+    <string name="library_bad">ဤဖုန်းရှိ စာကြည့်တိုက် ပျက်စီးနေပါသည် - %s</string>
+    <string name="saved">သိမ်းပြီးပါပြီ။</string>
+    <string name="save_fail">ဖိုင်ကို သိမ်း၍ မရပါ။</string>
+    <string name="offline_link">ထိုလင့်ခ်သည် အင်တာနက် လိုအပ်ပါသည်။ ဤစာကြည့်တိုက်သည် အင်တာနက်မလိုဘဲ အလုပ်လုပ်ပါသည်။</string>
+    <string name="ok">အိုကေ</string>
+    <string name="cancel">မလုပ်တော့ပါ</string>
+    <string name="save">သိမ်းရန်</string>
+    <string name="notices_hint">ပထမစာကြောင်းသည် ခေါင်းစဉ် ဖြစ်သည်။ ကြေညာချက်များကြား --- ဟု ရေးပါ။</string>
+    <string name="about_text">%1$s၊ ဗားရှင်း %2$s\nအက်ပ် %3$s\n\nဤသော့ဖြင့် လက်မှတ်ထိုးထားသော ပက်ကေ့ချ်များကိုသာ လက်ခံပါသည်။\n%4$s\n\nသင်ဖတ်သမျှကို မှတ်တမ်းမတင်ပါ။ ဤအက်ပ်သည် အင်တာနက်ကို ဘယ်တော့မှ မသုံးပါ။</string>
+    <string name="test_build">စမ်းသပ်ဗားရှင်း</string>
+</resources>

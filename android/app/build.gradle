@@ -1,0 +1,43 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'org.openpack.app'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId 'org.openpack.app'
+        minSdk 23            // Android 6.0 (2015)
+        targetSdk 34
+        versionCode 1
+        versionName '0.1.0-test'
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildTypes {
+        release { minifyEnabled false }
+    }
+    testOptions {
+        unitTests.returnDefaultValues = true
+        unitTests.includeAndroidResources = true   // the screen test reads the built-in pack from assets
+    }
+    testOptions.unitTests.all {
+        // Where the simulated Android used by the screen test is fetched from, once.
+        systemProperty 'robolectric.dependency.repo.url', 'https://maven-central.storage-download.googleapis.com/maven2'
+    }
+    lint { abortOnError false; checkReleaseBuilds false }
+    // The portal ships .js lesson files and fonts as assets: store them as they are.
+    androidResources { noCompress += ['woff', 'woff2'] }
+}
+
+dependencies {
+    // Pure-Java Ed25519 (CC0). Android only gained built-in Ed25519 in version 13.
+    implementation 'net.i2p.crypto:eddsa:0.3.0'
+    testImplementation 'junit:junit:4.13.2'
+    testImplementation 'org.json:json:20240303'
+    // Runs the real screen code on a computer, without a phone.
+    testImplementation 'org.robolectric:robolectric:4.14.1'
+}

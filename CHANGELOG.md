@@ -1,5 +1,12 @@
 # Changelog
 
+## Unreleased
+- Android app (`android/`), first test build: the library in an app, a built-in pack, sharing to nearby
+  phones over Wi-Fi or hotspot with a QR code, opening a new signed pack from a .zip, a notice editor.
+  No Google services, no analytics, one permission. See `android/README.md`.
+- Hardening: `manifest.js` must now be an exact copy of the signed manifest. Before, text placed before
+  or after the manifest inside that file was not checked (Node and Go checks both fixed, tests added).
+
 ## 0.6.0
 - Hub notice board: the hub owner writes `notices.txt`; visitors read it in the portal.
 - Tested across Chrome, WebKit and Firefox with phone profiles, over a network address; ARM

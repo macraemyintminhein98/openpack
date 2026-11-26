@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">OpenPack</string>
+    <string name="share">Share with nearby phones</string>
+    <string name="share_stop">Stop sharing</string>
+    <string name="menu">More</string>
+    <string name="open_pack">Open a new pack…</string>
+    <string name="edit_notices">Write notices…</string>
+    <string name="use_builtin">Go back to the built-in library</string>
+    <string name="about">About</string>
+    <string name="checking">Checking the library…</string>
+    <string name="sharing_on">Sharing is ON. On the other phone, join the same Wi-Fi or hotspot and open: %s</string>
+    <string name="no_network">Turn on Wi-Fi or your hotspot first, then tap Share again.</string>
+    <string name="pack_ok">The new pack is open.</string>
+    <string name="pack_bad">This pack cannot be opened: %s</string>
+    <string name="library_bad">The library on this phone is damaged: %s</string>
+    <string name="saved">Saved.</string>
+    <string name="save_fail">Could not save the file.</string>
+    <string name="offline_link">That link needs the internet. This library works offline.</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="notices_hint">First line = title. Put --- between notices.</string>
+    <string name="about_text">%1$s, version %2$s\nApp %3$s\n\nPacks are accepted only if signed with this key:\n%4$s\n\nNothing you read is recorded. The app never uses the internet.</string>
+    <string name="test_build">TEST BUILD</string>
+</resources>

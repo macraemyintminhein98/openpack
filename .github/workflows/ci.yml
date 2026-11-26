@@ -32,3 +32,23 @@ jobs:
         run: shellcheck -S warning scripts/*.sh box/*.sh bundle/*.sh
       - name: End-to-end (build, sign, verify, tamper checks, serve)
         run: bash scripts/e2e.sh
+
+  android:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+          cache: gradle
+      - name: Build the example pack with a throwaway key
+        run: |
+          node bin/openpack.js keygen "$RUNNER_TEMP/keys"
+          node bin/openpack.js build packs/example --key "$RUNNER_TEMP/keys/openpack.key" --out "$RUNNER_TEMP/dist" --version ci
+      - name: App tests and debug build (the APK is not published)
+        run: bash scripts/build-android.sh "$RUNNER_TEMP/dist/example-ci" "$RUNNER_TEMP/keys/openpack.pub"

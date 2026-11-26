@@ -13,7 +13,6 @@ import (
 	"io"
 	"os"
 	"path/filepath"
-	"reflect"
 	"strings"
 )
 
@@ -117,19 +116,9 @@ func checkManifestJS(dir string, manifestBytes []byte) error {
 	if err != nil {
 		return nil // optional
 	}
-	txt := string(b)
-	i, j := strings.Index(txt, "{"), strings.LastIndex(txt, "}")
-	if i < 0 || j < i {
-		return errors.New("manifest.js is malformed")
-	}
-	var a, c interface{}
-	if err := json.Unmarshal([]byte(txt[i:j+1]), &a); err != nil {
-		return errors.New("manifest.js is malformed")
-	}
-	if err := json.Unmarshal(manifestBytes, &c); err != nil {
-		return errors.New("manifest.json is malformed")
-	}
-	if !reflect.DeepEqual(a, c) {
+	// Must be an exact copy of the signed manifest inside the assignment, so no script can ride along.
+	want := "window.OPENPACK_MANIFEST = " + string(manifestBytes) + ";"
+	if strings.TrimRight(string(b), " \t\r\n") != want {
 		return errors.New("manifest.js does not match manifest.json")
 	}
 	return nil

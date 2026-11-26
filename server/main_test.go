@@ -161,3 +161,18 @@ func TestFindPack(t *testing.T) {
 		t.Fatal("expected error for folder without manifest.json")
 	}
 }
+
+func TestManifestJSCannotCarryScript(t *testing.T) {
+	dir, pub := buildTestPack(t)
+	p := filepath.Join(dir, "manifest.js")
+	good, _ := os.ReadFile(p)
+	for _, bad := range []string{
+		"fetch('http://x/');" + string(good),
+		strings.TrimSpace(string(good)) + "fetch('http://x/')",
+	} {
+		os.WriteFile(p, []byte(bad), 0o644)
+		if _, err := verifyPack(dir, pub, true, nil); err == nil || !strings.Contains(err.Error(), "manifest.js") {
+			t.Fatalf("script in manifest.js was accepted: %v", err)
+		}
+	}
+}

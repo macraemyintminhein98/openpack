@@ -89,3 +89,16 @@ test('build writes manifest.js and verify catches a changed copy', async () => {
   const r = verifyPack(outDir, pub);
   assert.ok(r.problems.some((p) => p.includes('manifest.js does not match')));
 });
+
+test('manifest.js cannot carry extra script around the signed manifest', async () => {
+  const dir = tmp();
+  const { priv, pub } = keygen(path.join(dir, 'keys'));
+  const { outDir } = await build(EXAMPLE, { key: priv, out: path.join(dir, 'dist'), version: 'test.6' });
+  const mjs = path.join(outDir, 'manifest.js');
+  const good = fs.readFileSync(mjs, 'utf8');
+  for (const bad of ["fetch('http://x/');" + good, good.trim() + "fetch('http://x/')"]) {
+    fs.writeFileSync(mjs, bad);
+    const r = verifyPack(outDir, pub);
+    assert.ok(r.problems.some((p) => p.includes('manifest.js does not match')), 'accepted: ' + bad.slice(0, 30));
+  }
+});
