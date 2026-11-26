@@ -28,10 +28,19 @@ OP_HOST=<this machine's LAN address> OP_DEVICE="Galaxy S5" python3 scripts/brows
 OP_ENGINE=webkit OP_DEVICE="iPhone SE" OP_HOST=<address> python3 scripts/browser-test.py
 ```
 
-**Limits.** These are today's browser engines with a phone-sized screen and touch. They are
-not old Android WebViews. Every portal script parses as ES5 (checked with the acorn parser),
-which covers syntax, but the code uses `fetch`, so Android System WebView / Chrome below
-version 42 (2015) will not run it.
+**Old phones.** Phones that never got a browser update still run the engine they shipped with
+(Android 4.4: Chromium 30 to 33, Android 5.0: Chromium 37). Three things guard that:
+
+- every page script parses as ES5, and `test/portal.test.js` fails if a script or the stylesheet
+  uses anything a 2013 browser lacks (fetch, Promise, Map, newer string and array methods,
+  CSS variables, grid, gap and so on);
+- `OP_OLD=1 python3 scripts/browser-test.py` runs the whole suite with fetch, Promise and the
+  newer methods removed from the browser before the page loads;
+- the suite includes 240 and 320 pixel wide screens.
+
+**Limits.** These are still today's browser engines. Removing features proves the page does not
+call them; it cannot show how a real old engine draws the page or shapes Burmese text. That needs
+an old phone in hand.
 
 ## Fonts
 

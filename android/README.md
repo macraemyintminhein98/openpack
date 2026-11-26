@@ -2,7 +2,7 @@
 
 The library as an app. No browser steps, no Termux, no computer.
 
-Status: **first test build. It has not been run on a real phone yet.** See "What has been tested".
+Status: **test build 0.3.0. It has not been run on a real phone yet.** See "What has been tested".
 
 ## What it does
 
@@ -32,13 +32,16 @@ no central server. Size was not a constraint; these were:
   Only local-network addresses (10.x, 172.16-31.x, 192.168.x, 169.254.x) are ever contacted.
 - **Sharing survives the screen turning off.** A foreground notice keeps the server, processor and
   Wi-Fi awake until Stop is tapped. Plug the phone in for long sessions.
-- **Old phones.** Android 5.0 (2014) and newer.
+- **Old and cheap phones.** Installs on Android 4.4 (2013) and newer, on any processor (there is
+  no native code), and on Android Go phones. The page uses nothing newer than a 2013 browser has,
+  so a phone whose built-in browser was never updated can still show it. See "Old and cheap phones".
 - **Its own Burmese font** on the native buttons and dialogs, so they read correctly on phones
   whose system font is Zawgyi.
 - **A spare signing key.** The app can trust more than one pack key. Build it with an everyday key
   and a spare kept offline, and losing the everyday key does not strand every installed phone.
 - **Few moving parts.** Plain Java, one small library, no Google services, a pinned build tool.
-  The same code is checked on simulated Android 5, 9 and 14 on every change.
+  The same code is checked on simulated Android 5, 9 and 14 on every change, and Android's own
+  checker stops the build if anything calls a feature Android 4.4 does not have.
 
 ## What it does not do
 
@@ -76,6 +79,55 @@ It refuses a private key. The copied pack and key are not committed (`android/.g
 
 Install on a phone: copy the `.apk` over, tap it, allow "install unknown apps" for the file manager.
 
+## Old and cheap phones
+
+What was done so the app installs and runs on them:
+
+- **Android 4.4 and newer.** Below Android 5 the app uses the older Holo look and bitmap icons.
+- **Signed the old way and the new way.** Phones before Android 7 only understand the first APK
+  signing scheme; the builds carry schemes 1, 2 and (release) 3. Checked with `apksigner verify
+  --min-sdk-version 19`.
+- **Any processor.** Pure Java, so 32-bit ARM, 64-bit ARM and x86 phones all run the same file.
+- **Small.** About 0.7 MB plus the pack you build in.
+- **Never-updated browsers.** The page no longer needs `fetch` or `Promise`; it uses plain
+  XMLHttpRequest and ES5 only. Tests fail if a newer feature creeps in.
+- **Very small screens.** Checked at 240 and 320 pixels wide.
+- **Nearly full phones.** A phone-to-phone copy or zip import first works out how much space it
+  needs and says so in megabytes if there is not enough, before copying anything.
+
+Installing, by Android version:
+
+| Phone | What the person does |
+|---|---|
+| Android 4.4 to 7 | Settings > Security > turn on "Unknown sources". Then tap the APK file. |
+| Android 8 and newer | Tap the APK. When asked, allow the file manager or browser to "install unknown apps". |
+| Any, with Google Play | Play Protect may say it does not know the developer. That is expected for an app from outside the store. |
+| Xiaomi, Oppo, Vivo, Huawei, Realme | After installing: Settings > Battery > OpenPack > no restrictions, or sharing stops when the screen turns off. |
+
+Storage: a built-in pack takes its size twice (once inside the app file, once unpacked). Keep the
+built-in pack small, and send large content as a pack `.zip` or phone to phone. A phone-to-phone
+update needs room for the new pack next to the old one until it has been checked.
+
+Honest limits for the oldest phones: nothing here has run on a real Android 4.4 to 6 phone, and
+no simulator covers Android 4.4 (the simulated runs start at Android 5.0). The web engine on
+Android 4.4 can never be updated; the page avoids everything it lacks, but how it draws the page
+and shapes Burmese text is unverified until someone opens it on one.
+
+## Release build (the one you give to people)
+
+```bash
+# once: make your keystore and keep it offline with a backup
+keytool -genkeypair -v -keystore keys/openpack-release.jks -alias openpack -keyalg RSA -keysize 4096 -validity 20000
+cp android/keystore.properties.example android/keystore.properties   # then fill in the passwords
+
+# every release
+scripts/build-android.sh dist/<pack> keys/openpack.pub spare/openpack.pub
+# -> android/app/build/outputs/apk/release/app-release.apk
+```
+
+`keystore.properties`, `*.jks` and `keys/` are in `.gitignore`. Raise `versionCode` in
+`android/app/build.gradle` for every release, or phones will not accept it as an update.
+
 ## Two keys, both yours
 
 1. **Pack key** (ed25519, `openpack keygen`): its public half is built into the app. The app opens
@@ -106,27 +158,29 @@ The page files (`index.html`, `app.js` ...) are not covered by the pack signatur
 takes them from an imported pack or another phone. It always uses the copy it was built with.
 
 Plain Java, no Kotlin, no AndroidX in the app. One library: `net.i2p.crypto:eddsa` (CC0), because
-Android only gained built-in ed25519 in version 13. Runs on Android 5.0 (2014) and newer.
+Android only gained built-in ed25519 in version 13. Runs on Android 4.4 (2013) and newer.
 
 ## What has been tested
 
 On a computer, in CI and by `scripts/build-android.sh`:
 
-- 41 unit tests of the pack check, server, phone-to-phone copying, zip import and notices, against
+- 42 unit tests of the pack check, server, phone-to-phone copying, zip import and notices, against
   a pack built by the Node tool (so the two implementations are checked against each other).
   Phone-to-phone tests use two real sockets: full copy, copy of only what is missing, resume after
   a break, a peer with changed files, an oversized file, a pack signed by a stranger.
 - The real app code on simulated Android 5, 9 and 14 (Robolectric): first launch, second launch,
   sharing that outlives the screen and stops from the notice, a zip import that is refused when one
   bit is changed and accepted when intact. This caught one crash that only Android 5 would have hit.
-- The browser suite (`scripts/browser-test.py`, 119 checks with the app's extras) run against the
-  app's server code:
+- Android lint with `NewApi` as a build-stopping error at minimum Android 4.4. It caught one call
+  and one icon that Android 4.4 could not have used.
+- The browser suite (`scripts/browser-test.py`, 131 checks with the app's extras) run against the
+  app's server code, also with `OP_OLD=1` (newer browser features removed):
   `OP_LAN=<this computer's address> OP_SERVER="java -cp <classes>:<jars> org.openpack.core.ServeMain" python3 scripts/browser-test.py`
 
 Not tested, because it needs phones in hand:
 
 - Installing and opening the APK on any real device.
-- How the page looks in the phone's own WebView, especially on old Android 5 to 8 phones.
+- How the page looks in the phone's own WebView, especially on old Android 4.4 to 8 phones.
 - Sharing and phone-to-phone copying over a real hotspot. Some phones isolate hotspot clients from
   each other; the hotspot owner should still be reachable, but this needs checking per phone brand.
 - Whether each phone brand really lets the notice keep sharing alive for hours. Some brands

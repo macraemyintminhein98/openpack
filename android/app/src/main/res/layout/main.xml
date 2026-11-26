@@ -27,7 +27,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#FFFFFF"
-        android:elevation="6dp"
         android:orientation="horizontal"
         android:padding="6dp">
 
@@ -36,7 +35,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:backgroundTint="#A8480F"
+            android:background="@drawable/btn_share"
+            android:layout_margin="4dp"
             android:minHeight="56dp"
             android:text="@string/share"
             android:textAllCaps="false"

@@ -38,7 +38,17 @@ echo "Trusted keys built in: $n"
 
 cd "$here/android"
 # OPENPACK_GRADLE=gradle uses an installed Gradle instead of downloading the pinned one.
-"${OPENPACK_GRADLE:-./gradlew}" --no-daemon -q testDebugUnitTest assembleDebug
+"${OPENPACK_GRADLE:-./gradlew}" --no-daemon -q lintDebug testDebugUnitTest assembleDebug
 apk="$here/android/app/build/outputs/apk/debug/app-debug.apk"
 ls -l "$apk"
-echo "Built: $apk"
+echo "Built (test build, throwaway signature): $apk"
+
+# A release build, signed with your own keystore, when android/keystore.properties exists.
+if [ -f "$here/android/keystore.properties" ]; then
+  "${OPENPACK_GRADLE:-./gradlew}" --no-daemon -q assembleRelease
+  rel="$here/android/app/build/outputs/apk/release/app-release.apk"
+  ls -l "$rel"
+  echo "Built (release, signed with your keystore): $rel"
+else
+  echo "No android/keystore.properties, so no release build. See android/keystore.properties.example."
+fi

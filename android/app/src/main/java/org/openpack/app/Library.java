@@ -130,8 +130,15 @@ final class Library {
     synchronized void importZip(InputStream in) throws Exception {
         PackZip.deleteTree(incomingDir);
         try {
-            long room = Math.max(0, app.getFilesDir().getUsableSpace() - (200L << 20));
-            PackZip.extract(in, incomingDir, Math.min(room, PackZip.DEFAULT_MAX_BYTES));
+            long room = Math.max(0, app.getFilesDir().getUsableSpace() - (50L << 20));
+            try {
+                PackZip.extract(in, incomingDir, Math.min(room, PackZip.DEFAULT_MAX_BYTES));
+            } catch (IOException e) {
+                if (String.valueOf(e.getMessage()).contains("too large") && room < PackZip.DEFAULT_MAX_BYTES) {
+                    throw new IOException("not enough free space on this phone for this pack (" + mb(room) + " MB free). Delete some photos or videos and try again");
+                }
+                throw e;
+            }
             PackVerifier.verify(incomingDir, keys, true, null);
         } catch (Exception e) {
             PackZip.deleteTree(incomingDir);
@@ -142,10 +149,25 @@ final class Library {
 
     /** A pack copied from a nearby phone. An unfinished copy stays in syncDir and carries on next time. */
     synchronized PeerSync.Result syncFrom(PeerSync.Offer offer, PeerSync.Progress progress) throws Exception {
+        File same = new File(syncDir, "manifest.json");
+        boolean resuming = same.isFile() && java.util.Arrays.equals(readAll(new java.io.FileInputStream(same)), offer.manifest);
+        long need = PeerSync.bytesStillNeeded(offer, resuming ? syncDir : new File(syncDir, "none"));
+        needSpace(need);
         PeerSync.Result r = PeerSync.fetch(offer, syncDir, pack, keys, progress);
         adopt(syncDir);
         return r;
     }
+
+    /** Refuses early, with numbers a person can act on, when the phone is too full. */
+    private void needSpace(long bytes) throws IOException {
+        long free = app.getFilesDir().getUsableSpace();
+        long margin = 50L << 20; // leave the phone room to breathe
+        if (bytes + margin > free) {
+            throw new IOException("not enough free space on this phone: needs " + mb(bytes) + " MB, has " + mb(Math.max(0, free - margin)) + " MB free. Delete some photos or videos and try again");
+        }
+    }
+
+    private static long mb(long bytes) { return (bytes + (1 << 20) - 1) >> 20; }
 
     /** Puts a fully checked pack folder into use. */
     private void adopt(File checked) throws Exception {

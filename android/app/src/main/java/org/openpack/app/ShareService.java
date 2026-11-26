@@ -87,7 +87,7 @@ public class ShareService extends Service {
         PendingIntent open = PendingIntent.getActivity(this, 0, new Intent(this, MainActivity.class), immutable);
         PendingIntent stop = PendingIntent.getService(this, 1, new Intent(this, ShareService.class).setAction(STOP), immutable);
         Notification.Builder b = Build.VERSION.SDK_INT >= 26 ? new Notification.Builder(this, CHANNEL) : new Notification.Builder(this);
-        return b.setSmallIcon(R.drawable.ic_launcher_fg)
+        return b.setSmallIcon(R.drawable.ic_stat_share)
             .setContentTitle(getString(R.string.note_title))
             .setContentText(getString(R.string.note_text))
             .setContentIntent(open)

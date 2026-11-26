@@ -225,6 +225,25 @@ public final class PeerSync {
         return r;
     }
 
+    /**
+     * How many bytes a copy of this offer still needs on disk, counting what an earlier attempt
+     * already left in dest. Cheap phones are often nearly full: say so before starting, not halfway.
+     */
+    public static long bytesStillNeeded(Offer o, File dest) {
+        long need = 0;
+        JSONArray items = o.json.optJSONArray("items");
+        for (int i = 0; items != null && i < items.length(); i++) {
+            JSONObject it = items.optJSONObject(i);
+            if (it == null) continue;
+            long want = Math.max(0, it.optLong("bytes", 0));
+            String path = it.optString("path", "");
+            File have = PackVerifier.isSafeContentPath(path) ? new File(dest, path) : null;
+            long got = have != null && have.isFile() ? Math.min(have.length(), want) : 0;
+            need += want - got;
+        }
+        return need;
+    }
+
     private static long download(String url, File out, long want) throws IOException {
         long have = out.isFile() ? out.length() : 0;
         HttpURLConnection c = open(url, 20000);

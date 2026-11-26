@@ -3,7 +3,7 @@
    Words on screen are NOT in this file: edit portal/strings.js.
 
    Two ways to run:
-     - served by the openpack server (http://...): fetches manifest.json and features.json
+     - served by the openpack server (http://...): reads manifest.json and features.json
      - opened straight from a USB stick or folder (file://): uses manifest.js, no server needed
 
    Screens are chosen by the address after the # sign, so the phone's Back button works:
@@ -314,11 +314,10 @@
   function lines(s) { return esc(s).replace(/\n/g, '<br>'); }
   var hubNotices = null; // null = not loaded yet
   function loadNotices() {
-    fetch('hub/notices.json', { cache: 'no-store' })
-      .then(function (r) { return r.json(); })
-      .then(function (d) { hubNotices = d.notices || []; })
-      .catch(function () { hubNotices = []; })
-      .then(function () { if (route().name === 'notices') { render(); } });
+    getJson('hub/notices.json', function (d) {
+      hubNotices = (d && d.notices) || [];
+      if (route().name === 'notices') { render(); }
+    });
   }
   function viewNotices() {
     var head = backBtn() + '<h2 class="title">' + ic('megaphone') + ' ' + esc(t('notices')) + '</h2>' +
@@ -406,6 +405,24 @@
 
   window.addEventListener('hashchange', render);
 
+  // Plain XMLHttpRequest on purpose: old phones whose built-in browser was never updated
+  // (Android 4.4 to 6) have neither fetch nor Promise. done(null) means it could not be read.
+  function getJson(url, done) {
+    var x = new XMLHttpRequest(), called = false;
+    function finish(v) { if (!called) { called = true; done(v); } }
+    x.onreadystatechange = function () {
+      if (x.readyState !== 4) { return; }
+      var v = null;
+      if (x.status === 200) { try { v = JSON.parse(x.responseText); } catch (e) { v = null; } }
+      finish(v);
+    };
+    x.onerror = function () { finish(null); };
+    try {
+      x.open('GET', url + (url.indexOf('?') < 0 ? '?' : '&') + 't=' + new Date().getTime(), true); // never a stale copy
+      x.send();
+    } catch (e) { finish(null); }
+  }
+
   function start(m) {
     if (!m || !m.items) {
       applySettings();
@@ -421,15 +438,9 @@
     start(window.OPENPACK_MANIFEST || null);
   } else {
     // features.json is generated live by the server: is Kiwix running, and what are the LAN addresses?
-    fetch('features.json', { cache: 'no-store' })
-      .then(function (r) { return r.json(); })
-      .then(function (f) { state.features = { kiwix: !!f.kiwix, urls: f.urls || [], notices: f.notices || 0, apk: !!f.apk, packZip: !!f.pack_zip }; })
-      .catch(function () {})
-      .then(function () {
-        return fetch('manifest.json', { cache: 'no-store' })
-          .then(function (r) { return r.json(); })
-          .catch(function () { return window.OPENPACK_MANIFEST || null; });
-      })
-      .then(start);
+    getJson('features.json', function (f) {
+      if (f) { state.features = { kiwix: !!f.kiwix, urls: f.urls || [], notices: f.notices || 0, apk: !!f.apk, packZip: !!f.pack_zip }; }
+      getJson('manifest.json', function (m) { start(m || window.OPENPACK_MANIFEST || null); });
+    });
   }
 })();

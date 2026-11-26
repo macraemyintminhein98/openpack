@@ -9,3 +9,4 @@ app/src/main/assets/keys/
 app/src/main/assets/openpack.pub
 *.jks
 *.keystore
+keystore.properties

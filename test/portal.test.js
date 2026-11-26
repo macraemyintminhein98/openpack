@@ -94,6 +94,28 @@ test('app.js stays old-browser safe (no arrow functions, let/const or template s
   }
 });
 
+test('the page uses nothing a 2013 phone browser lacks (Android 4.4, Chromium 30)', () => {
+  // Phones that never got a browser update still run the engine they shipped with.
+  const banned = [
+    [/\bfetch\s*\(/, 'fetch'], [/\bPromise\b/, 'Promise'], [/\.then\s*\(/, '.then()'], [/\basync\b|\bawait\b/, 'async/await'],
+    [/\bnew (Map|Set|WeakMap|WeakSet|Proxy|URL|URLSearchParams)\b/, 'Map/Set/URL'], [/\bSymbol\b/, 'Symbol'],
+    [/Object\.(assign|entries|values|fromEntries)\b/, 'Object.assign/entries/values'], [/Array\.(from|of)\b/, 'Array.from'],
+    [/\.(includes|startsWith|endsWith|padStart|padEnd|repeat|find|findIndex|closest|matches|replaceAll|flat|flatMap)\s*\(/, 'newer string/array/element method'],
+    [/\bclass\s+[A-Za-z]/, 'class'], [/\.\.\./, 'spread'], [/\bfor\s*\([^)]*\bof\b/, 'for-of']
+  ];
+  for (const f of ['app.js', 'search.js', 'qr.js', 'strings.js', 'icons.js', 'zawgyi-rules.js']) {
+    const code = fs.readFileSync(path.join(portalDir, f), 'utf8')
+      .replace(/\/\*[\s\S]*?\*\//g, '').replace(/^\s*\/\/.*$/gm, '')
+      .replace(/'(?:[^'\\\n]|\\.)*'/g, "''").replace(/"(?:[^"\\\n]|\\.)*"/g, '""'); // words inside labels do not count
+    for (const [re, name] of banned) { assert.ok(!re.test(code), f + ' uses ' + name + ': ' + (code.match(re) || [''])[0]); }
+  }
+  const css = fs.readFileSync(path.join(portalDir, 'style.css'), 'utf8').replace(/\/\*[\s\S]*?\*\//g, '');
+  for (const [re, name] of [[/var\(--/, 'CSS variables'], [/display:\s*(inline-)?grid/, 'grid'], [/\bgap:/, 'gap'], [/clamp\(|min\(|max\(/, 'clamp/min/max'],
+    [/position:\s*sticky/, 'sticky'], [/aspect-ratio/, 'aspect-ratio'], [/:is\(|:where\(|:has\(/, ':is/:where/:has'], [/\binset:/, 'inset']]) {
+    assert.ok(!re.test(css), 'style.css uses ' + name);
+  }
+});
+
 // ----- pack.json options for the portal -----
 const base = { name: 'p', items: [{ id: 'x', title: 'X', category: 'c', license: 'CC0-1.0', source: { type: 'local', path: 'x.txt' } }] };
 

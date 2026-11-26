@@ -50,8 +50,37 @@ def text(page, sel):
     return page.locator(sel).first.inner_text()
 
 
+# OP_OLD=1 takes away everything a 2013 browser (Chromium 30, Android 4.4) does not have, before the
+# page's own scripts run. It cannot make a new engine draw like an old one, but it proves the page
+# does not lean on anything newer.
+OLD = os.environ.get('OP_OLD') == '1'
+STRIP_NEW_APIS = """
+(function () {
+  // Map, Set and Symbol stay only because the test tool itself needs them inside the page; the page's
+  // scripts are separately checked to contain none of them (test/portal.test.js).
+  var gone = ['fetch', 'Promise', 'Proxy', 'Reflect', 'URLSearchParams',
+              'IntersectionObserver', 'ResizeObserver', 'AbortController', 'Headers', 'Request', 'Response', 'CSS'];
+  for (var i = 0; i < gone.length; i++) { try { Object.defineProperty(window, gone[i], { value: undefined, configurable: true, writable: true }); } catch (e) {} }
+  // (A shorter list than a real 2013 browser lacks: the test tool needs the rest to report results.)
+  var drop = [[Object, ['assign']],
+              [Array.prototype, ['find', 'findIndex', 'includes', 'fill']],
+              [String.prototype, ['includes', 'startsWith', 'endsWith', 'repeat', 'padStart', 'padEnd']],
+              [Element.prototype, ['closest', 'matches', 'append', 'prepend', 'replaceWith', 'before', 'after']],
+              [NodeList.prototype, ['forEach']]];
+  for (var d = 0; d < drop.length; d++) { for (var k = 0; k < drop[d][1].length; k++) { try { delete drop[d][0][drop[d][1][k]]; } catch (e) {} } }
+})();
+"""
+
+
+def new_ctx(b, **kw):
+    ctx = b.new_context(**kw)
+    if OLD:
+        ctx.add_init_script(STRIP_NEW_APIS)
+    return ctx
+
+
 def run_flow(b, base_url, tag, served):
-    ctx = b.new_context(**phone())
+    ctx = new_ctx(b, **phone())
     page = ctx.new_page()
     errs = []
     page.on('pageerror', lambda e: errs.append(str(e)))
@@ -96,7 +125,12 @@ def run_flow(b, base_url, tag, served):
     check(tag + ': search finds the lesson', page.locator('.card').count() == 1 and '#/s/lesson' in page.url, page.url)
     page.fill('#q', 'ကြိုဆို')
     page.click('.go')
-    page.wait_for_selector('.card')
+    for _ in range(50):  # wait for the new search, not the cards of the one before
+        if '#/s/' in page.url and 'lesson' not in page.url:
+            break
+        page.wait_for_timeout(100)
+    page.wait_for_selector('.card h3')
+    page.wait_for_timeout(150)
     check(tag + ': Burmese search works', page.locator('.card').count() == 1 and 'OpenPack' in text(page, '.card h3'))
     page.fill('#q', 'ႀကိဳဆို')  # the same word typed on a Zawgyi keyboard
     page.click('.go')
@@ -242,7 +276,7 @@ with sync_playwright() as p:
     time.sleep(1.5)
     try:
         run_flow(b, 'http://' + HOST + ':18090/', 'served', True)
-        ctx = b.new_context()
+        ctx = new_ctx(b, )
         r = ctx.request.get('http://' + HOST + ':18090/fonts/noto-sans-myanmar-myanmar-400-normal.woff2')
         check('served: font file is delivered as a font', r.status == 200 and 'font/woff2' in r.headers.get('content-type', ''), (r.status, r.headers.get('content-type')))
         r = ctx.request.get('http://' + HOST + ':18090/content/learn/sample-lesson.md')
@@ -252,7 +286,7 @@ with sync_playwright() as p:
         # ---- Android app server only: visitors can take the app's pack away, the sharing phone itself is not offered it ----
         if os.environ.get('OP_SERVER') and os.environ.get('OP_LAN'):
             lan = 'http://' + os.environ['OP_LAN'] + ':18090/'
-            v = b.new_context(**phone(), accept_downloads=True)
+            v = new_ctx(b, **phone(), accept_downloads=True)
             pv = v.new_page()
             pv.goto(lan + '#/share')
             pv.wait_for_selector('.sharebox')
@@ -266,19 +300,30 @@ with sync_playwright() as p:
             check('app: the downloaded file is a whole pack', any(n.endswith('/manifest.sig') for n in names) and any('/content/' in n for n in names), names[:4])
             check('app: the downloaded file carries no page scripts', not any(n.endswith('app.js') or n.endswith('index.html') for n in names))
             v.close()
-            o = b.new_context(**phone())
+            o = new_ctx(b, **phone())
             po = o.new_page()
             po.goto('http://localhost:18090/#/share')
             po.wait_for_selector('.sharebox')
             check('app: the sharing phone itself is not offered a download of its own pack', po.locator('.takeaway').count() == 0)
             o.close()
 
+        # ---- very small screens: cheap phones with 240 or 320 pixel wide displays ----
+        for w, h in ((240, 320), (320, 480)):
+            tiny = new_ctx(b, viewport={'width': w, 'height': h}, has_touch=True)
+            pt = tiny.new_page()
+            for where, sel in (('#/', '.tile'), ('#/c/survival', '.card'), ('#/l/water-safe', '.lpic svg'), ('#/share', '.sharebox svg'), ('#/settings', '.setgroup'), ('#/help', '.acc')):
+                pt.goto('http://localhost:18090/' + where)
+                pt.wait_for_selector(sel)
+                over = pt.evaluate('document.documentElement.scrollWidth - window.innerWidth')
+                check('%dpx screen: %s fits without sideways scrolling' % (w, where), over <= 1, over)
+            tiny.close()
+
         # ---- hub: notice board ----
         base = 'http://' + HOST + ':18090/'
         notices_before = open(bundle + 'notices.txt', 'rb').read() if os.path.exists(bundle + 'notices.txt') else None
         with open(bundle + 'notices.txt', 'w', encoding='utf8') as f:
             f.write('# comment\nဆေးခန်းဖွင့်ရက်\nကြာသပတေးနေ့ မနက် ၉ နာရီ\n<b>bold?</b>\n---\nNew books on Monday\n')
-        a = b.new_context(**phone())
+        a = new_ctx(b, **phone())
         pa = a.new_page()
         errs = []
         pa.on('pageerror', lambda e: errs.append(str(e)))
@@ -311,7 +356,7 @@ with sync_playwright() as p:
     out = subprocess.run(['node', ROOT + '/bin/openpack.js', 'build', tmp + '/pk', '--out', tmp + '/out'], capture_output=True, text=True)
     check('custom pack builds', out.returncode == 0, out.stdout + out.stderr)
     built = glob.glob(tmp + '/out/*/')[0]
-    ctx = b.new_context(**phone())
+    ctx = new_ctx(b, **phone())
     page = ctx.new_page()
     page.goto('file://' + built + 'index.html')
     page.wait_for_selector('.tile')

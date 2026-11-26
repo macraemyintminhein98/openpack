@@ -79,6 +79,15 @@ public class PeerSyncTest {
         PackVerifier.verify(dest, keys, true, null);
     }
 
+    @Test public void knowsHowMuchSpaceACopyStillNeeds() throws Exception {
+        PeerSync.Offer o = PeerSync.look(base, keys);
+        assertEquals(totalBytes, PeerSync.bytesStillNeeded(o, dest));
+        TestPack.write(new File(dest, "content/about/welcome.txt"), new byte[100]);
+        assertEquals(totalBytes - 100, PeerSync.bytesStillNeeded(o, dest));
+        PeerSync.fetch(o, dest, null, keys, null);
+        assertEquals(0, PeerSync.bytesStillNeeded(o, dest));
+    }
+
     @Test public void throwsAwayLeftoversOfADifferentPack() throws Exception {
         TestPack.write(new File(dest, "manifest.json"), "{\"other\":1}".getBytes());
         TestPack.write(new File(dest, "content/about/stale.txt"), "stale".getBytes());

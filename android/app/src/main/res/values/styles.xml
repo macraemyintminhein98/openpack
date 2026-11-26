@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="AppTheme" parent="android:Theme.Material.Light.NoActionBar">
-        <item name="android:colorPrimary">#A8480F</item>
-        <item name="android:colorPrimaryDark">#7E350B</item>
-        <item name="android:colorAccent">#A8480F</item>
-        <item name="android:windowBackground">#FAF8F3</item>
+    <!-- Android 4.4 -->
+    <style name="AppTheme" parent="android:Theme.Holo.Light.NoActionBar">
+        <item name="android:windowBackground">@color/page_bg</item>
     </style>
 </resources>

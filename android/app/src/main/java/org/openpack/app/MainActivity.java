@@ -148,6 +148,7 @@ public class MainActivity extends Activity {
         ws.setDisplayZoomControls(false);
 
         web.setWebViewClient(new WebViewClient() {
+            @android.annotation.TargetApi(24) // only Android 7+ calls this form; older phones call the one below
             @Override public boolean shouldOverrideUrlLoading(WebView v, WebResourceRequest r) {
                 return blockOutside(r.getUrl());
             }
