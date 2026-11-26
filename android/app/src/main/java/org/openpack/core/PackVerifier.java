@@ -17,6 +17,7 @@ import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.util.Collections;
+import java.util.List;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -57,7 +58,17 @@ public final class PackVerifier {
 
     private PackVerifier() {}
 
+    /** One trusted key. */
     public static Pack verify(File dir, byte[] publicKeyPem, boolean hashFiles, Progress progress)
+            throws PackException {
+        return verify(dir, Collections.singletonList(publicKeyPem), hashFiles, progress);
+    }
+
+    /**
+     * Several trusted keys: the pack is accepted if any one of them signed it. This is what lets
+     * a spare key, kept offline, take over if the everyday key is lost.
+     */
+    public static Pack verify(File dir, List<byte[]> publicKeys, boolean hashFiles, Progress progress)
             throws PackException {
         byte[] mb = readSmall(new File(dir, "manifest.json"), "manifest.json not found");
         JSONObject m;
@@ -67,8 +78,12 @@ public final class PackVerifier {
             throw new PackException("manifest.json is not valid JSON");
         }
 
-        verifySignature(dir, publicKeyPem, mb);
-        checkManifestJs(dir, mb);
+        File sf = new File(dir, "manifest.sig");
+        if (!sf.isFile()) throw new PackException("the pack is unsigned (manifest.sig missing)");
+        checkSignature(mb, readSmall(sf, "manifest.sig missing"), publicKeys);
+        File jf = new File(dir, "manifest.js");
+        if (!jf.isFile()) throw new PackException("manifest.js is missing");
+        checkManifestJs(readSmall(jf, "manifest.js is missing"), mb);
 
         JSONArray items = m.optJSONArray("items");
         if (items == null) throw new PackException("manifest.json has no items");
@@ -100,29 +115,34 @@ public final class PackVerifier {
         return new Pack(dir, m, paths);
     }
 
-    static void verifySignature(File dir, byte[] publicKeyPem, byte[] manifestBytes) throws PackException {
-        File sf = new File(dir, "manifest.sig");
-        if (!sf.isFile()) throw new PackException("the pack is unsigned (manifest.sig missing)");
+    /** True if any of the trusted keys signed these exact manifest bytes. */
+    public static void checkSignature(byte[] manifestBytes, byte[] sigFile, List<byte[]> publicKeys) throws PackException {
         byte[] sig;
         try {
-            sig = base64(new String(readSmall(sf, "manifest.sig missing"), StandardCharsets.US_ASCII).trim());
+            sig = base64(new String(sigFile, StandardCharsets.US_ASCII).trim());
         } catch (IllegalArgumentException e) {
             throw new PackException("manifest.sig is not valid base64");
         }
-        byte[] raw = rawKeyFromPem(publicKeyPem);
-        boolean ok;
-        try {
-            EdDSAParameterSpec spec = EdDSANamedCurveTable.getByName("Ed25519");
-            EdDSAEngine eng = new EdDSAEngine(MessageDigest.getInstance(spec.getHashAlgorithm()));
-            eng.initVerify(new EdDSAPublicKey(new EdDSAPublicKeySpec(raw, spec)));
-            eng.update(manifestBytes);
-            ok = eng.verify(sig);
-        } catch (Exception e) {
-            ok = false;
+        if (publicKeys == null || publicKeys.isEmpty()) throw new PackException("no public key");
+        PackException keyProblem = null;
+        for (byte[] pem : publicKeys) {
+            byte[] raw;
+            try {
+                raw = rawKeyFromPem(pem);
+            } catch (PackException e) {
+                keyProblem = e;
+                continue;
+            }
+            try {
+                EdDSAParameterSpec spec = EdDSANamedCurveTable.getByName("Ed25519");
+                EdDSAEngine eng = new EdDSAEngine(MessageDigest.getInstance(spec.getHashAlgorithm()));
+                eng.initVerify(new EdDSAPublicKey(new EdDSAPublicKeySpec(raw, spec)));
+                eng.update(manifestBytes);
+                if (eng.verify(sig)) return;
+            } catch (Exception ignored) {}
         }
-        if (!ok) {
-            throw new PackException("SIGNATURE INVALID: the manifest was changed, or it was signed by a different key");
-        }
+        if (keyProblem != null && publicKeys.size() == 1) throw keyProblem;
+        throw new PackException("SIGNATURE INVALID: the manifest was changed, or it was signed by a different key");
     }
 
     // DER header of an ed25519 SubjectPublicKeyInfo; the 32 key bytes follow it.
@@ -169,10 +189,8 @@ public final class PackVerifier {
      * manifest.js is the copy the page loads as a script. It must be an exact copy of the signed
      * manifest inside the assignment and nothing else, so no script can ride along with it.
      */
-    static void checkManifestJs(File dir, byte[] manifestBytes) throws PackException {
-        File f = new File(dir, "manifest.js");
-        if (!f.isFile()) throw new PackException("manifest.js is missing");
-        String txt = new String(readSmall(f, "manifest.js is missing"), StandardCharsets.UTF_8);
+    public static void checkManifestJs(byte[] js, byte[] manifestBytes) throws PackException {
+        String txt = new String(js, StandardCharsets.UTF_8);
         int end = txt.length();
         while (end > 0 && txt.charAt(end - 1) <= ' ') end--;
         String want = MANIFEST_JS_PREFIX + new String(manifestBytes, StandardCharsets.UTF_8) + ";";
@@ -218,7 +236,7 @@ public final class PackVerifier {
         return new String(out);
     }
 
-    private static byte[] readSmall(File f, String missing) throws PackException {
+    public static byte[] readSmall(File f, String missing) throws PackException {
         if (!f.isFile()) throw new PackException(missing);
         if (f.length() > 64L << 20) throw new PackException(f.getName() + " is too large");
         try {

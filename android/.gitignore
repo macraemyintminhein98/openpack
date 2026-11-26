@@ -2,7 +2,10 @@
 build/
 app/build/
 local.properties
-# The pack and public key are copied in by scripts/build-android.sh
-app/src/main/assets/
+# The pack and public keys are copied in by scripts/build-android.sh
+app/src/main/assets/pack/
+app/src/main/assets/pack.files
+app/src/main/assets/keys/
+app/src/main/assets/openpack.pub
 *.jks
 *.keystore

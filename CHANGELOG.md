@@ -1,9 +1,13 @@
 # Changelog
 
 ## Unreleased
-- Android app (`android/`), first test build: the library in an app, a built-in pack, sharing to nearby
-  phones over Wi-Fi or hotspot with a QR code, opening a new signed pack from a .zip, a notice editor.
-  No Google services, no analytics, one permission. See `android/README.md`.
+- Android app (`android/`), test build 0.2.0: the library in an app, a built-in pack, sharing to
+  nearby phones over Wi-Fi or hotspot with a QR code, opening a new signed pack from a .zip, a notice editor.
+  Built to keep going unattended: the app hands out its own installer and the pack to visitors, phones
+  update each other (only missing files, resumable, signature checked first), sharing carries on with
+  the screen off, Android 5+, its own Burmese font, and an optional spare signing key.
+  No Google services, no analytics. See `android/README.md`.
+- Share page: when the server is the Android app, visitors see "Get the app" and "Get the library as one file".
 - Hardening: `manifest.js` must now be an exact copy of the signed manifest. Before, text placed before
   or after the manifest inside that file was not checked (Node and Go checks both fixed, tests added).
 

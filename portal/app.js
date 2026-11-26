@@ -21,7 +21,7 @@
 
   var state = {
     manifest: null,
-    features: { kiwix: false, urls: [], notices: 0 },
+    features: { kiwix: false, urls: [], notices: 0, apk: false, packZip: false },
     set: { lang: 'my', size: 1, theme: 'light' }
   };
 
@@ -222,7 +222,17 @@
     var urls = shareUrls();
     return head + '<ol class="steps"><li>' + esc(t('share_s1')) + '</li><li>' + esc(t('share_s2')) + '</li><li>' + esc(t('share_s3')) + '</li></ol>' +
       '<div class="sharebox"><div class="qr">' + qrSvg(urls[0]) + '</div><p class="url-label">' + esc(t('share_addr')) + '</p>' +
-      urls.map(function (u) { return '<p class="url">' + esc(u) + '</p>'; }).join('') + '</div>';
+      urls.map(function (u) { return '<p class="url">' + esc(u) + '</p>'; }).join('') + '</div>' + takeAway();
+  }
+  // When a phone running the app is sharing, visitors can take the app and the whole library
+  // away with them, and then share it onwards themselves. Not shown on the sharing phone itself.
+  function takeAway() {
+    var h = location.hostname, f = state.features;
+    if (h === 'localhost' || h === '127.0.0.1' || (!f.apk && !f.packZip)) { return ''; }
+    return '<div class="sharebox takeaway"><p class="url-label">' + esc(t('take_title')) + '</p>' +
+      (f.apk ? '<p><a class="act" href="openpack.apk" download>' + ic('download') + esc(t('take_app')) + '</a></p>' : '') +
+      (f.packZip ? '<p><a class="act" href="pack.zip" download>' + ic('download') + esc(t('take_pack')) + '</a></p>' : '') +
+      '<p class="filenote">' + esc(t('take_note')) + '</p></div>';
   }
 
   /* ---------- lessons (step-by-step picture guides) ---------- */
@@ -413,7 +423,7 @@
     // features.json is generated live by the server: is Kiwix running, and what are the LAN addresses?
     fetch('features.json', { cache: 'no-store' })
       .then(function (r) { return r.json(); })
-      .then(function (f) { state.features = { kiwix: !!f.kiwix, urls: f.urls || [], notices: f.notices || 0 }; })
+      .then(function (f) { state.features = { kiwix: !!f.kiwix, urls: f.urls || [], notices: f.notices || 0, apk: !!f.apk, packZip: !!f.pack_zip }; })
       .catch(function () {})
       .then(function () {
         return fetch('manifest.json', { cache: 'no-store' })

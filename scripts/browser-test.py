@@ -249,6 +249,30 @@ with sync_playwright() as p:
         check('served: .md opens as text, not a download', r.status == 200 and r.headers.get('content-type', '').startswith('text/plain'), r.headers.get('content-type'))
         ctx.close()
 
+        # ---- Android app server only: visitors can take the app's pack away, the sharing phone itself is not offered it ----
+        if os.environ.get('OP_SERVER') and os.environ.get('OP_LAN'):
+            lan = 'http://' + os.environ['OP_LAN'] + ':18090/'
+            v = b.new_context(**phone(), accept_downloads=True)
+            pv = v.new_page()
+            pv.goto(lan + '#/share')
+            pv.wait_for_selector('.sharebox')
+            check('app: a visitor is offered the library as one file', pv.locator('.takeaway a[href="pack.zip"]').count() == 1)
+            names = []
+            if pv.locator('.takeaway a[href="pack.zip"]').count() == 1:
+                with pv.expect_download() as dl:
+                    pv.click('.takeaway a[href="pack.zip"]')
+                import zipfile
+                names = zipfile.ZipFile(dl.value.path()).namelist()
+            check('app: the downloaded file is a whole pack', any(n.endswith('/manifest.sig') for n in names) and any('/content/' in n for n in names), names[:4])
+            check('app: the downloaded file carries no page scripts', not any(n.endswith('app.js') or n.endswith('index.html') for n in names))
+            v.close()
+            o = b.new_context(**phone())
+            po = o.new_page()
+            po.goto('http://localhost:18090/#/share')
+            po.wait_for_selector('.sharebox')
+            check('app: the sharing phone itself is not offered a download of its own pack', po.locator('.takeaway').count() == 0)
+            o.close()
+
         # ---- hub: notice board ----
         base = 'http://' + HOST + ':18090/'
         notices_before = open(bundle + 'notices.txt', 'rb').read() if os.path.exists(bundle + 'notices.txt') else None

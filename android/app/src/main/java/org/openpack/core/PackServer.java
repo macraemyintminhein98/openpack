@@ -44,6 +44,8 @@ public final class PackServer {
     private volatile boolean lan;
     private volatile int port;
     private ExecutorService pool;
+    private volatile File apk;          // the app's own installer, so it can pass itself on
+    private volatile String zipName = "pack";
     private Thread acceptor;
 
     public PackServer(File portalDir, File packDir, Set<String> listedContent, File noticesFile, String version) {
@@ -129,6 +131,12 @@ public final class PackServer {
         }
     }
 
+    /** Lets visitors download the app itself from /openpack.apk. No app store or internet needed to spread it. */
+    public void setApk(File apkFile) { this.apk = apkFile != null && apkFile.isFile() ? apkFile : null; }
+
+    /** Folder name used inside /pack.zip, for example example-2026.48 */
+    public void setZipName(String name) { if (name != null) this.zipName = name.replaceAll("[^A-Za-z0-9._-]", "_"); }
+
     public boolean isRunning() { return socket != null; }
     public boolean isShared() { return lan; }
     public int port() { return port; }
@@ -201,7 +209,11 @@ public final class PackServer {
             json(out, Notices.toJson(Notices.read(noticesFile)), headOnly);
             return;
         }
-        File f = resolve(path);
+        if (path.equals("/pack.zip")) {
+            sendPackZip(out, headOnly);
+            return;
+        }
+        File f = path.equals("/openpack.apk") ? apk : resolve(path);
         if (f == null) {
             simple(out, 404, "Not Found", headOnly);
             return;
@@ -236,6 +248,46 @@ public final class PackServer {
         return f.isFile() ? f : null;
     }
 
+    /**
+     * The whole pack as one .zip, made on the fly: the three manifest files and every listed file.
+     * A phone without the app can carry this file away; a phone with the app can open it.
+     */
+    private void sendPackZip(OutputStream out, boolean headOnly) throws IOException {
+        StringBuilder sb = start(200, "OK");
+        sb.append("Content-Type: application/zip\r\n");
+        sb.append("Content-Disposition: attachment; filename=\"").append(zipName).append(".zip\"\r\n");
+        sb.append("Cache-Control: no-store\r\n\r\n");
+        out.write(sb.toString().getBytes(StandardCharsets.ISO_8859_1));
+        if (headOnly) { out.flush(); return; }
+        java.util.zip.ZipOutputStream zip = new java.util.zip.ZipOutputStream(out);
+        zip.setLevel(1); // most content (video, PDF, audio) is already compressed
+        byte[] buf = new byte[1 << 16];
+        List<String> names = new ArrayList<String>();
+        names.add("manifest.json");
+        names.add("manifest.js");
+        names.add("manifest.sig");
+        if (listed != null) {
+            List<String> sorted = new ArrayList<String>(listed);
+            Collections.sort(sorted);
+            names.addAll(sorted);
+        }
+        for (String rel : names) {
+            File f = new File(packDir, rel);
+            if (!f.isFile()) continue;
+            zip.putNextEntry(new java.util.zip.ZipEntry(zipName + "/" + rel));
+            InputStream in = new FileInputStream(f);
+            try {
+                int n;
+                while ((n = in.read(buf)) > 0) zip.write(buf, 0, n);
+            } finally {
+                in.close();
+            }
+            zip.closeEntry();
+        }
+        zip.finish();
+        out.flush();
+    }
+
     private String featuresJson() {
         try {
             JSONArray urls = new JSONArray();
@@ -246,6 +298,8 @@ public final class PackServer {
                 .put("version", version)
                 .put("notices", Notices.read(noticesFile).size())
                 .put("app", "android")
+                .put("apk", apk != null)
+                .put("pack_zip", true)
                 .toString();
         } catch (Exception e) {
             return "{}";
@@ -287,7 +341,9 @@ public final class PackServer {
         sb.append("Accept-Ranges: bytes\r\n");
         if (partial) sb.append("Content-Range: bytes ").append(from).append('-').append(to).append('/').append(len).append("\r\n");
         String lower = path.toLowerCase(Locale.ROOT);
-        if (lower.endsWith(".apk")) {
+        if (lower.equals("/openpack.apk")) {
+            sb.append("Content-Disposition: attachment; filename=\"OpenPack.apk\"\r\n");
+        } else if (lower.endsWith(".apk")) {
             sb.append("Content-Disposition: attachment\r\n");
         } else if (lower.equals("/") || lower.endsWith(".html") || lower.endsWith(".json") || lower.endsWith(".js")) {
             sb.append("Cache-Control: no-cache\r\n");
@@ -374,13 +430,19 @@ public final class PackServer {
     /** Addresses another phone on the same Wi-Fi or hotspot can type in. Mobile-data and VPN links are left out. */
     public static List<String> lanUrls(int port) {
         List<String> out = new ArrayList<String>();
+        for (String ip : lanIps()) out.add("http://" + ip + (port == 80 ? "" : ":" + port) + "/");
+        return out;
+    }
+
+    /** This device's own addresses on Wi-Fi, hotspot, USB or cable links. */
+    public static List<String> lanIps() {
+        List<String> out = new ArrayList<String>();
         try {
             for (NetworkInterface ni : Collections.list(NetworkInterface.getNetworkInterfaces())) {
                 if (!ni.isUp() || ni.isLoopback() || !isLocalLink(ni.getName())) continue;
                 for (InetAddress a : Collections.list(ni.getInetAddresses())) {
                     if (!(a instanceof Inet4Address) || a.isLoopbackAddress() || a.isLinkLocalAddress()) continue;
-                    String u = "http://" + a.getHostAddress() + (port == 80 ? "" : ":" + port) + "/";
-                    if (!out.contains(u)) out.add(u);
+                    if (!out.contains(a.getHostAddress())) out.add(a.getHostAddress());
                 }
             }
         } catch (Exception ignored) {}

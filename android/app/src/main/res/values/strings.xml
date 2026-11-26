@@ -23,4 +23,17 @@
     <string name="notices_hint">First line = title. Put --- between notices.</string>
     <string name="about_text">%1$s, version %2$s\nApp %3$s\n\nPacks are accepted only if signed with this key:\n%4$s\n\nNothing you read is recorded. The app never uses the internet.</string>
     <string name="test_build">TEST BUILD</string>
+    <string name="get_nearby">Get the newest pack from a nearby phone…</string>
+    <string name="looking">Looking for a phone that is sharing…</string>
+    <string name="none_found">No sharing phone was found. Join the same Wi-Fi or hotspot as the phone that is sharing. Or type the address it shows:</string>
+    <string name="choose_phone">Which phone?</string>
+    <string name="same_pack">That phone has the same pack as this one. Nothing to copy.</string>
+    <string name="older_pack">That phone has an OLDER pack (%1$s) than this one (%2$s). Copy it anyway?</string>
+    <string name="copying">Copying %1$d of %2$d…</string>
+    <string name="copied">Done. Copied %1$d new files and kept %2$d this phone already had.</string>
+    <string name="copy_failed">The copy did not finish: %s\nTry again and it will carry on where it stopped.</string>
+    <string name="copy">Copy</string>
+    <string name="note_title">OpenPack is sharing</string>
+    <string name="note_text">Nearby phones can open the library. Tap to open.</string>
+    <string name="share_bg">Sharing carries on when the screen is off. Keep the phone charging.</string>
 </resources>

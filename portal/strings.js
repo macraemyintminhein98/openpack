@@ -90,6 +90,10 @@ window.OPENPACK_STRINGS = {
     share_s2: 'အခြားသူများက ထို Wi-Fi သို့ ချိတ်ဆက်ပါ။',
     share_s3: 'ဖုန်းကင်မရာဖြင့် အောက်ပါ QR ကုဒ်ကို စကင်ဖတ်ပါ၊ သို့မဟုတ် လိပ်စာကို ဘရောက်ဇာတွင် ရိုက်ထည့်ပါ။',
     share_addr: 'လိပ်စာ',
+    take_title: 'ဤစာကြည့်တိုက်ကို သင့်ဖုန်းထဲ ယူသွားပါ',
+    take_app: 'အက်ပ်ကို ရယူရန်',
+    take_pack: 'စာကြည့်တိုက်ဖိုင်ကို ရယူရန်',
+    take_note: 'အက်ပ်ကို ထည့်သွင်းပြီးလျှင် သင်လည်း အခြားသူများကို မျှဝေနိုင်ပါသည်။',
     share_file: 'ဤစာမျက်နှာကို ဖိုလ်ဒါမှ တိုက်ရိုက်ဖွင့်ထားပါသည်။ လူများစွာကို မျှဝေလိုလျှင် START ဖိုင်ဖြင့် စတင်ပါ။',
 
     // Lessons (step-by-step picture guides)
@@ -193,6 +197,10 @@ window.OPENPACK_STRINGS = {
     share_s2: 'Other people connect to that Wi-Fi.',
     share_s3: 'They scan the QR code below with their phone camera, or type the address into a browser.',
     share_addr: 'Address',
+    take_title: 'Take this library with you',
+    take_app: 'Get the app',
+    take_pack: 'Get the library as one file',
+    take_note: 'After you install the app, you can share with other people too.',
     share_file: 'This page was opened directly from a folder. To share with many people, start it with the START file.',
 
     type_lesson: 'Picture lesson',

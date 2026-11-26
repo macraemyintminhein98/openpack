@@ -10,7 +10,7 @@ import java.io.OutputStream;
 /** The real pack built by the Node CLI (scripts/build-android.sh copies it into assets). */
 final class TestPack {
     static final File PACK = new File("src/main/assets/pack");
-    static final File PUB = new File("src/main/assets/openpack.pub");
+    static final File PUB = new File("src/main/assets/keys/1.pub");
 
     static byte[] pub() throws IOException { return read(PUB); }
 

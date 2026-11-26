@@ -216,3 +216,5 @@ html.dark .choice[aria-pressed=true] { background: #4a2d17; border-color: #e8873
 html.dark .badge { background: #1f3a22; color: #b9e6bd; }
 html.dark .card details { border-top-color: #3a352b; }
 html.dark .filenote { background: #4a3d12; }
+.takeaway { margin-top: 14px; }
+.takeaway .act { display: inline-flex; }

@@ -8,10 +8,10 @@ android {
 
     defaultConfig {
         applicationId 'org.openpack.app'
-        minSdk 23            // Android 6.0 (2015)
+        minSdk 21            // Android 5.0 (2014)
         targetSdk 34
-        versionCode 1
-        versionName '0.1.0-test'
+        versionCode 2
+        versionName '0.2.0-test'
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8

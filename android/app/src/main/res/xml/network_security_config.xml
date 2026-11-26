@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- The app's own screen talks to the app's own server on this phone, in plain http. -->
+<!-- Plain http is used only between phones on the same local network, and to the app's own
+     server on this phone. The code refuses any address that is not a local-network number
+     (see PeerSync.isLocalAddress), and every pack is signature-checked whatever it came over. -->
 <network-security-config>
-    <domain-config cleartextTrafficPermitted="true">
-        <domain includeSubdomains="false">127.0.0.1</domain>
-        <domain includeSubdomains="false">localhost</domain>
-    </domain-config>
+    <base-config cleartextTrafficPermitted="true" />
 </network-security-config>

@@ -17,6 +17,7 @@ public final class ServeMain {
             if (a[i].equals("-port")) port = Integer.parseInt(a[i + 1]);
         }
         PackVerifier.Pack p = PackVerifier.verify(dir, TestPack.read(pub), true, null);
+        // (the browser tests pass the bundle's key with -pub)
         File notices = new File(dir.getCanonicalFile().getParentFile(), "notices.txt");
         PackServer s = new PackServer(dir, dir, p.paths, notices, "android-test");
         System.out.println("serving " + p.name + " on " + s.start(true, port));
