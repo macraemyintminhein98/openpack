@@ -10,6 +10,26 @@ from playwright.sync_api import sync_playwright
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CHROME = sys.argv[1] if len(sys.argv) > 1 else '/usr/bin/google-chrome'
+# Optional, to get closer to real phones:
+#   OP_ENGINE=chromium|firefox|webkit   browser engine (default: the Chrome at the path above)
+#   OP_DEVICE="Galaxy S5"               emulate a phone (screen, touch, user agent); see playwright devices
+#   OP_HOST=192.168.1.20                reach the server by this address instead of localhost.
+#                                       Use the machine's LAN address: phones are never on localhost,
+#                                       and browsers switch some features off for non-localhost http.
+ENGINE = os.environ.get('OP_ENGINE', '')
+DEVICE = os.environ.get('OP_DEVICE', '')
+HOST = os.environ.get('OP_HOST', 'localhost')
+PW = None
+
+
+def phone():
+    """Context settings for one simulated phone."""
+    if DEVICE:
+        d = dict(PW.devices[DEVICE])
+        if ENGINE == 'firefox':
+            d.pop('is_mobile', None)
+        return d
+    return {'viewport': {'width': 360, 'height': 700}}
 bundle = sorted(glob.glob(ROOT + '/dist/OpenPack-*/'))[-1]
 pack = bundle + 'pack/'
 SHOTS = '/tmp/op-shots/'
@@ -31,7 +51,7 @@ def text(page, sel):
 
 
 def run_flow(b, base_url, tag, served):
-    ctx = b.new_context(viewport={'width': 360, 'height': 700})
+    ctx = b.new_context(**phone())
     page = ctx.new_page()
     errs = []
     page.on('pageerror', lambda e: errs.append(str(e)))
@@ -43,6 +63,7 @@ def run_flow(b, base_url, tag, served):
     check(tag + ': tiles are in Burmese by default', 'သင်ယူရန်' in page.inner_text('#view'), page.inner_text('#view')[:200])
     check(tag + ': page language is Burmese', page.evaluate('document.documentElement.lang') == 'my')
     check(tag + ': share button ' + ('shown' if served else 'hidden'), (page.locator('.bigbtn').count() == 1) == served)
+    check(tag + ': no notice bar unless the hub writes notices', page.locator('.noticebar').count() == 0)
     check(tag + ': home fits 360px wide', no_overflow(page))
     page.wait_for_timeout(300)
     loaded = page.evaluate("(function(){var n=0;document.fonts.forEach(function(f){if(f.status==='loaded'){n++}});return n})()")
@@ -207,7 +228,9 @@ def run_flow(b, base_url, tag, served):
 
 
 with sync_playwright() as p:
-    b = p.chromium.launch(executable_path=CHROME, args=['--no-sandbox'])
+    PW = p
+    b = getattr(p, ENGINE).launch() if ENGINE else p.chromium.launch(executable_path=CHROME, args=['--no-sandbox'])
+    print('engine:', ENGINE or 'chrome', b.version, '| device:', DEVICE or '360x700', '| host:', HOST)
 
     run_flow(b, 'file://' + pack + 'index.html', 'file', False)
 
@@ -216,15 +239,39 @@ with sync_playwright() as p:
                            stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)
     time.sleep(1.5)
     try:
-        run_flow(b, 'http://localhost:18090/', 'served', True)
+        run_flow(b, 'http://' + HOST + ':18090/', 'served', True)
         ctx = b.new_context()
-        r = ctx.request.get('http://localhost:18090/fonts/noto-sans-myanmar-myanmar-400-normal.woff2')
+        r = ctx.request.get('http://' + HOST + ':18090/fonts/noto-sans-myanmar-myanmar-400-normal.woff2')
         check('served: font file is delivered as a font', r.status == 200 and 'font/woff2' in r.headers.get('content-type', ''), (r.status, r.headers.get('content-type')))
-        r = ctx.request.get('http://localhost:18090/content/learn/sample-lesson.md')
+        r = ctx.request.get('http://' + HOST + ':18090/content/learn/sample-lesson.md')
         check('served: .md opens as text, not a download', r.status == 200 and r.headers.get('content-type', '').startswith('text/plain'), r.headers.get('content-type'))
         ctx.close()
+
+        # ---- hub: notice board ----
+        base = 'http://' + HOST + ':18090/'
+        notices_before = open(bundle + 'notices.txt', 'rb').read() if os.path.exists(bundle + 'notices.txt') else None
+        with open(bundle + 'notices.txt', 'w', encoding='utf8') as f:
+            f.write('# comment\nဆေးခန်းဖွင့်ရက်\nကြာသပတေးနေ့ မနက် ၉ နာရီ\n<b>bold?</b>\n---\nNew books on Monday\n')
+        a = b.new_context(**phone())
+        pa = a.new_page()
+        errs = []
+        pa.on('pageerror', lambda e: errs.append(str(e)))
+        pa.goto(base)
+        pa.wait_for_selector('.noticebar')
+        check('hub: home shows the notice bar with the count', '၂' not in text(pa, '.noticebar') and '2' in text(pa, '.noticebar'), text(pa, '.noticebar'))
+        pa.click('.noticebar')
+        pa.wait_for_selector('.notice')
+        check('hub: both notices are listed, Burmese intact', pa.locator('.notice').count() == 2 and 'ဆေးခန်းဖွင့်ရက်' in text(pa, '.notice h3'))
+        check('hub: notice text is shown as text, never as HTML', pa.locator('.notice b').count() == 0 and '<b>bold?</b>' in pa.inner_text('.notice'))
+        check('hub: notices say they are not part of the library', pa.locator('.fromhub').count() == 1)
+        pa.screenshot(path=SHOTS + 'hub-1-notices.png', full_page=True)
+
+        check('hub: no JS errors', not errs, errs)
+        a.close()
     finally:
         srv.terminate()
+        if 'notices_before' in dir() and notices_before is not None:  # put the hub's own file back
+            open(bundle + 'notices.txt', 'wb').write(notices_before)
 
     # ---- a pack that overrides categories, labels and default language ----
     tmp = tempfile.mkdtemp()
@@ -238,7 +285,7 @@ with sync_playwright() as p:
     out = subprocess.run(['node', ROOT + '/bin/openpack.js', 'build', tmp + '/pk', '--out', tmp + '/out'], capture_output=True, text=True)
     check('custom pack builds', out.returncode == 0, out.stdout + out.stderr)
     built = glob.glob(tmp + '/out/*/')[0]
-    ctx = b.new_context(viewport={'width': 360, 'height': 700})
+    ctx = b.new_context(**phone())
     page = ctx.new_page()
     page.goto('file://' + built + 'index.html')
     page.wait_for_selector('.tile')

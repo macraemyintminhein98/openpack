@@ -24,7 +24,7 @@ import (
 	"time"
 )
 
-const version = "0.5.0"
+const version = "0.6.0"
 
 func main() {
 	dirFlag := flag.String("dir", "", "pack folder (default: ./pack next to this program, or the current folder)")
@@ -33,6 +33,7 @@ func main() {
 	fast := flag.Bool("fast", false, "skip hashing every file at start-up (faster for big packs, less safe)")
 	check := flag.Bool("check", false, "only verify the pack and exit")
 	force := flag.Bool("force", false, "serve even if verification fails (not recommended)")
+	hubFlag := flag.String("hub", "", "hub folder holding notices.txt (default: the folder that contains the pack)")
 	showVersion := flag.Bool("version", false, "print version and exit")
 	flag.Parse()
 
@@ -90,12 +91,22 @@ func main() {
 	}
 	urls := lanURLs(chosen)
 
+	hubDir := *hubFlag
+	if hubDir == "" {
+		hubDir = filepath.Dir(dir)
+	}
+	hb := newHub(hubDir)
+
 	mux := http.NewServeMux()
 	mux.HandleFunc("/features.json", func(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("Content-Type", "application/json; charset=utf-8")
 		w.Header().Set("Cache-Control", "no-store")
-		_ = json.NewEncoder(w).Encode(map[string]interface{}{"kiwix": hasKiwix, "urls": urls, "version": version})
+		_ = json.NewEncoder(w).Encode(map[string]interface{}{
+			"kiwix": hasKiwix, "urls": urls, "version": version,
+			"notices": len(hb.notices()),
+		})
 	})
+	hb.register(mux)
 	if hasKiwix {
 		proxy := httputil.NewSingleHostReverseProxy(&url.URL{Scheme: "http", Host: "127.0.0.1:8081"})
 		mux.Handle("/kiwix/", proxy)

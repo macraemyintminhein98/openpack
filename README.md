@@ -229,6 +229,18 @@ a national health agency), keep to what the source says, and leave out anything 
 mistake can kill (identifying wild plants or mushrooms, medicine doses, home-made rehydration
 recipes).
 
+## Hub notice board
+
+The notice board belongs to the place running the START file (a shop, school, clinic), not
+to the signed pack. It only exists when the pack is served over Wi-Fi, never in folder mode.
+
+The hub owner writes notices in `notices.txt` next to the START files (first line is the
+title, `---` between notices). Visitors see a yellow bar on the home screen and can read
+them. Visitors cannot write anything. No restart is needed, and nothing is stored about
+readers.
+
+OpenPack has no chat or messaging, on purpose: see `docs/DISTRIBUTION.md`.
+
 ## Weekly release in one command
 
 ```bash
@@ -309,6 +321,7 @@ attribution shown on its library page.
 - [docs/CONTENT-POLICY.md](docs/CONTENT-POLICY.md): what may go in a pack, removal requests (draft, needs legal review)
 - [docs/DEVICE-TEST.md](docs/DEVICE-TEST.md): 20-minute checklist for real phones and Windows
 - [docs/burmese-review.csv](docs/burmese-review.csv): every Burmese label, for native review
+- [docs/TESTING.md](docs/TESTING.md): what was tested on which engines and phone profiles, and what was not
 - [docs/ROADMAP.md](docs/ROADMAP.md): audio, Kolibri, known gaps
 - [docs/lesson-review.md](docs/lesson-review.md): every lesson line with its sources, for a health professional to sign off
 - [docs/LESSON-AUDIT.md](docs/LESSON-AUDIT.md): what was checked, changed and deliberately left out
@@ -328,9 +341,10 @@ attribution shown on its library page.
 | Pack builder, signing, verification, licence gate | Working, tested (44 Node tests) |
 | Zawgyi lint, copyleft source rule, `zim`/`apk` kinds | Working, tested |
 | Picture lessons: builder checks, player, 9 lessons included in every pack | Working, tested in Node and Chrome (every lesson stepped through). **Content is AI-written from the listed sources and not yet expert-reviewed.** |
+| Hub notice board | Working, tested in Go and in three browser engines. Not tested on a real hotspot. |
 | Search: Zawgyi input, space-insensitive Burmese, syllable fallback, ranking | Working, tested in Node and in Chrome. Conversion rules need a native check on real typing. |
 | Weekly release script, change notes, checksum pinning | Release script tested end to end here. `pin-source.js` download-and-hash path tested against a live https server; the publisher `.sha256` shortcut is not yet tested against Kiwix. |
-| Portal: tiles, one-button items, settings (language, text size, theme), help, QR share, bundled Burmese font | Tested in headless Chrome in folder and served mode (108 checks incl. Back button, saved settings, 360 px width, largest text, dark). Not yet tried on real Burmese phones. |
+| Portal: tiles, one-button items, settings (language, text size, theme), help, QR share, bundled Burmese font | Tested in headless Chrome in folder and served mode (115 checks incl. Back button, saved settings, 360 px width, largest text, dark). Not yet tried on real Burmese phones. |
 | Go server: verification, serving, hidden dotfiles, no listings, range downloads | Tested (Go tests plus a Node-signed pack verified by Go, and tamper checks). Runs on Linux here. |
 | Windows, Android/Termux and 32-bit ARM builds | **Compiled but not run.** They cross-compile cleanly; nobody has executed them on those devices yet. |
 | `START-*` scripts | Written to spec, not yet run on real devices |

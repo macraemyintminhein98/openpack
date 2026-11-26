@@ -39,6 +39,14 @@ Nobody needs an account, and no list of readers is kept anywhere.
 - **Charging.** The content is free. If a shop charges for the copying service or the storage
   card, that is their business, but get legal advice first (non-commercial licences).
 
+## Hub notice board, and why there is no chat
+
+- **Notice board:** safe to use. Only the hub owner writes it (`notices.txt`); visitors read.
+- **No chat or messaging.** OpenPack is a library. A messaging feature would make every hub
+  owner answerable for what strangers write on their Wi-Fi, and would change what a carrier
+  is carrying. If that is ever reconsidered, get the legal questions answered first and have
+  the encryption reviewed by someone independent.
+
 ## When something is wrong in a pack
 
 1. Anyone reports it to a hub or the maintainer (see contact in the README).

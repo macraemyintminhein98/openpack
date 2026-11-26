@@ -108,6 +108,12 @@ window.OPENPACK_STRINGS = {
     l_loading: 'ဖွင့်နေပါသည်…',
     l_error: 'သင်ခန်းစာကို ဖွင့်၍ မရပါ။ ဖိုလ်ဒါတစ်ခုလုံးကို မူရင်းမှ ပြန်ကူးပါ။',
 
+    // Notice board (only when this pack is run from a hub's START file)
+    notices: 'ကြေညာချက်များ',
+    notices_n: 'ကြေညာချက် {n} ခု',
+    notices_from: 'ဤ Wi-Fi ကို စီမံသူက တင်ထားသော ကြေညာချက်များ ဖြစ်ပါသည်။ စာကြည့်တိုက်၏ အစိတ်အပိုင်း မဟုတ်ပါ။',
+    notices_none: 'ယခု ကြေညာချက် မရှိပါ။',
+
     // Messages
     err_manifest: 'ဖိုင်များ မတွေ့ပါ။ ဖိုလ်ဒါတစ်ခုလုံးကို မူရင်းမှ ပြန်ကူးပါ။',
     footer: 'အကြောင်းအရာတစ်ခုချင်းစီကို ၎င်း၏ လိုင်စင်စည်းကမ်းအတိုင်း မျှဝေထားပါသည်။'
@@ -203,6 +209,11 @@ window.OPENPACK_STRINGS = {
     l_unreviewed: 'This lesson has not yet been checked by an expert.',
     l_loading: 'Loading…',
     l_error: 'This lesson could not be opened. Copy the whole folder again from the original.',
+
+    notices: 'Notices',
+    notices_n: '{n} notices',
+    notices_from: 'Posted by whoever runs this Wi-Fi. Not part of the library.',
+    notices_none: 'No notices right now.',
 
     err_manifest: 'Files not found. Copy the whole folder again from the original.',
     footer: 'Each item is shared under the licence shown in its details.'

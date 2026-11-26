@@ -38,6 +38,12 @@ maintainer lives). They are questions, not answers.
 12. Should the signing key be held by a person or an organisation, and in which country?
 13. Is a takedown process as described in `CONTENT-POLICY.md` sufficient?
 
+## Hub notice board
+
+15. A hub can post its own notices (clinic days, water deliveries) for people on its Wi-Fi to
+    read. Does that count as publishing or as running a "digital platform" under the
+    Cybersecurity Law?
+
 ## Privacy
 
 14. The software keeps no logs and no accounts. Is there anything a hub is nevertheless

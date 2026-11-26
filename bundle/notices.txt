@@ -1,0 +1,17 @@
+# NOTICE BOARD / ကြေညာချက်ဘုတ်
+#
+# Write your notices below. People who open the library over your Wi-Fi will see them.
+# ကြေညာချက်များကို အောက်တွင် ရေးပါ။ သင့် Wi-Fi မှတစ်ဆင့် စာကြည့်တိုက်ကို ဖွင့်သူများ မြင်ရပါမည်။
+#
+# - The first line of a notice is its title. / ပထမစာကြောင်းသည် ခေါင်းစဉ် ဖြစ်သည်။
+# - Put a line of --- between notices. / ကြေညာချက်တစ်ခုနှင့်တစ်ခုကြား --- ဟု ရေးပါ။
+# - Lines that start with # are not shown. / # ဖြင့်စသော စာကြောင်းများကို မပြပါ။
+# - Save the file. No restart is needed. / ဖိုင်ကို သိမ်းပါ။ ပြန်စရန် မလိုပါ။
+#
+# Example / ဥပမာ (remove the # signs to use it / သုံးလိုလျှင် # များကို ဖျက်ပါ):
+#
+# ဆေးခန်းဖွင့်ရက်
+# ကြာသပတေးနေ့တိုင်း မနက် ၉ နာရီ
+# ---
+# New books on Monday
+# Come and copy the new pack.

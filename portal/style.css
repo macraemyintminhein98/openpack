@@ -65,6 +65,7 @@ h3.sub { font-size: 1.05rem; margin: 18px 0 8px; }
   border: 1px solid #d9d3c2; border-radius: 12px; background: #fff; color: #1d1b16; text-decoration: none; font-weight: 700;
 }
 .backbtn .ic { margin-right: .25rem; }
+button.backbtn { font: inherit; font-weight: 700; cursor: pointer; }
 
 /* Home */
 .tagline { font-size: 1.05rem; margin-bottom: 8px; }
@@ -187,6 +188,16 @@ html.dark .ldots i { background: #3a352b; }
 html.dark .ldots i.on { background: #e8873f; }
 html.dark .lwarn { background: #4a3d12; }
 html.dark .ldone { background: #1f3a22; color: #b9e6bd; }
+
+/* Hub: notice board */
+.noticebar {
+  display: flex; align-items: center; min-height: 54px; margin: 10px 0 0; padding: 8px 12px; border-radius: 14px;
+  background: #fff3cd; border: 2px solid #c9820a; color: #1d1b16; text-decoration: none; font-weight: 700;
+}
+.noticebar span { flex: 1 1 auto; margin: 0 .5rem; }
+.fromhub { margin: 0 0 12px; }
+.notice p { margin-top: 4px; }
+html.dark .noticebar { background: #4a3d12; border-color: #c9820a; color: #f2efe6; }
 
 /* Dark theme */
 html.dark body { background: #15130f; color: #f2efe6; }

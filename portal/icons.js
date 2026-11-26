@@ -24,6 +24,7 @@ window.OPENPACK_ICONS = {
   shield: '<path d="M12 3l8 3v6c0 4.5-3.2 8-8 9-4.8-1-8-4.5-8-9V6z"/><path d="M9 12l2.2 2.2L15 10"/>',
   drop: '<path d="M12 3s6 7 6 11a6 6 0 0 1-12 0c0-4 6-11 6-11z"/>',
   steps: '<path d="M4 19h5v-5h5V9h6"/>',
+  megaphone: '<path d="M4 10v4h3l8 5V5l-8 5z"/><path d="M18 9a4 4 0 0 1 0 6"/><path d="M7 14l1 5h3l-1-4"/>',
   check: '<path d="M5 12l5 5 9-10"/>',
   close: '<path d="M6 6l12 12M18 6L6 18"/>'
 };

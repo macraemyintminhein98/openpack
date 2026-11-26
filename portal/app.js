@@ -21,7 +21,7 @@
 
   var state = {
     manifest: null,
-    features: { kiwix: false, urls: [] },
+    features: { kiwix: false, urls: [], notices: 0 },
     set: { lang: 'my', size: 1, theme: 'light' }
   };
 
@@ -172,6 +172,7 @@
     return '<p class="tagline">' + esc(t('app_tagline')) + '</p>' +
       '<span class="badge">' + esc(t('offline_badge')) + '</span>' +
       searchForm('') +
+      (state.features.notices ? '<a class="noticebar" href="#/notices">' + ic('megaphone') + '<span>' + esc(t('notices_n', { n: state.features.notices })) + '</span>' + ic('chevron') + '</a>' : '') +
       '<h3 class="sub">' + esc(t('browse')) + '</h3><div class="tiles">' + tiles + '</div>' +
       (isFile ? '' : '<a class="bigbtn" href="#/share">' + ic('share') + esc(t('share')) + '</a>') +
       '<p class="ver">' + esc(t('pack_version', { v: state.manifest.version })) + '</p>';
@@ -297,6 +298,28 @@
       '<details><summary>' + esc(t('l_sources')) + '</summary><dl>' + src + '</dl></details>';
   }
 
+  /* ---------- hub: notice board ---------- */
+  // Notices come from the place running the server, not from the signed pack. They exist only
+  // in served mode, and nothing about them is kept on this device.
+  function lines(s) { return esc(s).replace(/\n/g, '<br>'); }
+  var hubNotices = null; // null = not loaded yet
+  function loadNotices() {
+    fetch('hub/notices.json', { cache: 'no-store' })
+      .then(function (r) { return r.json(); })
+      .then(function (d) { hubNotices = d.notices || []; })
+      .catch(function () { hubNotices = []; })
+      .then(function () { if (route().name === 'notices') { render(); } });
+  }
+  function viewNotices() {
+    var head = backBtn() + '<h2 class="title">' + ic('megaphone') + ' ' + esc(t('notices')) + '</h2>' +
+      '<p class="note fromhub">' + esc(t('notices_from')) + '</p>';
+    if (hubNotices === null) { return head + '<p class="muted">' + esc(t('l_loading')) + '</p>'; }
+    if (!hubNotices.length) { return head + '<p class="muted">' + esc(t('notices_none')) + '</p>'; }
+    return head + hubNotices.map(function (n) {
+      return '<article class="card notice"><h3>' + esc(n.title) + '</h3>' + (n.body ? '<p>' + lines(n.body) + '</p>' : '') + '</article>';
+    }).join('');
+  }
+
   /* ---------- routing and drawing ---------- */
   function route() {
     var h = location.hash.replace(/^#\/?/, '');
@@ -312,9 +335,11 @@
     applySettings();
     var r = route(), html;
     if (r.name !== 'l') { lessonAt.id = null; } // reopening a lesson starts again at step 1
+    if (r.name === 'notices' && location.hash !== lastHash) { hubNotices = null; loadNotices(); }
     if (r.name === 'c') { html = viewCategory(r.arg); }
     else if (r.name === 's') { html = viewSearch(r.arg); }
     else if (r.name === 'l') { html = viewLesson(r.arg); }
+    else if (r.name === 'notices') { html = viewNotices(); }
     else if (r.name === 'settings') { html = viewSettings(); }
     else if (r.name === 'help') { html = viewHelp(); }
     else if (r.name === 'share') { html = viewShare(); }
@@ -388,7 +413,7 @@
     // features.json is generated live by the server: is Kiwix running, and what are the LAN addresses?
     fetch('features.json', { cache: 'no-store' })
       .then(function (r) { return r.json(); })
-      .then(function (f) { state.features = { kiwix: !!f.kiwix, urls: f.urls || [] }; })
+      .then(function (f) { state.features = { kiwix: !!f.kiwix, urls: f.urls || [], notices: f.notices || 0 }; })
       .catch(function () {})
       .then(function () {
         return fetch('manifest.json', { cache: 'no-store' })

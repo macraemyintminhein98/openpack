@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.6.0
+- Hub notice board: the hub owner writes `notices.txt`; visitors read it in the portal.
+- Tested across Chrome, WebKit and Firefox with phone profiles, over a network address; ARM
+  builds run under emulation; Burmese text checker. Results in `docs/TESTING.md`.
+- Fact-check fixes to two lessons; rollout documents.
+
 ## 0.5.0
 - Picture lessons (`kind: "lesson"`): step-by-step guides with drawings, Why and Tips tabs, sources and a review flag.
 - Nine standard lessons in `lessons/`, added to every pack automatically (opt out with `"lessons": false`):

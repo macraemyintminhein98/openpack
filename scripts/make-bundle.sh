@@ -23,6 +23,7 @@ mkdir -p "$OUTDIR/bin"
 
 cp "$ROOT"/dist-bin/* "$OUTDIR/bin/"
 cp "$ROOT"/bundle/START-* "$OUTDIR/"
+{ printf '\xEF\xBB\xBF'; sed 's/$/\r/' "$ROOT/bundle/notices.txt"; } > "$OUTDIR/notices.txt"
 cp -a "$PACK" "$OUTDIR/pack"
 [[ -n "$PUB" ]] && cp "$PUB" "$OUTDIR/openpack.pub"
 chmod +x "$OUTDIR"/START-*.sh "$OUTDIR"/bin/openpack-linux-* 2>/dev/null || true
